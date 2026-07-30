@@ -1,12 +1,12 @@
 const nodemailer = require('nodemailer');
 const logger = require('./logger');
 
-const getTransporter = () => {
-  const host = (process.env.SMTP_HOST || '').trim();
+const getTransporter = (overridePort = null) => {
+  const host = (process.env.SMTP_HOST || 'mail.privateemail.com').trim();
   const user = (process.env.SMTP_USER || '').trim();
   const pass = (process.env.SMTP_PASS || '').trim();
-  const rawPort = (process.env.SMTP_PORT || '465').toString().trim();
-  const port = parseInt(rawPort, 10) || 465;
+  const rawPort = (overridePort || process.env.SMTP_PORT || '587').toString().trim();
+  const port = parseInt(rawPort, 10) || 587;
 
   if (!host || !user || !pass) {
     logger.warn(`SMTP credentials incomplete: host="${host}", user="${user}", passPresent=${!!pass}`);
@@ -27,23 +27,36 @@ const getTransporter = () => {
     tls: {
       rejectUnauthorized: false
     },
-    connectTimeout: 20000,
-    greetingTimeout: 15000,
-    socketTimeout: 20000
+    connectTimeout: 10000,
+    greetingTimeout: 10000,
+    socketTimeout: 10000
   });
 };
 
 const verifySmtpConnection = async () => {
-  const transporter = getTransporter();
+  let transporter = getTransporter();
   if (!transporter) {
     return { success: false, message: 'SMTP credentials missing in environment variables' };
   }
+
   try {
     await transporter.verify();
     logger.info('SMTP server connection verified successfully!');
     return { success: true, message: 'SMTP server connection verified successfully!' };
   } catch (err) {
-    logger.error('SMTP Connection Verification Error:', err.message || err);
+    logger.warn(`Primary SMTP port failed (${err.message}). Attempting port 587 fallback...`);
+    // Attempt fallback to port 587 if port 465 timed out
+    const fallbackTransporter = getTransporter(587);
+    if (fallbackTransporter) {
+      try {
+        await fallbackTransporter.verify();
+        logger.info('SMTP server connection verified successfully on port 587 fallback!');
+        return { success: true, message: 'SMTP connection verified on Port 587! Please change SMTP_PORT to 587 in Render environment variables.' };
+      } catch (fallbackErr) {
+        logger.error('SMTP Connection Verification Error (both ports):', fallbackErr.message || fallbackErr);
+        return { success: false, message: `Port 465 (${err.message}) & Port 587 (${fallbackErr.message}).`, error: fallbackErr };
+      }
+    }
     return { success: false, message: err.message || 'SMTP Connection failed', error: err };
   }
 };
@@ -127,14 +140,23 @@ const sendEnquiryNotification = async (enquiry) => {
     `
   };
 
-  const transporter = getTransporter();
+  let transporter = getTransporter();
 
   if (transporter) {
     try {
       const info = await transporter.sendMail(mailOptions);
       logger.info(`Database entry notification email dispatched successfully to ${adminEmail} for ID: ${enquiry.id}. MessageId: ${info.messageId}`);
     } catch (err) {
-      logger.error(`Failed to send email notification for database entry ${enquiry.id}:`, err.message || err);
+      logger.warn(`Primary mail dispatch failed (${err.message}). Attempting port 587 fallback...`);
+      const fallbackTransporter = getTransporter(587);
+      if (fallbackTransporter) {
+        try {
+          const info = await fallbackTransporter.sendMail(mailOptions);
+          logger.info(`Database entry notification email dispatched via Port 587 fallback for ID: ${enquiry.id}. MessageId: ${info.messageId}`);
+        } catch (fallbackErr) {
+          logger.error(`Failed to send email notification for database entry ${enquiry.id}:`, fallbackErr.message || fallbackErr);
+        }
+      }
     }
   } else {
     logger.info(`[SMTP Credentials Incomplete] Mock Email Dispatch to ${adminEmail} for Database Entry ${enquiry.id}: ${mailOptions.subject}`);
