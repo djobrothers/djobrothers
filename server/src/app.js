@@ -53,6 +53,13 @@ app.get('/api/health', (req, res) => {
   });
 });
 
+// Live SMTP Verification Route
+const { verifySmtpConnection } = require('./utils/mailer');
+app.get('/api/verify-smtp', async (req, res) => {
+  const result = await verifySmtpConnection();
+  return res.status(result.success ? 200 : 500).json(result);
+});
+
 // API Routes (Mounted flexibly to support /enquiries, /api/enquiries, and /api/v1/enquiries)
 app.use('/api/v1', enquiryRoutes);
 app.use('/api', enquiryRoutes);

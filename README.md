@@ -118,13 +118,13 @@ DB_PASSWORD=postgres
 # CORS & Client Proxy
 CORS_ORIGIN=http://localhost:3000
 
-# Nodemailer SMTP (Optional for live email dispatch)
-SMTP_HOST=smtp.mailtrap.io
-SMTP_PORT=2525
-SMTP_USER=your_username
-SMTP_PASS=your_password
-SMTP_FROM="AEGIS Enquiries <enquiries@aegis-engineering.com>"
-ADMIN_EMAIL="sales@aegis-engineering.com"
+# Nodemailer SMTP (Namecheap Private Email / privateemail.com)
+SMTP_HOST=mail.privateemail.com
+SMTP_PORT=465
+SMTP_USER=contact@djobrothers.com
+SMTP_PASS=your_privateemail_password
+SMTP_FROM="DJO Brothers Limited" <contact@djobrothers.com>
+ADMIN_EMAIL=contact@djobrothers.com
 ```
 
 ---

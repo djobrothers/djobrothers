@@ -9,7 +9,7 @@ const getTransporter = () => {
   const port = parseInt(rawPort, 10) || 465;
 
   if (!host || !user || !pass) {
-    logger.warn(`SMTP credentials missing: host=${!!host}, user=${!!user}, pass=${!!pass}`);
+    logger.warn(`SMTP credentials incomplete: host="${host}", user="${user}", passPresent=${!!pass}`);
     return null;
   }
 
@@ -19,6 +19,7 @@ const getTransporter = () => {
     host: host,
     port: port,
     secure: isSecure,
+    requireTLS: !isSecure,
     auth: {
       user: user,
       pass: pass
@@ -26,8 +27,25 @@ const getTransporter = () => {
     tls: {
       rejectUnauthorized: false
     },
-    connectTimeout: 15000
+    connectTimeout: 20000,
+    greetingTimeout: 15000,
+    socketTimeout: 20000
   });
+};
+
+const verifySmtpConnection = async () => {
+  const transporter = getTransporter();
+  if (!transporter) {
+    return { success: false, message: 'SMTP credentials missing in environment variables' };
+  }
+  try {
+    await transporter.verify();
+    logger.info('SMTP server connection verified successfully!');
+    return { success: true, message: 'SMTP server connection verified successfully!' };
+  } catch (err) {
+    logger.error('SMTP Connection Verification Error:', err.message || err);
+    return { success: false, message: err.message || 'SMTP Connection failed', error: err };
+  }
 };
 
 const sendEnquiryNotification = async (enquiry) => {
@@ -124,5 +142,6 @@ const sendEnquiryNotification = async (enquiry) => {
 };
 
 module.exports = {
-  sendEnquiryNotification
+  sendEnquiryNotification,
+  verifySmtpConnection
 };
