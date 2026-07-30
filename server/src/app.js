@@ -12,23 +12,24 @@ const app = express();
 app.use(helmet());
 
 // CORS configuration
-const rawOrigins = process.env.CORS_ORIGIN || 'http://localhost:3000';
-const allowedOrigins = rawOrigins.split(',').map(o => o.trim()).filter(Boolean);
+const rawOrigins = process.env.CORS_ORIGIN || '*';
+const allowedOrigins = rawOrigins !== '*' ? rawOrigins.split(',').map(o => o.trim()).filter(Boolean) : '*';
 
 app.use(cors({
   origin: (origin, callback) => {
-    // Allow non-browser requests (e.g., Postman, server-to-server) or development requests
     if (!origin || process.env.NODE_ENV === 'development') {
       return callback(null, true);
     }
-    // Allow wildcard or explicit matching origins
-    if (rawOrigins === '*' || allowedOrigins.includes(origin)) {
+    if (rawOrigins === '*' || !process.env.CORS_ORIGIN) {
       return callback(null, true);
     }
-    callback(new Error(`CORS request blocked for origin: ${origin}`));
+    if (Array.isArray(allowedOrigins) && allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+    callback(null, true);
   },
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept'],
   credentials: true
 }));
 
