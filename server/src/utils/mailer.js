@@ -1,23 +1,38 @@
 const nodemailer = require('nodemailer');
 const logger = require('./logger');
 
-let transporter = null;
+const getTransporter = () => {
+  const host = (process.env.SMTP_HOST || '').trim();
+  const user = (process.env.SMTP_USER || '').trim();
+  const pass = (process.env.SMTP_PASS || '').trim();
+  const rawPort = (process.env.SMTP_PORT || '465').toString().trim();
+  const port = parseInt(rawPort, 10) || 465;
 
-if (process.env.SMTP_HOST && process.env.SMTP_USER) {
-  transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: parseInt(process.env.SMTP_PORT || '587', 10),
-    secure: process.env.SMTP_PORT === '465',
+  if (!host || !user || !pass) {
+    logger.warn(`SMTP credentials missing: host=${!!host}, user=${!!user}, pass=${!!pass}`);
+    return null;
+  }
+
+  const isSecure = port === 465;
+
+  return nodemailer.createTransport({
+    host: host,
+    port: port,
+    secure: isSecure,
     auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS
-    }
+      user: user,
+      pass: pass
+    },
+    tls: {
+      rejectUnauthorized: false
+    },
+    connectTimeout: 15000
   });
-}
+};
 
 const sendEnquiryNotification = async (enquiry) => {
-  const adminEmail = process.env.ADMIN_EMAIL || 'contact@djobrothers.com';
-  const fromEmail = process.env.SMTP_FROM || '"DJO Brothers Limited" <contact@djobrothers.com>';
+  const adminEmail = (process.env.ADMIN_EMAIL || 'contact@djobrothers.com').trim();
+  const fromEmail = (process.env.SMTP_FROM || `"DJO Brothers Limited" <contact@djobrothers.com>`).trim();
 
   const mailOptions = {
     from: fromEmail,
@@ -94,15 +109,17 @@ const sendEnquiryNotification = async (enquiry) => {
     `
   };
 
+  const transporter = getTransporter();
+
   if (transporter) {
     try {
-      await transporter.sendMail(mailOptions);
-      logger.info(`Database entry notification email dispatched to ${adminEmail} for ID: ${enquiry.id}`);
+      const info = await transporter.sendMail(mailOptions);
+      logger.info(`Database entry notification email dispatched successfully to ${adminEmail} for ID: ${enquiry.id}. MessageId: ${info.messageId}`);
     } catch (err) {
-      logger.error(`Failed to send email notification for database entry ${enquiry.id}:`, err.message);
+      logger.error(`Failed to send email notification for database entry ${enquiry.id}:`, err.message || err);
     }
   } else {
-    logger.info(`[SMTP Pending] Mock Email Dispatch to ${adminEmail} for Database Entry ${enquiry.id}:`, mailOptions.subject);
+    logger.info(`[SMTP Credentials Incomplete] Mock Email Dispatch to ${adminEmail} for Database Entry ${enquiry.id}: ${mailOptions.subject}`);
   }
 };
 
