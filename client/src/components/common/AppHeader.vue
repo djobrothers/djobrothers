@@ -10,8 +10,8 @@
           </div>
         </div>
         <div class="brand-text">
-          <span class="brand-name">DJO <span class="brand-accent">BROTHERS</span></span>
-          <span class="brand-tagline">Engineering & Technology</span>
+          <span class="brand-name">DJO BROTHERS <span class="brand-accent">LIMITED</span></span>
+          <span class="brand-tagline">Engineering & Security Solutions</span>
         </div>
       </router-link>
 
@@ -29,30 +29,62 @@
 
           <!-- Dropdown Menu -->
           <div class="dropdown-menu">
-            <router-link to="/services/security-surveillance" class="dropdown-item flagship-item">
+            <router-link to="/services/security-hardware" class="dropdown-item flagship-item">
               <ShieldCheck class="item-icon flagship-icon" />
               <div>
                 <div class="item-title text-sky flex items-center gap-2">
-                  Security & Surveillance
+                  Security Hardware
                   <span class="flagship-tag">Flagship</span>
                 </div>
-                <div class="item-desc">AI Surveillance, PTZ & Command Centers</div>
+                <div class="item-desc">Defense Radar, LiDAR & Surveillance</div>
+              </div>
+            </router-link>
+
+            <router-link to="/services/cybersecurity-consultation" class="dropdown-item">
+              <Lock class="item-icon text-indigo" />
+              <div>
+                <div class="item-title">Cybersecurity</div>
+                <div class="item-desc">OT/ICS Defense & System Audits</div>
+              </div>
+            </router-link>
+
+            <router-link to="/services/factory-hardware-installation" class="dropdown-item">
+              <Factory class="item-icon text-emerald" />
+              <div>
+                <div class="item-title">Factory Hardware</div>
+                <div class="item-desc">Machinery Installation & SCADA</div>
+              </div>
+            </router-link>
+
+            <router-link to="/services/hardware-procurement-sales" class="dropdown-item">
+              <ShoppingBag class="item-icon text-purple" />
+              <div>
+                <div class="item-title">Hardware Sales & Procurement</div>
+                <div class="item-desc">OEM Provisioning & Global Logistics</div>
+              </div>
+            </router-link>
+
+            <router-link to="/services/civil-engineering" class="dropdown-item">
+              <HardHat class="item-icon text-amber" />
+              <div>
+                <div class="item-title">Civil Engineering</div>
+                <div class="item-desc">Infrastructure & Problem Solutions</div>
+              </div>
+            </router-link>
+
+            <router-link to="/services/heavy-machinery-barge-hire" class="dropdown-item">
+              <Ship class="item-icon text-cyan" />
+              <div>
+                <div class="item-title">Machinery & Barge Hire</div>
+                <div class="item-desc">Heavy Equipment & Marine Barges</div>
               </div>
             </router-link>
 
             <router-link to="/services/solar-installation" class="dropdown-item">
-              <SunIcon class="item-icon text-amber" />
+              <SunIcon class="item-icon text-yellow" />
               <div>
-                <div class="item-title">Solar Installation</div>
-                <div class="item-desc">Commercial & Hybrid Power</div>
-              </div>
-            </router-link>
-
-            <router-link to="/services/construction" class="dropdown-item">
-              <Building2 class="item-icon text-teal" />
-              <div>
-                <div class="item-title">Construction & Roads</div>
-                <div class="item-desc">Heavy Civil Engineering</div>
+                <div class="item-title">Solar Power Systems</div>
+                <div class="item-desc">Commercial & Industrial Solar</div>
               </div>
             </router-link>
           </div>
@@ -105,14 +137,26 @@
       
       <div class="mobile-services-group">
         <div class="mobile-group-title">Services</div>
-        <router-link @click="mobileMenuOpen = false" to="/services/security-surveillance" class="mobile-link flagship-mobile">
-          <ShieldCheck class="link-icon" /> Security & Surveillance (Flagship)
+        <router-link @click="mobileMenuOpen = false" to="/services/security-hardware" class="mobile-link flagship-mobile">
+          <ShieldCheck class="link-icon" /> Security Hardware (Radar & LiDAR)
+        </router-link>
+        <router-link @click="mobileMenuOpen = false" to="/services/cybersecurity-consultation" class="mobile-link">
+          <Lock class="link-icon" /> Cybersecurity Consultation
+        </router-link>
+        <router-link @click="mobileMenuOpen = false" to="/services/factory-hardware-installation" class="mobile-link">
+          <Factory class="link-icon" /> Factory Hardware Installation
+        </router-link>
+        <router-link @click="mobileMenuOpen = false" to="/services/hardware-procurement-sales" class="mobile-link">
+          <ShoppingBag class="link-icon" /> Hardware Sales & Procurement
+        </router-link>
+        <router-link @click="mobileMenuOpen = false" to="/services/civil-engineering" class="mobile-link">
+          <HardHat class="link-icon" /> Civil Engineering
+        </router-link>
+        <router-link @click="mobileMenuOpen = false" to="/services/heavy-machinery-barge-hire" class="mobile-link">
+          <Ship class="link-icon" /> Heavy Machinery & Barge Hire
         </router-link>
         <router-link @click="mobileMenuOpen = false" to="/services/solar-installation" class="mobile-link">
-          <SunIcon class="link-icon" /> Solar Installation
-        </router-link>
-        <router-link @click="mobileMenuOpen = false" to="/services/construction" class="mobile-link">
-          <Building2 class="link-icon" /> Road & Building Construction
+          <SunIcon class="link-icon" /> Solar Power Systems
         </router-link>
       </div>
 
@@ -130,7 +174,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
-import { Shield, ShieldCheck, Sun as SunIcon, Moon, Building2, ChevronDown, Menu, X, ArrowRight } from 'lucide-vue-next';
+import { Shield, ShieldCheck, Lock, Factory, ShoppingBag, HardHat, Ship, Sun as SunIcon, Moon, ChevronDown, Menu, X, ArrowRight } from 'lucide-vue-next';
 import { useTheme } from '../../composables/useTheme';
 
 const isScrolled = ref(false);

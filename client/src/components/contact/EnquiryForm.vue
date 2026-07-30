@@ -96,9 +96,13 @@
               v-model="form.service"
               :class="['form-input select-input', { 'input-error': fieldErrors.service }]"
             >
-              <option value="Security & Surveillance">Security & Surveillance (Flagship)</option>
-              <option value="Solar Installation">Solar Installation</option>
-              <option value="Road & Building Construction">Road & Building Construction</option>
+              <option value="Security Hardware">Security Hardware (Defense Radar & LiDAR)</option>
+              <option value="Cybersecurity Consultation">Cybersecurity Consultation & OT Defense</option>
+              <option value="Factory Hardware">Installation of Factory Hardware</option>
+              <option value="Hardware Procurement">Hardware Provision (Sales) & Procurement</option>
+              <option value="Civil Engineering">Civil Engineering & Problem Solutions</option>
+              <option value="Machinery and Barge Hire">Hiring of Heavy Duty Machinery & Barges</option>
+              <option value="Solar Installation">Solar Power & Renewable Energy</option>
               <option value="General Enquiry">General Corporate Enquiry</option>
             </select>
             <ChevronDown class="select-chevron" />
@@ -143,7 +147,7 @@ import { submitEnquiry } from '../../services/api';
 import { User, Mail, Phone, Shield, ChevronDown, Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-vue-next';
 
 const props = defineProps({
-  initialService: { type: String, default: 'Security & Surveillance' }
+  initialService: { type: String, default: 'Security Hardware' }
 });
 
 const form = reactive({

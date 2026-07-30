@@ -25,7 +25,7 @@
                 <div class="info-icon-box"><MapPin class="icon text-sky" /></div>
                 <div>
                   <h4 class="info-title">Office Address</h4>
-                  <p class="info-desc">DJO Brothers Technology Tower, Suite 1200<br />Innovation District, Zone 4</p>
+                  <p class="info-desc">DJO Brothers Limited Tower, Suite 1200<br />Innovation District, Zone 4</p>
                 </div>
               </li>
 
@@ -33,7 +33,7 @@
                 <div class="info-icon-box"><Phone class="icon text-sky" /></div>
                 <div>
                   <h4 class="info-title">Telephone Desk</h4>
-                  <p class="info-desc">+234 801 234 5678 / +1 (800) 555-0199</p>
+                  <p class="info-desc">+234 813 786 0082</p>
                 </div>
               </li>
 
@@ -41,7 +41,7 @@
                 <div class="info-icon-box"><Mail class="icon text-sky" /></div>
                 <div>
                   <h4 class="info-title">Electronic Mail</h4>
-                  <p class="info-desc">enquiries@djo-brothers.com</p>
+                  <p class="info-desc">contact@djobrothers.com</p>
                 </div>
               </li>
 
@@ -49,7 +49,7 @@
                 <div class="info-icon-box teal-box"><Clock class="icon text-teal" /></div>
                 <div>
                   <h4 class="info-title">Business Hours</h4>
-                  <p class="info-desc">Mon - Fri: 08:00 - 18:00 GMT</p>
+                  <p class="info-desc">Mon - Fri: 08:00 - 18:00 GMT+1</p>
                   <span class="sla-tag">24/7 Security SLA Active</span>
                 </div>
               </li>
@@ -83,7 +83,7 @@ import { MapPin, Phone, Mail, Clock, ShieldCheck } from 'lucide-vue-next';
 import EnquiryForm from '../components/contact/EnquiryForm.vue';
 
 const route = useRoute();
-const selectedService = ref('Security & Surveillance');
+const selectedService = ref('Security Hardware');
 
 const updateServiceFromQuery = () => {
   if (route.query.service) {

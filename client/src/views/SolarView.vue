@@ -6,7 +6,7 @@
         <div class="banner-content space-y-4">
           <div class="badge-tech text-amber bg-amber-light"><Sun class="b-icon" /> Renewable Energy Division</div>
           <h1 class="page-title">Commercial, Industrial & <span class="gradient-text">Utility Solar</span></h1>
-          <p class="page-subtitle">DJO Brothers Engineering delivers turnkey solar power installations, high-capacity lithium storage banks, microgrids, and long-term maintenance contracts.</p>
+          <p class="page-subtitle">DJO Brothers Limited delivers turnkey commercial solar power installations, high-capacity lithium storage banks, industrial microgrids, and long-term maintenance contracts.</p>
         </div>
       </div>
     </section>

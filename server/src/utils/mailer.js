@@ -17,8 +17,8 @@ if (process.env.SMTP_HOST && process.env.SMTP_USER) {
 
 const sendEnquiryNotification = async (enquiry) => {
   const mailOptions = {
-    from: process.env.SMTP_FROM || '"DJO Brothers Engineering" <no-reply@djo-brothers.com>',
-    to: process.env.ADMIN_EMAIL || 'enquiries@djo-brothers.com',
+    from: process.env.SMTP_FROM || '"DJO Brothers Limited" <no-reply@djobrothers.com>',
+    to: process.env.ADMIN_EMAIL || 'contact@djobrothers.com',
     subject: `[New Enquiry] ${enquiry.service} - ${enquiry.full_name}`,
     html: `
       <h2>New Corporate Enquiry Received</h2>

@@ -4,12 +4,12 @@
     <section class="page-banner bg-tech-grid">
       <div class="container">
         <div class="banner-content space-y-4">
-          <div class="badge-tech">About DJO Brothers</div>
+          <div class="badge-tech">About DJO Brothers Limited</div>
           <h1 class="page-title">
-            Pioneering High-Tech Infrastructure & <span class="gradient-text">Defense Systems</span>
+            Engineering Problem Solvers & <span class="gradient-text">Defense Systems Pioneers</span>
           </h1>
           <p class="page-subtitle">
-            DJO Brothers Engineering & Technology is an international engineering company dedicated to protecting critical assets through flagship surveillance technology while building sustainable energy grids and heavy civil infrastructure.
+            DJO Brothers Limited is a premier multidisciplinary engineering firm dedicated to providing comprehensive solutions to engineering problems across physical security hardware, defense radar & LiDAR, cybersecurity, factory hardware, procurement, civil engineering, machinery/barge hiring, and solar energy.
           </p>
         </div>
       </div>
@@ -20,38 +20,38 @@
       <div class="grid lg-grid-cols-12 gap-12 items-center">
         <div class="col-span-7 space-y-6">
           <div class="badge-tech">Company Legacy</div>
-          <h2 class="section-title">Built on Technical Precision & Uncompromising Standards</h2>
+          <h2 class="section-title">Built on Technical Precision & Engineering Problem Solving</h2>
           <p class="text-muted leading-relaxed">
-            Founded by a multidisciplinary team of systems engineers, security specialists, and civil infrastructure pioneers, DJO Brothers was formed to address the growing complexity of modern enterprise risk and energy demands.
+            DJO Brothers Limited was established by a team of defense system specialists, mechanical millwrights, cybersecurity architects, and civil infrastructure pioneers to deliver tailored solutions to complex engineering challenges.
           </p>
           <p class="text-muted text-sm leading-relaxed">
-            Over the past decade, we have established our <strong>Security & Surveillance</strong> division as our primary flagship specialization—deploying AI video analytics, thermal tracking, and centralized command centers across high-security environments, oil fields, government infrastructure, and industrial complexes.
+            Our <strong>Security Hardware</strong> division stands as a primary flagship discipline — installing and calibrating high-level 3D Doppler defense radar, solid-state 3D LiDAR, thermal camera arrays, and C4ISR command centers across airports, oil fields, government assets, and military complexes.
           </p>
         </div>
 
         <div class="col-span-5">
           <div class="glass-panel space-y-4">
-            <h3 class="card-title"><Award class="icon text-sky" /> Engineering Benchmarks</h3>
+            <h3 class="card-title"><Award class="icon text-sky" /> Corporate Capabilities</h3>
             <div class="benchmark-list">
               <div class="benchmark-item">
                 <ShieldCheck class="b-icon text-sky" />
                 <div>
-                  <h4 class="b-title">Flagship Security Excellence</h4>
-                  <p class="b-desc">Design, installation, and commissioning of defense-grade surveillance networks across 500+ sensitive sites.</p>
+                  <h4 class="b-title">Defense Radar & LiDAR Installation</h4>
+                  <p class="b-desc">Turnkey installation and Doppler calibration of defense radar and 3D LiDAR point cloud scanners across sensitive sites.</p>
                 </div>
               </div>
               <div class="benchmark-item">
                 <Sun class="b-icon text-amber" />
                 <div>
-                  <h4 class="b-title">Renewable Energy Matrix</h4>
-                  <p class="b-desc">Over 150MW of installed commercial and industrial solar capacity with integrated storage battery banks.</p>
+                  <h4 class="b-title">Cybersecurity & Factory Hardware</h4>
+                  <p class="b-desc">OT/ICS SCADA security audits, industrial machinery assembly, PLC control cabinet installations, and technical hardware procurement.</p>
                 </div>
               </div>
               <div class="benchmark-item">
                 <Building2 class="b-icon text-teal" />
                 <div>
-                  <h4 class="b-title">Civil Infrastructure</h4>
-                  <p class="b-desc">More than 1.2 million m² of commercial facilities, industrial structures, and highway paving completed.</p>
+                  <h4 class="b-title">Civil Infrastructure & Heavy Hire</h4>
+                  <p class="b-desc">Turnkey civil engineering, heavy duty earthmoving machinery rental, and marine barge fleet chartering.</p>
                 </div>
               </div>
             </div>
@@ -68,7 +68,7 @@
             <div class="icon-box sky-box"><Target class="box-icon text-sky" /></div>
             <h3 class="card-title">Our Mission</h3>
             <p class="text-muted text-sm">
-              To deliver intelligent, enterprise-grade security systems, resilient renewable power, and world-class civil infrastructure that protect lives, secure critical national assets, and power sustainable economic growth.
+              To engineer innovative, resilient, and uncompromised solutions to engineering problems — protecting critical assets with defense-grade radar and security hardware, hardening industrial networks, delivering turnkey civil infrastructure, and providing heavy machinery and marine barge assets.
             </p>
           </div>
 
@@ -76,7 +76,7 @@
             <div class="icon-box teal-box"><Eye class="box-icon text-teal" /></div>
             <h3 class="card-title">Our Vision</h3>
             <p class="text-muted text-sm">
-              To be the global engineering benchmark in AI-powered surveillance technology, clean energy systems, and high-performance civil construction, setting the standard for technical excellence, safety, and reliability.
+              To be recognized globally as DJO Brothers Limited — the engineering problem solver of choice for defense radar installation, cybersecurity, industrial factory setups, civil infrastructure, and equipment fleet logistics.
             </p>
           </div>
         </div>
@@ -89,7 +89,7 @@
         badge="Governance & Culture"
         title="Our Guiding"
         highlightTitle="Core Values"
-        description="Every project we engineer is governed by strict core values that define our operational ethos."
+        description="Every project engineered by DJO Brothers Limited is governed by strict core values that define our operational ethos."
         :center="true"
       />
 
@@ -102,12 +102,12 @@
         <div class="glass-panel value-card">
           <Cpu class="v-icon text-sky" />
           <h4 class="v-title">Continuous Innovation</h4>
-          <p class="v-desc">Integrating edge AI, thermal optics, LiDAR sensors, and smart grid software ahead of industry shifts.</p>
+          <p class="v-desc">Integrating 3D defense radar, LiDAR point clouds, OT cybersecurity, and smart factory hardware ahead of industry shifts.</p>
         </div>
         <div class="glass-panel value-card">
           <Lock class="v-icon text-teal" />
           <h4 class="v-title">Defense Reliability</h4>
-          <p class="v-desc">Engineering fail-safe systems with redundant architecture designed for zero downtime in high-risk zones.</p>
+          <p class="v-desc">Engineering fail-safe systems with redundant architecture designed for zero downtime in critical environments.</p>
         </div>
         <div class="glass-panel value-card">
           <Award class="v-icon text-amber" />
@@ -120,8 +120,8 @@
     <!-- Consultation CTA -->
     <section class="section-padding container text-center max-w-3xl">
       <div class="glass-panel space-y-6">
-        <h2 class="cta-title">Partner with DJO Brothers Today</h2>
-        <p class="text-muted text-sm">Connect with our senior engineering team to discuss your security, solar, or construction requirements.</p>
+        <h2 class="cta-title">Partner with DJO Brothers Limited Today</h2>
+        <p class="text-muted text-sm">Connect with our senior engineering team to discuss your security hardware, cybersecurity, factory installation, procurement, civil engineering, or heavy fleet hire requirements.</p>
         <div class="flex justify-center">
           <router-link to="/contact" class="btn-primary">
             <span>Contact Solution Architects</span>

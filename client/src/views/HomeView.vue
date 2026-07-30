@@ -12,28 +12,28 @@
           <!-- Left Column -->
           <div class="hero-content">
             <div class="badge-tech badge-flagship">
-              <Shield class="badge-icon" />
-              <span>Flagship Security & Infrastructure Firm</span>
+              <Wrench class="badge-icon" />
+              <span>MULTIDISCIPLINARY ENGINEERING & SOLUTIONS FIRM</span>
             </div>
 
             <h1 class="hero-title">
-              Advanced Security & <br />
-              <span class="gradient-text-flagship">Surveillance Solutions</span>
+              Turnkey Solutions to <br />
+              <span class="gradient-text-flagship">Complex Engineering Problems</span>
             </h1>
 
             <p class="hero-subtitle">
-              Engineering mission-critical security networks, AI video analytics, command centers, renewable solar grids, and civil infrastructure worldwide.
+              DJO Brothers Limited provides end-to-end engineering solutions — combining defense-grade security hardware, cybersecurity consultation, industrial factory installation, technical procurement, civil infrastructure, heavy machinery & barge hiring, and solar energy under one master engineering framework.
             </p>
 
             <!-- Hero Actions -->
             <div class="hero-actions">
               <router-link to="/contact" class="btn-primary hero-btn">
-                <span>Request Consultation</span>
+                <span>Request Solution Consultation</span>
                 <ArrowRight class="btn-icon" />
               </router-link>
 
               <router-link to="/services" class="btn-secondary hero-btn">
-                <span>Explore Our Services</span>
+                <span>Explore All 7 Divisions</span>
                 <ChevronRight class="btn-icon text-muted" />
               </router-link>
             </div>
@@ -41,16 +41,20 @@
             <!-- Stats -->
             <div class="hero-stats">
               <div class="stat-item">
-                <div class="stat-num text-sky">99.99%</div>
-                <div class="stat-label">Security Uptime</div>
+                <div class="stat-num text-sky">7 Core</div>
+                <div class="stat-label">Engineering Divisions</div>
               </div>
               <div class="stat-item">
                 <div class="stat-num text-teal">500+</div>
-                <div class="stat-label">Enterprise Projects</div>
+                <div class="stat-label">Projects Completed</div>
               </div>
               <div class="stat-item">
-                <div class="stat-num text-amber">ISO 9001</div>
-                <div class="stat-label">Certified Engineering</div>
+                <div class="stat-num text-amber">100%</div>
+                <div class="stat-label">Problem Solved Rate</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num text-emerald">ISO 9001</div>
+                <div class="stat-label">Certified Precision</div>
               </div>
             </div>
           </div>
@@ -61,49 +65,65 @@
               <div class="visual-header">
                 <div class="live-status">
                   <div class="live-dot"></div>
-                  <span class="status-label">Live Surveillance Node</span>
+                  <span class="status-label">Engineering Operations Hub</span>
                 </div>
-                <span class="status-badge">AI Analytics Active</span>
+                <span class="status-badge">Matrix Active</span>
               </div>
 
               <!-- Interactive Node Info -->
               <div class="node-box">
                 <div class="node-target">
-                  <span>Target Site: Critical Pipeline Alpha</span>
-                  <span class="target-status">Protected</span>
+                  <span>Scope: Integrated Engineering & Security</span>
+                  <span class="target-status">Operational</span>
                 </div>
 
                 <div class="node-grid">
                   <div class="node-card">
                     <div class="node-title">
-                      <span>Thermal PTZ</span>
-                      <Eye class="node-icon text-sky" />
+                      <span>Defense Radar & LiDAR</span>
+                      <Radio class="node-icon text-sky" />
                     </div>
-                    <div class="node-val">128 Channels Active</div>
+                    <div class="node-val">High-Level Installation</div>
                   </div>
 
                   <div class="node-card">
                     <div class="node-title">
-                      <span>LiDAR Radar</span>
-                      <Radio class="node-icon text-teal" />
+                      <span>Civil & Marine Fleet</span>
+                      <Ship class="node-icon text-teal" />
                     </div>
-                    <div class="node-val">360° Perimeter Scan</div>
+                    <div class="node-val">Roads & Barge Charter</div>
+                  </div>
+
+                  <div class="node-card">
+                    <div class="node-title">
+                      <span>Factory Hardware</span>
+                      <Factory class="node-icon text-emerald" />
+                    </div>
+                    <div class="node-val">Industrial SCADA & Assembly</div>
+                  </div>
+
+                  <div class="node-card">
+                    <div class="node-title">
+                      <span>Cybersecurity & Solar</span>
+                      <Lock class="node-icon text-indigo" />
+                    </div>
+                    <div class="node-val">OT Hardening & Microgrids</div>
                   </div>
                 </div>
 
                 <div class="node-ai">
                   <div class="ai-label">
                     <Cpu class="ai-icon" />
-                    <span>Deep Neural Anomaly Detection</span>
+                    <span>Multidisciplinary Engineering Problem Solving</span>
                   </div>
-                  <span class="ai-time">0.02s Response</span>
+                  <span class="ai-time">Turnkey Delivery</span>
                 </div>
               </div>
 
               <div class="visual-footer">
-                <router-link to="/services/security-surveillance" class="btn-primary w-full justify-center">
-                  <ShieldCheck class="btn-icon" />
-                  <span>View Flagship Security Suite</span>
+                <router-link to="/services" class="btn-primary w-full justify-center">
+                  <Wrench class="btn-icon" />
+                  <span>Explore All Engineering Divisions</span>
                 </router-link>
               </div>
             </div>
@@ -120,20 +140,20 @@
           <div class="overview-content space-y-4">
             <div class="badge-tech">Company Overview</div>
             <h2 class="section-title">
-              Engineering Future-Proof Infrastructure & <span class="gradient-text">Defense-Grade Systems</span>
+              Solutions to Engineering Problems & <span class="gradient-text">Defense Security Systems</span>
             </h2>
             <p class="section-desc">
-              Founded on principles of uncompromising precision and innovation, DJO Brothers Engineering & Technology delivers end-to-end solutions spanning intelligent surveillance networks, high-yield solar arrays, and robust civil construction projects.
+              DJO Brothers Limited is a premier engineering solutions firm dedicated to solving complex technical and structural challenges. We specialize in defense radar & LiDAR security hardware, cybersecurity consultation, industrial factory installation, technical procurement, civil engineering, and heavy machinery & barge hiring.
             </p>
             <p class="section-desc-secondary">
-              Our flagship Security & Surveillance division empowers governments, industrial facilities, oil & gas operators, and commercial enterprises with AI-driven situational awareness and critical asset protection.
+              Our flagship Security Hardware division installs and configures high-level defense radar and solid-state 3D LiDAR systems, empowering governments, industrial complexes, oil & gas operators, and critical infrastructure with uncompromised situational defense.
             </p>
 
             <div class="overview-cards-row">
               <div class="overview-mini-card">
                 <ShieldCheck class="mini-icon text-sky" />
-                <h4 class="mini-title">Flagship Security</h4>
-                <p class="mini-desc">AI analytics, LiDAR, radar, PTZ & Command Centers</p>
+                <h4 class="mini-title">Defense Radar & LiDAR</h4>
+                <p class="mini-desc">High-level defense radar, solid-state 3D LiDAR & PTZ</p>
               </div>
 
               <div class="overview-mini-card">
@@ -212,27 +232,27 @@
                   <span>Primary Engineering Specialization</span>
                 </div>
 
-                <h3 class="flagship-card-title">Security & Surveillance Systems</h3>
+                <h3 class="flagship-card-title">Security Hardware, Defense Radar & LiDAR</h3>
 
                 <p class="flagship-card-desc">
-                  Our flagship division engineers defense-grade security architecture for critical infrastructure, oil & gas facilities, smart cities, and government complexes. Featuring AI Video Analytics, Thermal Imaging, LiDAR Perimeter Intrusion Detection, and 24/7 Integrated Command Centers.
+                  DJO Brothers Limited installs and configures high-level 3D Doppler defense radar, solid-state LiDAR scanners, 4K thermal PTZ camera arrays, perimeter intrusion detection systems (PIDS), and C4ISR command centers.
                 </p>
 
                 <div class="flagship-features-grid">
-                  <div class="feature-tag"><CheckCircle class="tag-icon" /> AI Video Analytics</div>
-                  <div class="feature-tag"><CheckCircle class="tag-icon" /> LiDAR & Radar Surveillance</div>
-                  <div class="feature-tag"><CheckCircle class="tag-icon" /> Thermal & PTZ Cameras</div>
-                  <div class="feature-tag"><CheckCircle class="tag-icon" /> Command & Control Centers</div>
-                  <div class="feature-tag"><CheckCircle class="tag-icon" /> Autonomous Drone Patrols</div>
-                  <div class="feature-tag"><CheckCircle class="tag-icon" /> Pipeline & Oil Defense</div>
+                  <div class="feature-tag"><CheckCircle class="tag-icon" /> Defense 3D Doppler Radar</div>
+                  <div class="feature-tag"><CheckCircle class="tag-icon" /> Solid-State 3D LiDAR</div>
+                  <div class="feature-tag"><CheckCircle class="tag-icon" /> 4K Optical & Thermal PTZ</div>
+                  <div class="feature-tag"><CheckCircle class="tag-icon" /> Command (C4ISR) Centers</div>
+                  <div class="feature-tag"><CheckCircle class="tag-icon" /> Biometrics & Speed Gates</div>
+                  <div class="feature-tag"><CheckCircle class="tag-icon" /> Perimeter Intrusion (PIDS)</div>
                 </div>
 
                 <div class="flagship-actions">
-                  <router-link to="/services/security-surveillance" class="btn-primary">
-                    <span>Explore Full Flagship Page</span>
+                  <router-link to="/services/security-hardware" class="btn-primary">
+                    <span>Explore Security Hardware Page</span>
                     <ArrowRight class="btn-icon" />
                   </router-link>
-                  <router-link to="/contact?service=Security+%26+Surveillance" class="btn-secondary">
+                  <router-link to="/contact?service=Security+Hardware" class="btn-secondary">
                     <span>Request Security Audit</span>
                   </router-link>
                 </div>
@@ -241,28 +261,28 @@
               <!-- Graphic Preview -->
               <div class="flagship-preview">
                 <div class="preview-header">
-                  <span class="preview-title"><Lock class="preview-icon" /> Defense Suite Architecture</span>
+                  <span class="preview-title"><Lock class="preview-icon" /> Defense Radar & LiDAR Status</span>
                   <span class="preview-status">Operational</span>
                 </div>
                 <div class="preview-list">
                   <div class="preview-item">
                     <div>
-                      <div class="item-name">Thermal Optical PTZ Arrays</div>
-                      <div class="item-sub">Long-range 15km detection radius</div>
+                      <div class="item-name">3D Doppler Defense Radar</div>
+                      <div class="item-sub">10km Early Warning Array</div>
                     </div>
-                    <span class="item-badge">Active</span>
+                    <span class="item-badge">Calibrated</span>
                   </div>
                   <div class="preview-item">
                     <div>
-                      <div class="item-name">Fibre-Optic Perimeter Sensor</div>
-                      <div class="item-sub">Zero false alarm seismic intrusion</div>
+                      <div class="item-name">Solid-State 3D LiDAR Mesh</div>
+                      <div class="item-sub">High-density Point Cloud Scanning</div>
                     </div>
-                    <span class="item-badge">Active</span>
+                    <span class="item-badge">Calibrated</span>
                   </div>
                   <div class="preview-item">
                     <div>
-                      <div class="item-name">Command Center Video Wall</div>
-                      <div class="item-sub">Multi-node failover streaming</div>
+                      <div class="item-name">C4ISR Video Wall Console</div>
+                      <div class="item-sub">PSIM Real-Time Telemetry Stream</div>
                     </div>
                     <span class="item-badge text-teal">Connected</span>
                   </div>
@@ -271,37 +291,70 @@
             </div>
           </div>
 
-          <!-- Secondary Cards -->
+          <!-- Secondary Divisions Cards (All Services) -->
           <div class="secondary-grid">
-            <!-- Solar Card -->
+            <!-- 1. Cybersecurity -->
             <div class="glass-panel glass-panel-interactive secondary-card">
-              <div class="sec-icon-box amber-box"><Sun class="sec-icon text-amber" /></div>
-              <h3 class="sec-title">Solar Installation</h3>
-              <p class="sec-desc">Turnkey commercial, industrial, and hybrid solar power solutions engineered for max energy independence.</p>
+              <div class="sec-icon-box sky-box"><Lock class="sec-icon text-indigo" /></div>
+              <h3 class="sec-title">Cybersecurity</h3>
+              <p class="sec-desc">OT/ICS SCADA security audits, zero-trust network design, and cyber-physical hardware hardening.</p>
+              <router-link to="/services/cybersecurity-consultation" class="btn-secondary w-full justify-between">
+                <span>View Cybersecurity</span>
+                <ArrowRight class="btn-icon" />
+              </router-link>
+            </div>
+
+            <!-- 2. Factory Hardware -->
+            <div class="glass-panel glass-panel-interactive secondary-card">
+              <div class="sec-icon-box teal-box"><Factory class="sec-icon text-emerald" /></div>
+              <h3 class="sec-title">Factory Hardware</h3>
+              <p class="sec-desc">Industrial equipment assembly, precision laser positioning, PLC cabinets, and conveyor lines.</p>
+              <router-link to="/services/factory-hardware-installation" class="btn-secondary w-full justify-between">
+                <span>View Factory Hardware</span>
+                <ArrowRight class="btn-icon" />
+              </router-link>
+            </div>
+
+            <!-- 3. Hardware Procurement -->
+            <div class="glass-panel glass-panel-interactive secondary-card">
+              <div class="sec-icon-box amber-box"><ShoppingBag class="sec-icon text-purple" /></div>
+              <h3 class="sec-title">Hardware Sales & Procurement</h3>
+              <p class="sec-desc">Provision (sales) of specialized security, factory, and engineering hardware with global logistics.</p>
+              <router-link to="/services/hardware-procurement-sales" class="btn-secondary w-full justify-between">
+                <span>View Procurement</span>
+                <ArrowRight class="btn-icon" />
+              </router-link>
+            </div>
+
+            <!-- 4. Civil Engineering -->
+            <div class="glass-panel glass-panel-interactive secondary-card">
+              <div class="sec-icon-box amber-box"><HardHat class="sec-icon text-amber" /></div>
+              <h3 class="sec-title">Civil Engineering</h3>
+              <p class="sec-desc">Infrastructure construction, highway paving, structural design, and custom engineering problem-solving.</p>
+              <router-link to="/services/civil-engineering" class="btn-secondary w-full justify-between">
+                <span>View Civil Engineering</span>
+                <ArrowRight class="btn-icon" />
+              </router-link>
+            </div>
+
+            <!-- 5. Heavy Machinery & Barge Hire -->
+            <div class="glass-panel glass-panel-interactive secondary-card">
+              <div class="sec-icon-box sky-box"><Ship class="sec-icon text-cyan" /></div>
+              <h3 class="sec-title">Machinery & Barge Hire</h3>
+              <p class="sec-desc">Heavy duty construction machinery rental and marine flat-deck & spud barge chartering.</p>
+              <router-link to="/services/heavy-machinery-barge-hire" class="btn-secondary w-full justify-between">
+                <span>View Fleet Hire</span>
+                <ArrowRight class="btn-icon" />
+              </router-link>
+            </div>
+
+            <!-- 6. Solar Installation -->
+            <div class="glass-panel glass-panel-interactive secondary-card">
+              <div class="sec-icon-box amber-box"><Sun class="sec-icon text-yellow" /></div>
+              <h3 class="sec-title">Solar Power Systems</h3>
+              <p class="sec-desc">Turnkey commercial and industrial solar arrays with containerized lithium battery (BESS) storage.</p>
               <router-link to="/services/solar-installation" class="btn-secondary w-full justify-between">
                 <span>View Solar Solutions</span>
-                <ArrowRight class="btn-icon" />
-              </router-link>
-            </div>
-
-            <!-- Construction Card -->
-            <div class="glass-panel glass-panel-interactive secondary-card">
-              <div class="sec-icon-box teal-box"><Building2 class="sec-icon text-teal" /></div>
-              <h3 class="sec-title">Road & Building Construction</h3>
-              <p class="sec-desc">Heavy civil engineering, highway paving, commercial building construction, and project management.</p>
-              <router-link to="/services/construction" class="btn-secondary w-full justify-between">
-                <span>View Construction Division</span>
-                <ArrowRight class="btn-icon" />
-              </router-link>
-            </div>
-
-            <!-- Integration Card -->
-            <div class="glass-panel glass-panel-interactive secondary-card">
-              <div class="sec-icon-box sky-box"><Cpu class="sec-icon text-sky" /></div>
-              <h3 class="sec-title">System Integration</h3>
-              <p class="sec-desc">Unifying surveillance networks, solar microgrids, and building management into single-pane command centers.</p>
-              <router-link to="/contact" class="btn-secondary w-full justify-between">
-                <span>Consult an Engineer</span>
                 <ArrowRight class="btn-icon" />
               </router-link>
             </div>
@@ -336,7 +389,7 @@
 </template>
 
 <script setup>
-import { Shield, ShieldCheck, Sun, Building2, Cpu, Eye, Radio, ChevronRight, ArrowRight, CheckCircle, Lock, Award, Activity } from 'lucide-vue-next';
+import { Shield, ShieldCheck, Sun, Building2, Cpu, Eye, Radio, ChevronRight, ArrowRight, CheckCircle, Lock, Award, Activity, Factory, ShoppingBag, HardHat, Ship, Wrench } from 'lucide-vue-next';
 import SectionHeader from '../components/common/SectionHeader.vue';
 import EnquiryForm from '../components/contact/EnquiryForm.vue';
 </script>

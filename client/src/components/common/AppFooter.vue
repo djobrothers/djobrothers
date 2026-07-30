@@ -11,39 +11,57 @@
                 <Shield class="logo-shield" />
               </div>
             </div>
-            <span class="brand-name">DJO <span class="brand-accent">BROTHERS</span></span>
+            <span class="brand-name">DJO BROTHERS <span class="brand-accent">LIMITED</span></span>
           </div>
 
           <p class="brand-desc">
-            DJO Brothers Engineering & Technology is a premier engineering firm delivering enterprise-grade Security & Surveillance solutions, AI video analytics, command center integrations, solar energy installations, and heavy civil construction.
+            DJO Brothers Limited provides turnkey engineering problem solutions. We specialize in high-level defense Radar & LiDAR security hardware, cybersecurity consultation, factory hardware installation, technical procurement, civil engineering, and heavy machinery & barge hiring.
           </p>
 
           <div class="flagship-badge-wrapper">
             <span class="badge-tech badge-flagship">
-              Flagship: Security & Surveillance Systems
+              Flagship: Defense Radar, LiDAR & Security Hardware
             </span>
           </div>
         </div>
 
-        <!-- Division Links -->
+        <!-- Core Services Links -->
         <div class="footer-col">
           <h4 class="col-title">Core Services</h4>
           <ul class="footer-links">
             <li>
-              <router-link to="/services/security-surveillance" class="link-item flagship-link">
-                <ChevronRight class="chevron" /> Security & Surveillance
+              <router-link to="/services/security-hardware" class="link-item flagship-link">
+                <ChevronRight class="chevron" /> Security Hardware (Radar/LiDAR)
               </router-link>
             </li>
-            <li class="sub-item">• AI Video Analytics & Thermal</li>
-            <li class="sub-item">• Command & Control Centers</li>
+            <li>
+              <router-link to="/services/cybersecurity-consultation" class="link-item">
+                <ChevronRight class="chevron" /> Cybersecurity Consultation
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/services/factory-hardware-installation" class="link-item">
+                <ChevronRight class="chevron" /> Factory Hardware Installation
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/services/hardware-procurement-sales" class="link-item">
+                <ChevronRight class="chevron" /> Hardware Provision & Procurement
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/services/civil-engineering" class="link-item">
+                <ChevronRight class="chevron" /> Civil Engineering & Infrastructure
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/services/heavy-machinery-barge-hire" class="link-item">
+                <ChevronRight class="chevron" /> Heavy Machinery & Barge Hire
+              </router-link>
+            </li>
             <li>
               <router-link to="/services/solar-installation" class="link-item">
                 <ChevronRight class="chevron" /> Solar Power Systems
-              </router-link>
-            </li>
-            <li>
-              <router-link to="/services/construction" class="link-item">
-                <ChevronRight class="chevron" /> Road & Building Construction
               </router-link>
             </li>
           </ul>
@@ -53,10 +71,10 @@
         <div class="footer-col">
           <h4 class="col-title">Company & Trust</h4>
           <ul class="footer-links">
-            <li><router-link to="/about" class="link-item">About DJO Brothers</router-link></li>
-            <li><router-link to="/about#mission" class="link-item">Mission & Core Values</router-link></li>
-            <li><router-link to="/about#safety" class="link-item">HSE Safety Standards</router-link></li>
-            <li><router-link to="/about#quality" class="link-item">Quality Assurance (ISO)</router-link></li>
+            <li><router-link to="/about" class="link-item">About DJO Brothers Limited</router-link></li>
+            <li><router-link to="/about#mission" class="link-item">Engineering Mission & Values</router-link></li>
+            <li><router-link to="/about#safety" class="link-item">HSE & Quality Assurance</router-link></li>
+            <li><router-link to="/services" class="link-item">All Service Divisions</router-link></li>
             <li><router-link to="/contact" class="link-item">Contact Engineering Team</router-link></li>
           </ul>
         </div>
@@ -67,19 +85,19 @@
           <ul class="footer-contact">
             <li class="contact-item">
               <MapPin class="icon text-sky" />
-              <span>Technology & Engineering Tower, Suite 1200, Innovation District</span>
+              <span>DJO Brothers Limited Tower, Suite 1200, Innovation District</span>
             </li>
             <li class="contact-item">
               <Phone class="icon text-sky" />
-              <span>+1 (800) 555-0199 / +44 20 7946 0912</span>
+              <span>+234 813 786 0082</span>
             </li>
             <li class="contact-item">
               <Mail class="icon text-sky" />
-              <span>enquiries@djo-brothers.com</span>
+              <span>contact@djobrothers.com</span>
             </li>
             <li class="contact-item">
               <Clock class="icon text-teal" />
-              <span>Mon - Fri: 08:00 - 18:00 GMT</span>
+              <span>Mon - Fri: 08:00 - 18:00 GMT+1</span>
             </li>
           </ul>
         </div>
@@ -88,11 +106,11 @@
 
       <!-- Footer Bottom -->
       <div class="footer-bottom">
-        <p>© {{ currentYear }} DJO Brothers Engineering & Technology Ltd. All Rights Reserved.</p>
+        <p>© {{ currentYear }} DJO Brothers Limited. All Rights Reserved.</p>
         <div class="bottom-tags">
-          <span>Enterprise Security Solutions</span>
-          <span>Civil Infrastructure</span>
-          <span>Solar Energy Grids</span>
+          <span>Defense Radar & LiDAR</span>
+          <span>Cybersecurity & Factory Hardware</span>
+          <span>Civil Engineering & Barge Hire</span>
         </div>
       </div>
 

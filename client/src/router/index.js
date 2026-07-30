@@ -2,9 +2,13 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import AboutView from '../views/AboutView.vue';
 import ServicesView from '../views/ServicesView.vue';
-import SecuritySurveillanceView from '../views/SecuritySurveillanceView.vue';
+import SecurityHardwareView from '../views/SecurityHardwareView.vue';
+import CybersecurityView from '../views/CybersecurityView.vue';
+import FactoryHardwareView from '../views/FactoryHardwareView.vue';
+import HardwareProcurementView from '../views/HardwareProcurementView.vue';
+import CivilEngineeringView from '../views/CivilEngineeringView.vue';
+import MachineryBargeHireView from '../views/MachineryBargeHireView.vue';
 import SolarView from '../views/SolarView.vue';
-import ConstructionView from '../views/ConstructionView.vue';
 import ContactView from '../views/ContactView.vue';
 
 const routes = [
@@ -12,43 +16,69 @@ const routes = [
     path: '/',
     name: 'Home',
     component: HomeView,
-    meta: { title: 'DJO Brothers Engineering & Technology | Advanced Security, Solar & Construction' }
+    meta: { title: 'DJO Brothers Limited | Advanced Security Hardware, Cybersecurity & Civil Engineering' }
   },
   {
     path: '/about',
     name: 'About',
     component: AboutView,
-    meta: { title: 'About Us | DJO Brothers Engineering & Technology' }
+    meta: { title: 'About Us | DJO Brothers Limited' }
   },
   {
     path: '/services',
     name: 'Services',
     component: ServicesView,
-    meta: { title: 'Engineering Divisions | DJO Brothers Engineering & Technology' }
+    meta: { title: 'Engineering & Security Divisions | DJO Brothers Limited' }
   },
   {
-    path: '/services/security-surveillance',
-    name: 'SecuritySurveillance',
-    component: SecuritySurveillanceView,
-    meta: { title: 'Flagship Security & Surveillance Systems | DJO Brothers' }
+    path: '/services/security-hardware',
+    name: 'SecurityHardware',
+    component: SecurityHardwareView,
+    alias: '/services/security-surveillance',
+    meta: { title: 'Security Hardware & Defense Radar / LiDAR | DJO Brothers Limited' }
+  },
+  {
+    path: '/services/cybersecurity-consultation',
+    name: 'CybersecurityConsultation',
+    component: CybersecurityView,
+    meta: { title: 'Cybersecurity Consultation & Infrastructure Defense | DJO Brothers Limited' }
+  },
+  {
+    path: '/services/factory-hardware-installation',
+    name: 'FactoryHardwareInstallation',
+    component: FactoryHardwareView,
+    meta: { title: 'Factory Hardware & Industrial Installation | DJO Brothers Limited' }
+  },
+  {
+    path: '/services/hardware-procurement-sales',
+    name: 'HardwareProcurementSales',
+    component: HardwareProcurementView,
+    meta: { title: 'Hardware Provision & Technical Procurement | DJO Brothers Limited' }
+  },
+  {
+    path: '/services/civil-engineering',
+    name: 'CivilEngineering',
+    component: CivilEngineeringView,
+    alias: '/services/construction',
+    meta: { title: 'Civil Engineering & Infrastructure Solutions | DJO Brothers Limited' }
+  },
+  {
+    path: '/services/heavy-machinery-barge-hire',
+    name: 'HeavyMachineryBargeHire',
+    component: MachineryBargeHireView,
+    meta: { title: 'Heavy Duty Machinery & Marine Barge Hire | DJO Brothers Limited' }
   },
   {
     path: '/services/solar-installation',
     name: 'SolarInstallation',
     component: SolarView,
-    meta: { title: 'Commercial & Industrial Solar Solutions | DJO Brothers' }
-  },
-  {
-    path: '/services/construction',
-    name: 'Construction',
-    component: ConstructionView,
-    meta: { title: 'Road & Building Construction | DJO Brothers' }
+    meta: { title: 'Solar & Renewable Power Microgrids | DJO Brothers Limited' }
   },
   {
     path: '/contact',
     name: 'Contact',
     component: ContactView,
-    meta: { title: 'Contact Us | DJO Brothers Engineering & Technology' }
+    meta: { title: 'Contact Us | DJO Brothers Limited' }
   },
   {
     path: '/:pathMatch(.*)*',
