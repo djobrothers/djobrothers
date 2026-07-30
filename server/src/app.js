@@ -55,10 +55,13 @@ app.get('/api/health', (req, res) => {
 
 // Live SMTP Verification Route
 const { verifySmtpConnection } = require('./utils/mailer');
-app.get('/api/verify-smtp', async (req, res) => {
+const handleVerifySmtp = async (req, res) => {
   const result = await verifySmtpConnection();
   return res.status(result.success ? 200 : 500).json(result);
-});
+};
+app.get('/api/verify-smtp', handleVerifySmtp);
+app.get('/api/v1/verify-smtp', handleVerifySmtp);
+app.get('/verify-smtp', handleVerifySmtp);
 
 // API Routes (Mounted flexibly to support /enquiries, /api/enquiries, and /api/v1/enquiries)
 app.use('/api/v1', enquiryRoutes);
