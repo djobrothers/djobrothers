@@ -12,17 +12,24 @@ const app = express();
 app.use(helmet());
 
 // CORS configuration
-const allowedOrigins = (process.env.CORS_ORIGIN || 'http://localhost:3000').split(',');
+const rawOrigins = process.env.CORS_ORIGIN || 'http://localhost:3000';
+const allowedOrigins = rawOrigins.split(',').map(o => o.trim()).filter(Boolean);
+
 app.use(cors({
   origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes(origin) || process.env.NODE_ENV === 'development') {
-      callback(null, true);
-    } else {
-      callback(new Error('CORS request blocked: Not allowed by server configuration.'));
+    // Allow non-browser requests (e.g., Postman, server-to-server) or development requests
+    if (!origin || process.env.NODE_ENV === 'development') {
+      return callback(null, true);
     }
+    // Allow wildcard or explicit matching origins
+    if (rawOrigins === '*' || allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+    callback(new Error(`CORS request blocked for origin: ${origin}`));
   },
-  methods: ['GET', 'POST', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
 }));
 
 // Compression & Body parsing

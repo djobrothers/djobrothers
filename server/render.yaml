@@ -1,0 +1,21 @@
+# Render Infrastructure-as-Code Blueprint Specification
+# See https://render.com/docs/blueprint-spec for details
+
+services:
+  - type: web
+    name: djo-backend-api
+    env: node
+    region: oregon # or frankfurt, singapore, ohio
+    plan: free
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm run start:prod
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: DATABASE_URL
+        sync: false # Set manually in Render Dashboard using your Neon DATABASE_URL
+      - key: CORS_ORIGIN
+        sync: false # Set manually in Render Dashboard using your Vercel URL
