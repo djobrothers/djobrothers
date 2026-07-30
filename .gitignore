@@ -1,0 +1,47 @@
+# Dependencies (covers root, client/node_modules, server/node_modules)
+node_modules/
+.pnpm-store/
+.yarn/
+
+# Environment Variables & Secrets (covers root, client/.env, server/.env)
+.env
+.env.*
+!.env.example
+
+# Build & Output Directories
+dist/
+dist-ssr/
+build/
+out/
+
+# Storage & Uploads
+uploads/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Testing & Coverage
+coverage/
+.nyc_output/
+*.lcov
+
+# Editor & IDE Directories
+.vscode/
+.idea/
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Temporary & Cache
+.cache/
+.eslintcache
+.stylelintcache
+*.tmp
+*.temp
