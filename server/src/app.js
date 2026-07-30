@@ -53,8 +53,10 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// API Routes
+// API Routes (Mounted flexibly to support /enquiries, /api/enquiries, and /api/v1/enquiries)
+app.use('/api/v1', enquiryRoutes);
 app.use('/api', enquiryRoutes);
+app.use('/', enquiryRoutes);
 
 // Handle 404 Not Found
 app.use((req, res) => {

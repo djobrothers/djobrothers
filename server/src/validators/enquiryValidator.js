@@ -1,7 +1,7 @@
 const Joi = require('joi');
 
-// International phone number pattern: + followed by country code and digits (e.g. +2348012345678, +447123456789, or without +)
-const phoneRegex = /^\+?[1-9]\d{6,14}$/;
+// Flexible phone pattern allowing spaces, hyphens, parentheses, and optional + prefix
+const phoneRegex = /^[\+\d\s\-\(\)]{7,25}$/;
 
 const enquirySchema = Joi.object({
   full_name: Joi.string()
@@ -34,15 +34,14 @@ const enquirySchema = Joi.object({
     }),
 
   service: Joi.string()
-    .valid(
-      'Security & Surveillance',
-      'Solar Installation',
-      'Road & Building Construction',
-      'General Enquiry'
-    )
+    .trim()
+    .min(2)
+    .max(100)
     .required()
     .messages({
-      'any.only': 'Please select a valid service from the options provided.'
+      'string.empty': 'Please select a service option.',
+      'string.min': 'Service option selected is invalid.',
+      'string.max': 'Service name cannot exceed 100 characters.'
     }),
 
   message: Joi.string()

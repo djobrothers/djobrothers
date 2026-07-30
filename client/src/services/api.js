@@ -1,14 +1,13 @@
 import axios from 'axios';
 
 const getBaseUrl = () => {
+  let url = '/api/';
   if (import.meta.env.VITE_API_BASE_URL) {
-    return import.meta.env.VITE_API_BASE_URL;
+    url = import.meta.env.VITE_API_BASE_URL;
+  } else if (typeof window !== 'undefined' && !window.location.hostname.includes('localhost') && !window.location.hostname.includes('127.0.0.1')) {
+    url = 'https://djobrothers.onrender.com/api/';
   }
-  // In production deployments where VITE_API_BASE_URL is not set, default to Render live endpoint
-  if (typeof window !== 'undefined' && !window.location.hostname.includes('localhost') && !window.location.hostname.includes('127.0.0.1')) {
-    return 'https://djobrothers.onrender.com/api';
-  }
-  return '/api';
+  return url.endsWith('/') ? url : `${url}/`;
 };
 
 const api = axios.create({
@@ -22,7 +21,7 @@ const api = axios.create({
 
 export const submitEnquiry = async (formData) => {
   try {
-    const response = await api.post('/enquiries', formData);
+    const response = await api.post('enquiries', formData);
     return response.data;
   } catch (error) {
     if (error.response && error.response.data) {
