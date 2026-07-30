@@ -4,6 +4,21 @@ const logger = require('./src/utils/logger');
 
 const PORT = process.env.PORT || 5000;
 
+const db = require('./src/config/db');
+
+// Execute pending database migrations automatically on server startup
+db.migrate.latest()
+  .then(([batchNo, log]) => {
+    if (log.length > 0) {
+      logger.info(`Database migration completed (Batch ${batchNo}): ${log.join(', ')}`);
+    } else {
+      logger.info(`Database schema is up to date.`);
+    }
+  })
+  .catch((err) => {
+    logger.error(`Database migration warning: ${err.message}`);
+  });
+
 const server = app.listen(PORT, () => {
   logger.info(`=======================================================`);
   logger.info(` DJO Brothers Engineering Backend API Server Active `);

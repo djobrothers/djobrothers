@@ -3,13 +3,18 @@ require('dotenv').config();
 module.exports = {
   development: {
     client: 'postgresql',
-    connection: {
-      host: process.env.DB_HOST || '127.0.0.1',
-      port: process.env.DB_PORT || 5432,
-      database: process.env.DB_NAME || 'djo_corporate_db',
-      user: process.env.DB_USER || 'postgres',
-      password: process.env.DB_PASSWORD || 'postgres'
-    },
+    connection: process.env.DATABASE_URL
+      ? {
+          connectionString: process.env.DATABASE_URL,
+          ssl: { rejectUnauthorized: false }
+        }
+      : {
+          host: process.env.DB_HOST || '127.0.0.1',
+          port: process.env.DB_PORT || 5432,
+          database: process.env.DB_NAME || 'DJObrothers',
+          user: process.env.DB_USER || 'postgres',
+          password: process.env.DB_PASSWORD || 'postgres'
+        },
     pool: {
       min: 2,
       max: 10
