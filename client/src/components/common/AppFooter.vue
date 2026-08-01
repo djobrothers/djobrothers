@@ -12,7 +12,6 @@
             </div>
             <div class="flex flex-col">
               <span class="brand-name">DJO BROTHERS <span class="brand-accent">LIMITED</span></span>
-              <span class="text-xs text-sky font-bold tracking-wider">CAC Reg. No: RC 8554182</span>
             </div>
           </div>
 
@@ -121,10 +120,6 @@
           <h4 class="col-title">{{ t('footer.contactInfo') }}</h4>
           <ul class="footer-contact">
             <li class="contact-item">
-              <FileCheck2 class="icon text-sky" />
-              <span class="font-bold text-sky">CAC Reg. No: RC 8554182</span>
-            </li>
-            <li class="contact-item">
               <MapPin class="icon text-sky" />
               <span>54 Enerhen Road, Enerhen, Warri, Delta State, Nigeria</span>
             </li>
@@ -146,11 +141,10 @@
 
       <!-- Footer Bottom -->
       <div class="footer-bottom">
-        <p>© {{ currentYear }} DJO Brothers Limited (RC 8554182). {{ t('footer.rights') }}</p>
+        <p>© {{ currentYear }} DJO Brothers Limited. {{ t('footer.rights') }}</p>
         <div class="bottom-tags">
           <span>{{ t('footer.tag1') }}</span>
           <span>{{ t('footer.tag2') }}</span>
-          <span>{{ t('footer.tag3') }}</span>
           <span>{{ t('footer.tag4') }}</span>
         </div>
       </div>
@@ -167,7 +161,6 @@ import {
   Phone,
   Mail,
   Clock,
-  FileCheck2,
 } from "lucide-vue-next";
 import BrandLogoIcon from "./BrandLogoIcon.vue";
 import { t } from "../../i18n";

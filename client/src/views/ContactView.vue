@@ -21,13 +21,6 @@
             <h3 class="card-title pb-5 border-b">{{ t('contactPage.hqTitle') }}</h3>
             
             <ul class="info-list">
-              <li class="info-item">
-                <div class="info-icon-box"><FileCheck2 class="icon text-sky" /></div>
-                <div>
-                  <h4 class="info-title">CAC Registration</h4>
-                  <p class="info-desc font-bold text-sky">RC 8554182</p>
-                </div>
-              </li>
 
               <li class="info-item">
                 <div class="info-icon-box"><MapPin class="icon text-sky" /></div>
@@ -88,7 +81,7 @@
 <script setup>
 import { ref, onMounted, watch } from 'vue';
 import { useRoute } from 'vue-router';
-import { MapPin, Phone, Mail, Clock, ShieldCheck, FileCheck2 } from 'lucide-vue-next';
+import { MapPin, Phone, Mail, Clock, ShieldCheck } from 'lucide-vue-next';
 import EnquiryForm from '../components/contact/EnquiryForm.vue';
 import { t } from '../i18n';
 
