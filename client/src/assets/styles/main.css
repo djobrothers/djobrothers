@@ -436,3 +436,117 @@ html:not(.light-mode) .text-amber { color: #F59E0B; }
 .animate-pulse-glow {
   animation: pulseGlow 4s infinite ease-in-out;
 }
+
+/* Mobile Screen Responsiveness Polish (iPhone XR, Galaxy S9+, small devices <= 640px) */
+@media (max-width: 640px) {
+  .hero-section {
+    padding-top: 7rem;
+    padding-bottom: 3.5rem;
+    min-height: auto;
+  }
+  
+  .hero-title {
+    font-size: 1.95rem !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.01em;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem !important;
+    line-height: 1.6;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn-primary,
+  .hero-actions .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+  }
+
+  .stat-num {
+    font-size: 1.5rem !important;
+  }
+
+  .stat-label {
+    font-size: 0.725rem !important;
+  }
+
+  .page-title, .flagship-hero-title {
+    font-size: 1.85rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .page-subtitle {
+    font-size: 0.925rem !important;
+    line-height: 1.55;
+  }
+
+  .container {
+    padding-left: 1.15rem;
+    padding-right: 1.15rem;
+  }
+
+  .glass-panel {
+    padding: 1.25rem !important;
+    border-radius: 16px;
+  }
+
+  .badge-tech {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.725rem;
+    white-space: normal;
+    text-align: left;
+    line-height: 1.35;
+  }
+
+  .spec-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+    padding: 0.6rem 0.75rem;
+  }
+
+  .spec-val {
+    font-size: 0.8rem;
+  }
+
+  .banner-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .banner-actions .btn-primary,
+  .banner-actions .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .faq-card {
+    padding: 1.15rem !important;
+  }
+
+  .faq-q {
+    font-size: 0.95rem !important;
+    line-height: 1.4;
+  }
+
+  .faq-a {
+    padding-left: 0 !important;
+    margin-top: 0.5rem;
+    font-size: 0.85rem !important;
+  }
+
+  .card-title {
+    font-size: 1.25rem !important;
+    line-height: 1.3;
+  }
+}

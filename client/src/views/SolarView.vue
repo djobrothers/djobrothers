@@ -4,9 +4,9 @@
     <section class="page-banner bg-tech-grid">
       <div class="container">
         <div class="banner-content space-y-4">
-          <div class="badge-tech text-amber bg-amber-light"><Sun class="b-icon" /> Renewable Energy Division</div>
-          <h1 class="page-title">Commercial, Industrial & <span class="gradient-text">Utility Solar</span></h1>
-          <p class="page-subtitle">DJO Brothers Limited delivers turnkey commercial solar power installations, high-capacity lithium storage banks, industrial microgrids, and long-term maintenance contracts.</p>
+          <div class="badge-tech text-amber bg-amber-light"><Sun class="b-icon" /> {{ t('solar.badge') }}</div>
+          <h1 class="page-title">{{ t('solar.heroTitle') }} <span class="gradient-text">{{ t('solar.heroTitleHighlight') }}</span></h1>
+          <p class="page-subtitle">{{ t('solar.heroDesc') }}</p>
         </div>
       </div>
     </section>
@@ -16,20 +16,20 @@
       <div class="grid md-grid-cols-3 gap-8">
         <div class="glass-panel card-box">
           <div class="icon-box amber-box"><Sun class="box-icon text-amber" /></div>
-          <h3 class="card-title">Rooftop & Industrial Solar</h3>
-          <p class="card-desc">High-efficiency Tier-1 monocrystalline PERC/TOPCon solar arrays for factories, office towers, warehouses, and commercial estates.</p>
+          <h3 class="card-title">{{ t('solar.card1Title') }}</h3>
+          <p class="card-desc">{{ t('solar.card1Desc') }}</p>
         </div>
 
         <div class="glass-panel card-box">
           <div class="icon-box amber-box"><BatteryCharging class="box-icon text-amber" /></div>
-          <h3 class="card-title">BESS Lithium Storage</h3>
-          <p class="card-desc">Containerized Battery Energy Storage Systems (BESS) using LiFePO4 chemistry for 24/7 uninterrupted power during grid blackouts.</p>
+          <h3 class="card-title">{{ t('solar.card2Title') }}</h3>
+          <p class="card-desc">{{ t('solar.card2Desc') }}</p>
         </div>
 
         <div class="glass-panel card-box">
           <div class="icon-box amber-box"><Zap class="box-icon text-amber" /></div>
-          <h3 class="card-title">Hybrid Microgrids</h3>
-          <p class="card-desc">Intelligent energy management system (EMS) integrating solar, battery, diesel generators, and main grid into a single automatic transfer network.</p>
+          <h3 class="card-title">{{ t('solar.badge') }}</h3>
+          <p class="card-desc">{{ t('solar.heroDesc') }}</p>
         </div>
       </div>
     </section>
@@ -37,11 +37,11 @@
     <!-- CTA -->
     <section class="section-padding container text-center max-w-3xl">
       <div class="glass-panel space-y-6">
-        <h2 class="cta-title">Transition Your Estate to Renewable Power</h2>
-        <p class="text-muted text-sm">Our solar engineers conduct load profile analysis and financial payback modeling for your facility.</p>
+        <h2 class="cta-title">{{ t('solar.heroTitle') }}</h2>
+        <p class="text-muted text-sm">{{ t('solar.heroDesc') }}</p>
         <div class="flex justify-center">
           <router-link to="/contact?service=Solar+Installation" class="btn-primary">
-            <span>Request Solar Audit</span> <ArrowRight class="btn-icon" />
+            <span>{{ t('nav.requestConsultation') }}</span> <ArrowRight class="btn-icon" />
           </router-link>
         </div>
       </div>
@@ -51,6 +51,7 @@
 
 <script setup>
 import { Sun, BatteryCharging, Zap, ArrowRight } from 'lucide-vue-next';
+import { t } from '../i18n';
 </script>
 
 <style scoped>

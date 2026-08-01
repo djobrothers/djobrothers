@@ -6,21 +6,21 @@
       <div class="container">
         <div class="banner-content space-y-6">
           <div class="badge-tech badge-flagship">
-            <ShieldCheck class="b-icon" /> PRIMARY FLAGSHIP SPECIALIZATION
+            <ShieldCheck class="b-icon" /> {{ t('secHardware.badge') }}
           </div>
 
           <h1 class="flagship-hero-title">
-            Security & Surveillance <br />
-            <span class="gradient-text-flagship">Engineering Suite</span>
+            {{ t('secHardware.heroTitle') }} <br />
+            <span class="gradient-text-flagship">{{ t('secHardware.heroTitleHighlight') }}</span>
           </h1>
 
           <p class="page-subtitle">
-            DJO Brothers Engineering & Technology designs, integrates, and deploys defense-grade security systems for critical infrastructure, oil & gas assets, government installations, and smart cities worldwide.
+            {{ t('secHardware.heroDesc') }}
           </p>
 
           <div class="banner-actions">
             <router-link to="/contact?service=Security+%26+Surveillance" class="btn-primary hero-btn">
-              <Shield class="btn-icon" /> <span>Schedule Flagship Security Audit</span>
+              <Shield class="btn-icon" /> <span>{{ t('nav.requestConsultation') }}</span>
             </router-link>
           </div>
         </div>
@@ -30,10 +30,10 @@
     <!-- Technologies Grid -->
     <section class="section-padding container space-y-12" id="technologies">
       <SectionHeader
-        badge="Technology Stack"
-        title="Next-Generation"
-        highlightTitle="Surveillance Technologies"
-        description="Our multi-layered security ecosystem combines optical, thermal, radar, LiDAR, and artificial intelligence into a unified situational awareness platform."
+        :badge="t('secHardware.sectionBadge')"
+        :title="t('secHardware.sectionTitle')"
+        :highlightTitle="t('secHardware.sectionHighlight')"
+        :description="t('secHardware.sectionDesc')"
         :center="true"
         :isFlagship="true"
       />
@@ -43,15 +43,15 @@
         <!-- 1. AI Video Analytics -->
         <div class="glass-panel tech-card">
           <div class="tech-icon-box"><Cpu class="tech-icon text-sky" /></div>
-          <h3 class="card-title">Intelligent Surveillance & AI Analytics</h3>
-          <p class="card-desc">Deep neural networks processing live video feeds for facial recognition, license plate recognition (ANPR), object classification, and loitering detection.</p>
+          <h3 class="card-title">{{ t('secHardware.radarTitle') }}</h3>
+          <p class="card-desc">{{ t('secHardware.radarDesc') }}</p>
         </div>
 
         <!-- 2. CCTV & PTZ -->
         <div class="glass-panel tech-card">
           <div class="tech-icon-box"><Video class="tech-icon text-sky" /></div>
-          <h3 class="card-title">CCTV & High-Resolution PTZ Systems</h3>
-          <p class="card-desc">Ultra-HD 4K optical CCTV cameras equipped with 50x optical zoom PTZ, laser IR illuminators, starlight night vision, and IP68 vandal-proof housings.</p>
+          <h3 class="card-title">{{ t('secHardware.lidarTitle') }}</h3>
+          <p class="card-desc">{{ t('secHardware.lidarDesc') }}</p>
         </div>
 
         <!-- 3. Thermal Imaging -->
@@ -141,6 +141,7 @@
 <script setup>
 import { Shield, ShieldCheck, Cpu, Video, Eye, Radio, Fingerprint, Zap, Activity, HelpCircle } from 'lucide-vue-next';
 import SectionHeader from '../components/common/SectionHeader.vue';
+import { t } from '../i18n';
 
 const faqs = [
   {

@@ -6,21 +6,21 @@
       <div class="container">
         <div class="banner-content space-y-6">
           <div class="badge-tech">
-            <HardHat class="b-icon text-amber" /> CIVIL ENGINEERING & STRUCTURAL INFRASTRUCTURE
+            <HardHat class="b-icon text-amber" /> {{ t('civil.badge') }}
           </div>
 
           <h1 class="flagship-hero-title">
-            Civil Engineering & Turnkey <br />
-            <span class="gradient-text">& Solutions to Complex Engineering Problems</span>
+            {{ t('civil.heroTitle') }} <br />
+            <span class="gradient-text">{{ t('civil.heroTitleHighlight') }}</span>
           </h1>
 
           <p class="page-subtitle">
-            DJO Brothers Limited delivers end-to-end civil engineering solutions, structural design, highway road construction, site earthworks, drainage systems, and tailored engineering problem-solving for public and private sector projects.
+            {{ t('civil.heroDesc') }}
           </p>
 
           <div class="banner-actions">
             <router-link to="/contact?service=Civil+Engineering" class="btn-primary hero-btn">
-              <HardHat class="btn-icon" /> <span>Consult Civil Engineering Team</span>
+              <HardHat class="btn-icon" /> <span>{{ t('nav.requestConsultation') }}</span>
             </router-link>
           </div>
         </div>
@@ -30,10 +30,10 @@
     <!-- Problem Solving Spotlight -->
     <section class="section-padding container space-y-12">
       <SectionHeader
-        badge="Engineering Problem Solvers"
-        title="Customized Engineering"
-        highlightTitle="Solutions Matrix"
-        description="At DJO Brothers Limited, every project begins with a fundamental question: how can engineering overcome the challenge at hand?"
+        :badge="t('civil.badge')"
+        :title="t('civil.heroTitle')"
+        :highlightTitle="t('civil.heroTitleHighlight')"
+        :description="t('civil.heroDesc')"
         :center="true"
       />
 
@@ -42,43 +42,43 @@
         <!-- 1. Infrastructure Construction -->
         <div class="glass-panel tech-card border-amber">
           <div class="tech-icon-box bg-amber-900/30 text-amber-400"><Building2 class="w-6 h-6" /></div>
-          <h3 class="card-title">Commercial & Industrial Building Construction</h3>
-          <p class="card-desc">Design and construction of reinforced concrete structures, steel frame industrial warehouses, security towers, and commercial office complexes.</p>
+          <h3 class="card-title">{{ t('civil.card1Title') }}</h3>
+          <p class="card-desc">{{ t('civil.card1Desc') }}</p>
         </div>
 
         <!-- 2. Road & Highway Engineering -->
         <div class="glass-panel tech-card border-amber">
           <div class="tech-icon-box bg-amber-900/30 text-amber-400"><Compass class="w-6 h-6" /></div>
-          <h3 class="card-title">Highway & Heavy Road Infrastructure</h3>
-          <p class="card-desc">Asphalt paving, subgrade stabilization, highway bypass networks, industrial access roads, culvert installations, and bridge abutments.</p>
+          <h3 class="card-title">{{ t('civil.card2Title') }}</h3>
+          <p class="card-desc">{{ t('civil.card2Desc') }}</p>
         </div>
 
         <!-- 3. Complex Engineering Problem Solving -->
         <div class="glass-panel tech-card border-amber">
           <div class="tech-icon-box bg-amber-900/30 text-amber-400"><Cpu class="w-6 h-6" /></div>
-          <h3 class="card-title">Engineering Problem Solving & Remediation</h3>
-          <p class="card-desc">Diagnosing structural failures, soil erosion remediation, slope stabilization, heavy load foundation re-engineering, and retrofitting compromised structures.</p>
+          <h3 class="card-title">{{ t('civil.card3Title') }}</h3>
+          <p class="card-desc">{{ t('civil.card3Desc') }}</p>
         </div>
 
         <!-- 4. Site Preparation & Earthworks -->
         <div class="glass-panel tech-card">
           <div class="tech-icon-box"><Shovel class="tech-icon text-sky" /></div>
-          <h3 class="card-title">Site Excavation & Mass Earthworks</h3>
-          <p class="card-desc">Land clearing, bulk excavation, cut-and-fill grading, soil compaction testing, and site leveling for large industrial facilities.</p>
+          <h3 class="card-title">{{ t('civil.card4Title') }}</h3>
+          <p class="card-desc">{{ t('civil.card4Desc') }}</p>
         </div>
 
         <!-- 5. Stormwater & Drainage Engineering -->
         <div class="glass-panel tech-card">
           <div class="tech-icon-box"><Droplets class="tech-icon text-teal" /></div>
-          <h3 class="card-title">Stormwater Drainage & Flood Mitigation</h3>
-          <p class="card-desc">Hydrological modeling, concrete retention basins, subterranean drainage channels, erosion control barriers, and flood protection embankments.</p>
+          <h3 class="card-title">{{ t('civil.card5Title') }}</h3>
+          <p class="card-desc">{{ t('civil.card5Desc') }}</p>
         </div>
 
         <!-- 6. EPC Project Management -->
         <div class="glass-panel tech-card">
           <div class="tech-icon-box"><Briefcase class="tech-icon text-emerald" /></div>
-          <h3 class="card-title">Turnkey EPC Project Delivery</h3>
-          <p class="card-desc">Engineering, Procurement, and Construction (EPC) management guaranteeing strict timeline compliance, quality control, and budget adherence.</p>
+          <h3 class="card-title">{{ t('civil.card6Title') }}</h3>
+          <p class="card-desc">{{ t('civil.card6Desc') }}</p>
         </div>
 
       </div>
@@ -88,36 +88,36 @@
     <section class="section-padding section-alt border-y">
       <div class="container space-y-10">
         <SectionHeader
-          badge="Disciplined Execution"
-          title="Civil Engineering & Problem Solving"
-          highlightTitle="Workflow"
-          description="How DJO Brothers Limited resolves complex structural and civil challenges."
+          :badge="t('civil.workflowBadge')"
+          :title="t('civil.workflowTitle')"
+          :highlightTitle="t('civil.workflowHighlight')"
+          :description="t('civil.workflowDesc')"
           :center="true"
         />
 
         <div class="grid md-grid-cols-4 gap-6">
           <div class="glass-panel space-y-3">
             <span class="text-3xl font-extrabold text-amber">01</span>
-            <h4 class="font-bold text-lg text-slate-100">Geotechnical & Site Analysis</h4>
-            <p class="text-xs text-muted leading-relaxed">Soil bore sample testing, topographical elevation surveying, structural load calculation, and environmental impact assessment.</p>
+            <h4 class="font-bold text-lg text-slate-100">{{ t('civil.step1Title') }}</h4>
+            <p class="text-xs text-muted leading-relaxed">{{ t('civil.step1Desc') }}</p>
           </div>
 
           <div class="glass-panel space-y-3">
             <span class="text-3xl font-extrabold text-sky">02</span>
-            <h4 class="font-bold text-lg text-slate-100">Structural Design & CAD Modeling</h4>
-            <p class="text-xs text-muted leading-relaxed">Developing BIM 3D CAD models, structural calculations, concrete mix formulations, and municipal permit documentation.</p>
+            <h4 class="font-bold text-lg text-slate-100">{{ t('civil.step2Title') }}</h4>
+            <p class="text-xs text-muted leading-relaxed">{{ t('civil.step2Desc') }}</p>
           </div>
 
           <div class="glass-panel space-y-3">
             <span class="text-3xl font-extrabold text-teal">03</span>
-            <h4 class="font-bold text-lg text-slate-100">Heavy Civil Execution</h4>
-            <p class="text-xs text-muted leading-relaxed">Mobilization of heavy machinery fleets, foundation piling, rebar placement, concrete pouring, and quality assurance inspection.</p>
+            <h4 class="font-bold text-lg text-slate-100">{{ t('civil.step3Title') }}</h4>
+            <p class="text-xs text-muted leading-relaxed">{{ t('civil.step3Desc') }}</p>
           </div>
 
           <div class="glass-panel space-y-3">
             <span class="text-3xl font-extrabold text-emerald">04</span>
-            <h4 class="font-bold text-lg text-slate-100">Handover & Structural Certification</h4>
-            <p class="text-xs text-muted leading-relaxed">As-built drawing validation, load testing verification, safety sign-off, and structural warranty handover.</p>
+            <h4 class="font-bold text-lg text-slate-100">{{ t('civil.step4Title') }}</h4>
+            <p class="text-xs text-muted leading-relaxed">{{ t('civil.step4Desc') }}</p>
           </div>
         </div>
       </div>
@@ -125,7 +125,7 @@
 
     <!-- FAQ Section -->
     <section class="section-padding container max-w-4xl space-y-8">
-      <SectionHeader badge="FAQ" title="Frequently Asked Questions" highlightTitle="Civil Engineering" :center="true" />
+      <SectionHeader :badge="t('civil.faqBadge')" :title="t('civil.faqTitle')" :highlightTitle="t('civil.faqHighlight')" :center="true" />
       <div class="space-y-4">
         <div v-for="(faq, idx) in faqs" :key="idx" class="glass-panel faq-card">
           <h4 class="faq-q"><HelpCircle class="faq-icon text-amber" /> {{ faq.question }}</h4>
@@ -137,11 +137,11 @@
     <!-- Final CTA -->
     <section class="section-padding container text-center max-w-3xl">
       <div class="glass-panel space-y-6">
-        <h2 class="card-title font-bold text-2xl justify-center">Have a Complex Civil Engineering Challenge?</h2>
-        <p class="text-muted text-sm">Consult with DJO Brothers Limited senior civil engineers to evaluate your site, design custom solutions, and execute turnkey construction.</p>
+        <h2 class="card-title font-bold text-2xl justify-center">{{ t('civil.ctaTitle') }}</h2>
+        <p class="text-muted text-sm">{{ t('civil.ctaDesc') }}</p>
         <div class="flex justify-center">
           <router-link to="/contact?service=Civil+Engineering" class="btn-primary">
-            <HardHat class="btn-icon" /> <span>Consult Civil Engineers</span>
+            <HardHat class="btn-icon" /> <span>{{ t('civil.ctaBtn') }}</span>
           </router-link>
         </div>
       </div>
@@ -151,25 +151,27 @@
 </template>
 
 <script setup>
-import { HardHat, Building2, Compass, Cpu, Droplets, Briefcase, HelpCircle } from 'lucide-vue-next';
+import { computed } from 'vue';
+import { HardHat, Building2, Compass, Cpu, CheckCircle2, Shield, HelpCircle, Droplets, Briefcase } from 'lucide-vue-next';
 import SectionHeader from '../components/common/SectionHeader.vue';
+import { t } from '../i18n';
 
-const Shovel = HardHat; // fallback cleanly to HardHat
+const Shovel = HardHat;
 
-const faqs = [
+const faqs = computed(() => [
   {
-    question: "What does 'providing solutions to engineering problems' mean for DJO Brothers Limited?",
-    answer: "It means we don't just build standard structures; we diagnose and solve complex, non-standard engineering challenges — such as unstable soil foundations, extreme weather drainage issues, structural retrofits, and high-security facility integration."
+    question: t('civil.q1'),
+    answer: t('civil.a1')
   },
   {
-    question: "Do you handle both building construction and road infrastructure?",
-    answer: "Yes. DJO Brothers Limited undertakes heavy civil works including highways, access roads, drainage culverts, industrial factories, high-security command buildings, and structural foundations."
+    question: t('civil.q2'),
+    answer: t('civil.a2')
   },
   {
-    question: "Are your civil engineering designs compliant with international building codes?",
-    answer: "Yes. All structural calculations and designs produced by DJO Brothers Limited conform strictly to Eurocodes, BS Standards, and local structural regulations."
+    question: t('civil.q3'),
+    answer: t('civil.a3')
   }
-];
+]);
 </script>
 
 <style scoped>

@@ -3,11 +3,11 @@
     <div class="form-header space-y-3">
       <div class="badge-tech badge-flagship">
         <Send class="badge-icon" />
-        <span>Engineering Enquiry Portal</span>
+        <span>{{ t('form.title') }}</span>
       </div>
-      <h3 class="form-title">Request an Enterprise Consultation</h3>
+      <h3 class="form-title">{{ t('form.title') }}</h3>
       <p class="form-subtitle">
-        Submit your project specifications or security assessment request. Our team responds within 24 business hours.
+        {{ t('form.subtitle') }}
       </p>
     </div>
 
@@ -23,7 +23,7 @@
           <div class="toast-content">
             <CheckCircle2 class="toast-icon text-emerald" />
             <div class="toast-text">
-              <h4 class="toast-title">Submission Successful!</h4>
+              <h4 class="toast-title">{{ t('form.successTitle') }}</h4>
               <p class="toast-desc">{{ successMessage }}</p>
             </div>
             <button @click="dismissNotification" class="toast-close" aria-label="Close notification">
@@ -43,7 +43,7 @@
           <div class="toast-content">
             <AlertCircle class="toast-icon text-rose" />
             <div class="toast-text">
-              <h4 class="toast-title">Submission Notice</h4>
+              <h4 class="toast-title">Notice</h4>
               <p class="toast-desc">{{ errorMessage }}</p>
             </div>
             <button @click="dismissNotification" class="toast-close" aria-label="Close notification">
@@ -59,7 +59,7 @@
       <div class="form-row">
         <!-- Full Name -->
         <div class="form-field">
-          <label for="full_name" class="form-label">Full Name <span class="required">*</span></label>
+          <label for="full_name" class="form-label">{{ t('form.fullName') }} <span class="required">*</span></label>
           <div class="input-wrapper">
             <User class="field-icon" />
             <input
@@ -75,7 +75,7 @@
 
         <!-- Email -->
         <div class="form-field">
-          <label for="email" class="form-label">Work Email Address <span class="required">*</span></label>
+          <label for="email" class="form-label">{{ t('form.email') }} <span class="required">*</span></label>
           <div class="input-wrapper">
             <Mail class="field-icon" />
             <input
@@ -93,7 +93,7 @@
       <div class="form-row">
         <!-- Phone Number -->
         <div class="form-field">
-          <label for="phone_number" class="form-label">Phone Number <span class="required">*</span></label>
+          <label for="phone_number" class="form-label">{{ t('form.phone') }} <span class="required">*</span></label>
           <div class="input-wrapper">
             <Phone class="field-icon" />
             <input
@@ -109,7 +109,7 @@
 
         <!-- Service Select -->
         <div class="form-field">
-          <label for="service" class="form-label">Service Required <span class="required">*</span></label>
+          <label for="service" class="form-label">{{ t('form.service') }} <span class="required">*</span></label>
           <div class="input-wrapper">
             <Shield class="field-icon text-sky" />
             <select
@@ -117,14 +117,13 @@
               v-model="form.service"
               :class="['form-input select-input', { 'input-error': fieldErrors.service }]"
             >
-              <option value="Security Hardware">Security Hardware (Defense Radar & LiDAR)</option>
-              <option value="Cybersecurity Consultation">Cybersecurity Consultation & OT Defense</option>
-              <option value="Factory Hardware">Installation of Factory Hardware</option>
-              <option value="Hardware Procurement">Hardware Provision (Sales) & Procurement</option>
-              <option value="Civil Engineering">Civil Engineering & Problem Solutions</option>
-              <option value="Machinery and Barge Hire">Hiring of Heavy Duty Machinery & Barges</option>
-              <option value="Solar Installation">Solar Power & Renewable Energy</option>
-              <option value="General Enquiry">General Corporate Enquiry</option>
+              <option value="Security Hardware">{{ t('header.securityHardware') }}</option>
+              <option value="Cybersecurity Consultation">{{ t('header.cybersecurity') }}</option>
+              <option value="Factory Hardware">{{ t('header.factoryHardware') }}</option>
+              <option value="Hardware Procurement">{{ t('header.hardwareProcurement') }}</option>
+              <option value="Civil Engineering">{{ t('header.civilEngineering') }}</option>
+              <option value="Machinery and Barge Hire">{{ t('header.bargeHire') }}</option>
+              <option value="Solar Installation">{{ t('header.solar') }}</option>
             </select>
             <ChevronDown class="select-chevron" />
           </div>
@@ -134,12 +133,12 @@
 
       <!-- Message -->
       <div class="form-field">
-        <label for="message" class="form-label">Project Details / Requirements <span class="required">*</span></label>
+        <label for="message" class="form-label">{{ t('form.message') }} <span class="required">*</span></label>
         <textarea
           id="message"
           v-model="form.message"
           rows="4"
-          placeholder="Briefly describe your project requirements..."
+          placeholder="..."
           :class="['form-input textarea-input', { 'input-error': fieldErrors.message }]"
         ></textarea>
         <span v-if="fieldErrors.message" class="error-msg">{{ fieldErrors.message }}</span>
@@ -149,12 +148,12 @@
       <div class="submit-wrapper">
         <button type="submit" :disabled="isSubmitting" class="btn-primary submit-btn">
           <span v-if="!isSubmitting" class="flex items-center justify-center gap-2">
-            <span>Submit Engineering Enquiry</span>
+            <span>{{ t('form.submit') }}</span>
             <Send class="btn-icon" />
           </span>
           <span v-else class="flex items-center justify-center gap-2">
             <Loader2 class="spinner-icon" />
-            <span>Processing...</span>
+            <span>{{ t('form.sending') }}</span>
           </span>
         </button>
       </div>
@@ -166,6 +165,7 @@
 import { ref, reactive, watch, onUnmounted } from 'vue';
 import { submitEnquiry } from '../../services/api';
 import { User, Mail, Phone, Shield, ChevronDown, Send, CheckCircle2, AlertCircle, Loader2, X } from 'lucide-vue-next';
+import { t } from '../../i18n';
 
 const props = defineProps({
   initialService: { type: String, default: 'Security Hardware' }

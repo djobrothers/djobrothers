@@ -4,9 +4,9 @@
     <section class="page-banner bg-tech-grid">
       <div class="container">
         <div class="banner-content space-y-4">
-          <div class="badge-tech text-teal bg-teal-light"><Building2 class="b-icon" /> Civil Infrastructure Division</div>
-          <h1 class="page-title">Road Paving, Civil & <span class="gradient-text">Commercial Construction</span></h1>
-          <p class="page-subtitle">DJO Brothers Engineering delivers heavy civil construction, highway road networks, commercial developments, structural renovations, and turnkey EPC project management.</p>
+          <div class="badge-tech text-teal bg-teal-light"><Building2 class="b-icon" /> {{ t('civil.badge') }}</div>
+          <h1 class="page-title">{{ t('civil.heroTitle') }} <span class="gradient-text">{{ t('civil.heroTitleHighlight') }}</span></h1>
+          <p class="page-subtitle">{{ t('civil.heroDesc') }}</p>
         </div>
       </div>
     </section>
@@ -16,20 +16,20 @@
       <div class="grid md-grid-cols-3 gap-8">
         <div class="glass-panel card-box">
           <div class="icon-box teal-box"><Truck class="box-icon text-teal" /></div>
-          <h3 class="card-title">Highway & Road Paving</h3>
-          <p class="card-desc">Asphalt paving, concrete highways, drainage channels, bridge structures, and municipal road infrastructure built for extreme axle loads.</p>
+          <h3 class="card-title">{{ t('civil.card1Title') }}</h3>
+          <p class="card-desc">{{ t('civil.card1Desc') }}</p>
         </div>
 
         <div class="glass-panel card-box">
           <div class="icon-box teal-box"><Building2 class="box-icon text-teal" /></div>
-          <h3 class="card-title">Commercial & Industrial Buildings</h3>
-          <p class="card-desc">Steel frame structures, high-rise corporate towers, warehouses, and specialized command center facilities built to international building codes.</p>
+          <h3 class="card-title">{{ t('civil.card2Title') }}</h3>
+          <p class="card-desc">{{ t('civil.card2Desc') }}</p>
         </div>
 
         <div class="glass-panel card-box">
           <div class="icon-box teal-box"><HardHat class="box-icon text-teal" /></div>
-          <h3 class="card-title">Turnkey EPC Contracting</h3>
-          <p class="card-desc">Complete Engineering, Procurement, and Construction (EPC) services with single-point accountability and guaranteed HSE safety compliance.</p>
+          <h3 class="card-title">{{ t('civil.badge') }}</h3>
+          <p class="card-desc">{{ t('civil.heroDesc') }}</p>
         </div>
       </div>
     </section>
@@ -37,11 +37,11 @@
     <!-- CTA -->
     <section class="section-padding container text-center max-w-3xl">
       <div class="glass-panel space-y-6">
-        <h2 class="cta-title">Build Infrastructure That Endures</h2>
-        <p class="text-muted text-sm">Connect with DJO Brothers Construction engineers to discuss your next road or building project.</p>
+        <h2 class="cta-title">{{ t('civil.heroTitle') }}</h2>
+        <p class="text-muted text-sm">{{ t('civil.heroDesc') }}</p>
         <div class="flex justify-center">
           <router-link to="/contact?service=Road+%26+Building+Construction" class="btn-primary">
-            <span>Contact Civil Team</span> <ArrowRight class="btn-icon" />
+            <span>{{ t('nav.requestConsultation') }}</span> <ArrowRight class="btn-icon" />
           </router-link>
         </div>
       </div>
@@ -51,6 +51,7 @@
 
 <script setup>
 import { Building2, Truck, HardHat, ArrowRight } from 'lucide-vue-next';
+import { t } from '../i18n';
 </script>
 
 <style scoped>

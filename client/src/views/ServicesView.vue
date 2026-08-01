@@ -5,12 +5,12 @@
     <section class="page-banner bg-tech-grid">
       <div class="container">
         <div class="banner-content space-y-4">
-          <div class="badge-tech">DJO BROTHERS LIMITED — SERVICE MATRIX</div>
+          <div class="badge-tech">{{ t('servicesPage.badge') }}</div>
           <h1 class="page-title">
-            Integrated Engineering & <span class="gradient-text">Security Divisions</span>
+            {{ t('servicesPage.heroTitle') }} <span class="gradient-text">{{ t('servicesPage.heroTitleHighlight') }}</span>
           </h1>
           <p class="page-subtitle">
-            DJO Brothers Limited provides innovative solutions to complex engineering problems. Explore our 7 specialized engineering and security divisions.
+            {{ t('servicesPage.heroDesc') }}
           </p>
         </div>
       </div>
@@ -21,44 +21,44 @@
       
       <!-- 1. Flagship Security Hardware Division -->
       <div class="glass-panel flagship-box">
-        <div class="flagship-badge-top">★ Primary Flagship Division</div>
+        <div class="flagship-badge-top">★ {{ t('nav.flagship') }}</div>
 
         <div class="grid lg-grid-cols-12 gap-10 items-center">
           <div class="col-span-7 space-y-6">
             <div class="badge-tech badge-flagship">
-              <ShieldCheck class="b-icon" /> Primary Core Specialization
+              <ShieldCheck class="b-icon" /> {{ t('secHardware.badge') }}
             </div>
 
-            <h2 class="div-title">Security Hardware, Defense Radar & LiDAR</h2>
+            <h2 class="div-title">{{ t('header.securityHardware') }}</h2>
 
             <p class="text-muted leading-relaxed">
-              DJO Brothers Limited installs, calibrates, and maintains high-level defense radar, solid-state 3D LiDAR point cloud scanners, optical/thermal PTZ camera arrays, perimeter intrusion detection systems (PIDS), and centralized C4ISR command centers.
+              {{ t('secHardware.heroDesc') }}
             </p>
 
             <div class="grid md-grid-cols-3 gap-3">
-              <div class="sub-feature"><Radio class="f-icon text-sky" /> Defense 3D Radar</div>
-              <div class="sub-feature"><Eye class="f-icon text-sky" /> Solid-State LiDAR</div>
-              <div class="sub-feature"><Video class="f-icon text-sky" /> 4K & Thermal PTZ</div>
-              <div class="sub-feature"><Zap class="f-icon text-sky" /> Fibre PIDS Hardware</div>
-              <div class="sub-feature"><Fingerprint class="f-icon text-sky" /> Biometrics & Speed Gates</div>
-              <div class="sub-feature"><Cpu class="f-icon text-sky" /> C4ISR Command Matrix</div>
+              <div class="sub-feature"><Radio class="f-icon text-sky" /> {{ t('servicesPage.sub1') }}</div>
+              <div class="sub-feature"><Eye class="f-icon text-sky" /> {{ t('servicesPage.sub2') }}</div>
+              <div class="sub-feature"><Video class="f-icon text-sky" /> {{ t('servicesPage.sub3') }}</div>
+              <div class="sub-feature"><Zap class="f-icon text-sky" /> {{ t('servicesPage.sub4') }}</div>
+              <div class="sub-feature"><Fingerprint class="f-icon text-sky" /> {{ t('servicesPage.sub5') }}</div>
+              <div class="sub-feature"><Cpu class="f-icon text-sky" /> {{ t('servicesPage.sub6') }}</div>
             </div>
 
             <div>
               <router-link to="/services/security-hardware" class="btn-primary">
-                <span>Explore Security Hardware Division</span>
+                <span>{{ t('common.viewDetails') }}</span>
                 <ArrowRight class="btn-icon" />
               </router-link>
             </div>
           </div>
 
           <div class="col-span-5 side-card">
-            <h4 class="side-title"><ShieldCheck class="f-icon text-sky" /> Key Applications</h4>
+            <h4 class="side-title"><ShieldCheck class="f-icon text-sky" /> {{ t('servicesPage.appsTitle') }}</h4>
             <ul class="app-list">
-              <li class="app-item"><span>Defense & Perimeter Boundaries</span> <span class="app-tag">Radar / LiDAR</span></li>
-              <li class="app-item"><span>Oil Depots & Refineries</span> <span class="app-tag">ATEX Thermal</span></li>
-              <li class="app-item"><span>Airports & Ports</span> <span class="app-tag">3D Point Cloud</span></li>
-              <li class="app-item"><span>Command Centers</span> <span class="app-tag">PSIM Integration</span></li>
+              <li class="app-item"><span>{{ t('servicesPage.app1') }}</span> <span class="app-tag">{{ t('servicesPage.app1Tag') }}</span></li>
+              <li class="app-item"><span>{{ t('servicesPage.app2') }}</span> <span class="app-tag">{{ t('servicesPage.app2Tag') }}</span></li>
+              <li class="app-item"><span>{{ t('servicesPage.app3') }}</span> <span class="app-tag">{{ t('servicesPage.app3Tag') }}</span></li>
+              <li class="app-item"><span>{{ t('servicesPage.app4') }}</span> <span class="app-tag">{{ t('servicesPage.app4Tag') }}</span></li>
             </ul>
           </div>
         </div>
@@ -68,19 +68,19 @@
       <div class="glass-panel sec-box indigo-border">
         <div class="grid lg-grid-cols-12 gap-8 items-center">
           <div class="col-span-7 space-y-4">
-            <div class="badge-tech text-indigo bg-indigo-light"><Lock class="b-icon" /> Cybersecurity Division</div>
-            <h2 class="div-title">Cybersecurity Consultation & Infrastructure Defense</h2>
-            <p class="text-muted text-sm">OT/ICS network hardening, SCADA security audits, cyber-physical hardware encryption, zero-trust network design, and penetration testing.</p>
+            <div class="badge-tech text-indigo bg-indigo-light"><Lock class="b-icon" /> {{ t('servicesPage.div2Badge') }}</div>
+            <h2 class="div-title">{{ t('servicesPage.div2Title') }}</h2>
+            <p class="text-muted text-sm">{{ t('servicesPage.div2Desc') }}</p>
             <div class="pt-2">
               <router-link to="/services/cybersecurity-consultation" class="btn-secondary">
-                <span>View Cybersecurity Division</span> <ArrowRight class="btn-icon" />
+                <span>{{ t('servicesPage.div2Btn') }}</span> <ArrowRight class="btn-icon" />
               </router-link>
             </div>
           </div>
           <div class="col-span-5 side-card">
-            <div class="text-indigo font-bold text-sm">Industrial OT Defense</div>
-            <p class="text-muted text-xs">Protecting physical IP hardware and SCADA control subnets from cyber intrusion.</p>
-            <div class="roi-box"><span>Compliance Standard</span> <span class="text-indigo font-bold">IEC 62443 / ISO 27001</span></div>
+            <div class="text-indigo font-bold text-sm">{{ t('servicesPage.div2SideTitle') }}</div>
+            <p class="text-muted text-xs">{{ t('servicesPage.div2SideDesc') }}</p>
+            <div class="roi-box"><span>{{ t('servicesPage.div2RoiLabel') }}</span> <span class="text-indigo font-bold">{{ t('servicesPage.div2RoiVal') }}</span></div>
           </div>
         </div>
       </div>
@@ -89,19 +89,19 @@
       <div class="glass-panel sec-box emerald-border">
         <div class="grid lg-grid-cols-12 gap-8 items-center">
           <div class="col-span-7 space-y-4">
-            <div class="badge-tech text-emerald bg-emerald-light"><Factory class="b-icon" /> Industrial Division</div>
-            <h2 class="div-title">Installation of Factory Hardware</h2>
-            <p class="text-muted text-sm">Industrial plant equipment assembly, precision laser positioning, SCADA/PLC control panel mounting, power distribution, and automated assembly line setups.</p>
+            <div class="badge-tech text-emerald bg-emerald-light"><Factory class="b-icon" /> {{ t('servicesPage.div3Badge') }}</div>
+            <h2 class="div-title">{{ t('servicesPage.div3Title') }}</h2>
+            <p class="text-muted text-sm">{{ t('servicesPage.div3Desc') }}</p>
             <div class="pt-2">
               <router-link to="/services/factory-hardware-installation" class="btn-secondary">
-                <span>View Factory Hardware Division</span> <ArrowRight class="btn-icon" />
+                <span>{{ t('servicesPage.div3Btn') }}</span> <ArrowRight class="btn-icon" />
               </router-link>
             </div>
           </div>
           <div class="col-span-5 side-card">
-            <div class="text-emerald font-bold text-sm">Turnkey Industrial Rigging</div>
-            <p class="text-muted text-xs">Millwright assembly, hydraulic piping, and electrical commissioning.</p>
-            <div class="roi-box"><span>Precision Tolerance</span> <span class="text-emerald font-bold">&lt; 0.05mm Laser Alignment</span></div>
+            <div class="text-emerald font-bold text-sm">{{ t('servicesPage.div3SideTitle') }}</div>
+            <p class="text-muted text-xs">{{ t('servicesPage.div3SideDesc') }}</p>
+            <div class="roi-box"><span>{{ t('servicesPage.div3RoiLabel') }}</span> <span class="text-emerald font-bold">{{ t('servicesPage.div3RoiVal') }}</span></div>
           </div>
         </div>
       </div>
@@ -110,19 +110,19 @@
       <div class="glass-panel sec-box purple-border">
         <div class="grid lg-grid-cols-12 gap-8 items-center">
           <div class="col-span-7 space-y-4">
-            <div class="badge-tech text-purple bg-purple-light"><ShoppingBag class="b-icon" /> Technical Sourcing</div>
-            <h2 class="div-title">Hardware Provision (Sales) & Procurement</h2>
-            <p class="text-muted text-sm">Direct sales of specialized security hardware, factory components, civil equipment, OEM sourcing, pre-shipment FAT testing, and global logistics.</p>
+            <div class="badge-tech text-purple bg-purple-light"><ShoppingBag class="b-icon" /> {{ t('servicesPage.div4Badge') }}</div>
+            <h2 class="div-title">{{ t('servicesPage.div4Title') }}</h2>
+            <p class="text-muted text-sm">{{ t('servicesPage.div4Desc') }}</p>
             <div class="pt-2">
               <router-link to="/services/hardware-procurement-sales" class="btn-secondary">
-                <span>View Procurement Division</span> <ArrowRight class="btn-icon" />
+                <span>{{ t('servicesPage.div4Btn') }}</span> <ArrowRight class="btn-icon" />
               </router-link>
             </div>
           </div>
           <div class="col-span-5 side-card">
-            <div class="text-purple font-bold text-sm">Global Supply Network</div>
-            <p class="text-muted text-xs">Certified OEM hardware sales and expedited door-to-door delivery.</p>
-            <div class="roi-box"><span>OEM Warranty</span> <span class="text-purple font-bold">100% Certified Direct</span></div>
+            <div class="text-purple font-bold text-sm">{{ t('servicesPage.div4SideTitle') }}</div>
+            <p class="text-muted text-xs">{{ t('servicesPage.div4SideDesc') }}</p>
+            <div class="roi-box"><span>{{ t('servicesPage.div4RoiLabel') }}</span> <span class="text-purple font-bold">{{ t('servicesPage.div4RoiVal') }}</span></div>
           </div>
         </div>
       </div>
@@ -131,19 +131,19 @@
       <div class="glass-panel sec-box amber-border">
         <div class="grid lg-grid-cols-12 gap-8 items-center">
           <div class="col-span-7 space-y-4">
-            <div class="badge-tech text-amber bg-amber-light"><HardHat class="b-icon" /> Engineering Division</div>
-            <h2 class="div-title">Civil Engineering & Problem Solutions</h2>
-            <p class="text-muted text-sm">Heavy civil infrastructure, highway road construction, site earthworks, drainage systems, and tailored engineering problem-solving.</p>
+            <div class="badge-tech text-amber bg-amber-light"><HardHat class="b-icon" /> {{ t('servicesPage.div5Badge') }}</div>
+            <h2 class="div-title">{{ t('servicesPage.div5Title') }}</h2>
+            <p class="text-muted text-sm">{{ t('servicesPage.div5Desc') }}</p>
             <div class="pt-2">
               <router-link to="/services/civil-engineering" class="btn-secondary">
-                <span>View Civil Engineering Division</span> <ArrowRight class="btn-icon" />
+                <span>{{ t('servicesPage.div5Btn') }}</span> <ArrowRight class="btn-icon" />
               </router-link>
             </div>
           </div>
           <div class="col-span-5 side-card">
-            <div class="text-amber font-bold text-sm">Engineering Problem Solvers</div>
-            <p class="text-muted text-xs">Customized engineering design for complex terrain and structural challenges.</p>
-            <div class="roi-box"><span>Code Compliance</span> <span class="text-amber font-bold">Eurocode & ASTM Compliant</span></div>
+            <div class="text-amber font-bold text-sm">{{ t('servicesPage.div5SideTitle') }}</div>
+            <p class="text-muted text-xs">{{ t('servicesPage.div5SideDesc') }}</p>
+            <div class="roi-box"><span>{{ t('servicesPage.div5RoiLabel') }}</span> <span class="text-amber font-bold">{{ t('servicesPage.div5RoiVal') }}</span></div>
           </div>
         </div>
       </div>
@@ -152,19 +152,19 @@
       <div class="glass-panel sec-box cyan-border">
         <div class="grid lg-grid-cols-12 gap-8 items-center">
           <div class="col-span-7 space-y-4">
-            <div class="badge-tech text-cyan bg-cyan-light"><Ship class="b-icon" /> Heavy Fleet Rental</div>
-            <h2 class="div-title">Hiring of Heavy Duty Machineries & Barges</h2>
-            <p class="text-muted text-sm">Onshore construction equipment rental (cranes, excavators, dozers) and marine barge fleet chartering (flat-deck, spud, and crane barges).</p>
+            <div class="badge-tech text-cyan bg-cyan-light"><Ship class="b-icon" /> {{ t('servicesPage.div6Badge') }}</div>
+            <h2 class="div-title">{{ t('servicesPage.div6Title') }}</h2>
+            <p class="text-muted text-sm">{{ t('servicesPage.div6Desc') }}</p>
             <div class="pt-2">
               <router-link to="/services/heavy-machinery-barge-hire" class="btn-secondary">
-                <span>View Machinery & Barge Hire</span> <ArrowRight class="btn-icon" />
+                <span>{{ t('servicesPage.div6Btn') }}</span> <ArrowRight class="btn-icon" />
               </router-link>
             </div>
           </div>
           <div class="col-span-5 side-card">
-            <div class="text-cyan font-bold text-sm">Onshore & Marine Logistics</div>
-            <p class="text-muted text-xs">Certified operator crews and mobile maintenance support.</p>
-            <div class="roi-box"><span>Deck Capacity</span> <span class="text-cyan font-bold">Up to 5,000 Ton Barges</span></div>
+            <div class="text-cyan font-bold text-sm">{{ t('servicesPage.div6SideTitle') }}</div>
+            <p class="text-muted text-xs">{{ t('servicesPage.div6SideDesc') }}</p>
+            <div class="roi-box"><span>{{ t('servicesPage.div6RoiLabel') }}</span> <span class="text-cyan font-bold">{{ t('servicesPage.div6RoiVal') }}</span></div>
           </div>
         </div>
       </div>
@@ -173,19 +173,19 @@
       <div class="glass-panel sec-box yellow-border">
         <div class="grid lg-grid-cols-12 gap-8 items-center">
           <div class="col-span-7 space-y-4">
-            <div class="badge-tech text-yellow bg-yellow-light"><Sun class="b-icon" /> Clean Energy</div>
-            <h2 class="div-title">Solar Installation & Microgrids</h2>
-            <p class="text-muted text-sm">Commercial, industrial, and utility solar arrays with containerized lithium battery storage (BESS) for off-grid power stability.</p>
+            <div class="badge-tech text-yellow bg-yellow-light"><Sun class="b-icon" /> {{ t('servicesPage.div7Badge') }}</div>
+            <h2 class="div-title">{{ t('servicesPage.div7Title') }}</h2>
+            <p class="text-muted text-sm">{{ t('servicesPage.div7Desc') }}</p>
             <div class="pt-2">
               <router-link to="/services/solar-installation" class="btn-secondary">
-                <span>View Solar Division</span> <ArrowRight class="btn-icon" />
+                <span>{{ t('servicesPage.div7Btn') }}</span> <ArrowRight class="btn-icon" />
               </router-link>
             </div>
           </div>
           <div class="col-span-5 side-card">
-            <div class="text-yellow font-bold text-sm">Energy Independence</div>
-            <p class="text-muted text-xs">Lower operational utility costs with high-yield solar power.</p>
-            <div class="roi-box"><span>Storage Chemistry</span> <span class="text-yellow font-bold">LiFePO4 Containerized BESS</span></div>
+            <div class="text-yellow font-bold text-sm">{{ t('servicesPage.div7SideTitle') }}</div>
+            <p class="text-muted text-xs">{{ t('servicesPage.div7SideDesc') }}</p>
+            <div class="roi-box"><span>{{ t('servicesPage.div7RoiLabel') }}</span> <span class="text-yellow font-bold">{{ t('servicesPage.div7RoiVal') }}</span></div>
           </div>
         </div>
       </div>
@@ -197,6 +197,7 @@
 
 <script setup>
 import { ShieldCheck, Lock, Factory, ShoppingBag, HardHat, Ship, Sun, Radio, Eye, Video, Zap, Fingerprint, Cpu, ArrowRight } from 'lucide-vue-next';
+import { t } from '../i18n';
 </script>
 
 <style scoped>
@@ -217,7 +218,7 @@ import { ShieldCheck, Lock, Factory, ShoppingBag, HardHat, Ship, Sun, Radio, Eye
 .side-card { background: var(--bg-navy-900); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
 .side-title { font-size: 0.9rem; font-weight: 700; color: var(--color-text-primary); display: flex; align-items: center; gap: 0.5rem; text-transform: uppercase; }
 .app-list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.8rem; color: var(--color-text-secondary); }
-.app-item { padding: 0.6rem; background: var(--bg-navy-950); border-radius: 8px; border: 1px solid var(--glass-border); display: flex; justify-between: space-between; align-items: center; }
+.app-item { padding: 0.6rem; background: var(--bg-navy-950); border-radius: 8px; border: 1px solid var(--glass-border); display: flex; justify-content: space-between; align-items: center; }
 .app-tag { color: var(--color-electric-600); font-weight: 600; }
 
 .sec-box { padding: 2rem; }

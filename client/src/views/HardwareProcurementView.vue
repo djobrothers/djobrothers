@@ -6,21 +6,21 @@
       <div class="container">
         <div class="banner-content space-y-6">
           <div class="badge-tech">
-            <ShoppingBag class="b-icon text-purple" /> GLOBAL TECHNICAL PROCUREMENT & HARDWARE PROVISION
+            <ShoppingBag class="b-icon text-purple" /> {{ t('procurement.badge') }}
           </div>
 
           <h1 class="flagship-hero-title">
-            Hardware Provision (Sales) <br />
-            <span class="gradient-text">& Global Technical Procurement</span>
+            {{ t('procurement.heroTitle') }} <br />
+            <span class="gradient-text">{{ t('procurement.heroTitleHighlight') }}</span>
           </h1>
 
           <p class="page-subtitle">
-            DJO Brothers Limited provides direct hardware sales, OEM equipment sourcing, technical procurement, and global supply chain logistics for specialized defense systems, industrial plant hardware, and civil engineering machinery.
+            {{ t('procurement.heroDesc') }}
           </p>
 
           <div class="banner-actions">
             <router-link to="/contact?service=Hardware+Procurement" class="btn-primary hero-btn">
-              <ShoppingBag class="btn-icon" /> <span>Submit Hardware RFQ</span>
+              <ShoppingBag class="btn-icon" /> <span>{{ t('nav.requestConsultation') }}</span>
             </router-link>
           </div>
         </div>
@@ -30,10 +30,10 @@
     <!-- Services Grid -->
     <section class="section-padding container space-y-12">
       <SectionHeader
-        badge="Procurement Capabilities"
-        title="Direct Sales & Sourcing for"
-        highlightTitle="Mission-Critical Hardware"
-        description="We eliminate procurement friction through verified global OEM partnerships, rigorous quality inspection, and door-to-door delivery."
+        :badge="t('procurement.badge')"
+        :title="t('procurement.heroTitle')"
+        :highlightTitle="t('procurement.heroTitleHighlight')"
+        :description="t('procurement.heroDesc')"
         :center="true"
       />
 
@@ -42,43 +42,43 @@
         <!-- 1. Security & Defense Hardware Sales -->
         <div class="glass-panel tech-card border-purple">
           <div class="tech-icon-box bg-purple-900/30 text-purple-400"><ShieldCheck class="w-6 h-6" /></div>
-          <h3 class="card-title">Security & Defense Hardware Provision</h3>
-          <p class="card-desc">Direct sales of defense 3D Doppler radars, solid-state LiDAR sensors, thermal PTZ cameras, biometric access control turnstiles, and command center LED wall displays.</p>
+          <h3 class="card-title">{{ t('procurement.card1Title') }}</h3>
+          <p class="card-desc">{{ t('procurement.card1Desc') }}</p>
         </div>
 
         <!-- 2. Factory & Industrial Hardware Supply -->
         <div class="glass-panel tech-card border-purple">
           <div class="tech-icon-box bg-purple-900/30 text-purple-400"><Factory class="w-6 h-6" /></div>
-          <h3 class="card-title">Factory Equipment & Component Sales</h3>
-          <p class="card-desc">Sourcing and provision of industrial PLC controllers, variable frequency drives (VFD), hydraulic power units, industrial motors, high-pressure valves, and sensor arrays.</p>
+          <h3 class="card-title">{{ t('procurement.card2Title') }}</h3>
+          <p class="card-desc">{{ t('procurement.card2Desc') }}</p>
         </div>
 
         <!-- 3. Heavy Civil & Machinery Sourcing -->
         <div class="glass-panel tech-card border-purple">
           <div class="tech-icon-box bg-purple-900/30 text-purple-400"><Truck class="w-6 h-6" /></div>
-          <h3 class="card-title">Construction Equipment & Vessel Sourcing</h3>
-          <p class="card-desc">Procurement of heavy earthmoving machinery, mobile cranes, diesel generators, marine barges, and specialized civil engineering tools from top global OEMs.</p>
+          <h3 class="card-title">{{ t('procurement.card3Title') }}</h3>
+          <p class="card-desc">{{ t('procurement.card3Desc') }}</p>
         </div>
 
         <!-- 4. Global Supply Chain & Logistics -->
         <div class="glass-panel tech-card">
           <div class="tech-icon-box"><Globe class="tech-icon text-sky" /></div>
-          <h3 class="card-title">Turnkey International Logistics</h3>
-          <p class="card-desc">End-to-end freight forwarding, freight insurance, customs clearance handling, and tax compliance for overseas equipment delivery.</p>
+          <h3 class="card-title">{{ t('procurement.card4Title') }}</h3>
+          <p class="card-desc">{{ t('procurement.card4Desc') }}</p>
         </div>
 
         <!-- 5. Quality Assurance & Factory Inspection -->
         <div class="glass-panel tech-card">
           <div class="tech-icon-box"><CheckCircle2 class="tech-icon text-emerald" /></div>
-          <h3 class="card-title">Pre-Shipment Quality Testing (FAT)</h3>
-          <p class="card-desc">On-site factory acceptance testing, compliance verification against ISO standards, physical inspection, and certified calibration before dispatch.</p>
+          <h3 class="card-title">{{ t('procurement.card5Title') }}</h3>
+          <p class="card-desc">{{ t('procurement.card5Desc') }}</p>
         </div>
 
         <!-- 6. Critical Spare Parts Management -->
         <div class="glass-panel tech-card">
           <div class="tech-icon-box"><Layers class="tech-icon text-amber" /></div>
-          <h3 class="card-title">Consignment & Spare Parts Inventory</h3>
-          <p class="card-desc">Stocking critical replacement modules, specialized radar ICs, optical lenses, hydraulic seals, and emergency replacement hardware to ensure zero client downtime.</p>
+          <h3 class="card-title">{{ t('procurement.card6Title') }}</h3>
+          <p class="card-desc">{{ t('procurement.card6Desc') }}</p>
         </div>
 
       </div>
@@ -88,36 +88,36 @@
     <section class="section-padding section-alt border-y">
       <div class="container space-y-10">
         <SectionHeader
-          badge="Sourcing Framework"
-          title="End-to-End Procurement"
-          highlightTitle="Lifecycle"
-          description="How DJO Brothers Limited delivers genuine, certified hardware from manufacturer to site destination."
+          :badge="t('procurement.lifecycleBadge')"
+          :title="t('procurement.lifecycleTitle')"
+          :highlightTitle="t('procurement.lifecycleHighlight')"
+          :description="t('procurement.lifecycleDesc')"
           :center="true"
         />
 
         <div class="grid md-grid-cols-4 gap-6">
           <div class="glass-panel space-y-3">
             <span class="text-3xl font-extrabold text-purple">01</span>
-            <h4 class="font-bold text-lg text-slate-100">Specification & RFQ Review</h4>
-            <p class="text-xs text-muted leading-relaxed">Analyzing client engineering specifications, verifying part compatibility, and issuing global tender requests.</p>
+            <h4 class="font-bold text-lg text-slate-100">{{ t('procurement.step1Title') }}</h4>
+            <p class="text-xs text-muted leading-relaxed">{{ t('procurement.step1Desc') }}</p>
           </div>
 
           <div class="glass-panel space-y-3">
             <span class="text-3xl font-extrabold text-sky">02</span>
-            <h4 class="font-bold text-lg text-slate-100">OEM Negotiation & QA</h4>
-            <p class="text-xs text-muted leading-relaxed">Contract negotiation with Tier-1 OEMs, price optimization, warranty securing, and pre-production vetting.</p>
+            <h4 class="font-bold text-lg text-slate-100">{{ t('procurement.step2Title') }}</h4>
+            <p class="text-xs text-muted leading-relaxed">{{ t('procurement.step2Desc') }}</p>
           </div>
 
           <div class="glass-panel space-y-3">
             <span class="text-3xl font-extrabold text-teal">03</span>
-            <h4 class="font-bold text-lg text-slate-100">Inspection & Shipping</h4>
-            <p class="text-xs text-muted leading-relaxed">Pre-shipment verification, export licensing, marine/air cargo booking, and real-time shipment GPS tracking.</p>
+            <h4 class="font-bold text-lg text-slate-100">{{ t('procurement.step3Title') }}</h4>
+            <p class="text-xs text-muted leading-relaxed">{{ t('procurement.step3Desc') }}</p>
           </div>
 
           <div class="glass-panel space-y-3">
             <span class="text-3xl font-extrabold text-emerald">04</span>
-            <h4 class="font-bold text-lg text-slate-100">Customs & On-Site Delivery</h4>
-            <p class="text-xs text-muted leading-relaxed">Customs duty clearance, offloading at project site, final inspection sign-off, and warranty documentation handover.</p>
+            <h4 class="font-bold text-lg text-slate-100">{{ t('procurement.step4Title') }}</h4>
+            <p class="text-xs text-muted leading-relaxed">{{ t('procurement.step4Desc') }}</p>
           </div>
         </div>
       </div>
@@ -125,7 +125,7 @@
 
     <!-- FAQ Section -->
     <section class="section-padding container max-w-4xl space-y-8">
-      <SectionHeader badge="FAQ" title="Frequently Asked Questions" highlightTitle="Hardware Procurement" :center="true" />
+      <SectionHeader :badge="t('procurement.faqBadge')" :title="t('procurement.faqTitle')" :highlightTitle="t('procurement.faqHighlight')" :center="true" />
       <div class="space-y-4">
         <div v-for="(faq, idx) in faqs" :key="idx" class="glass-panel faq-card">
           <h4 class="faq-q"><HelpCircle class="faq-icon text-purple" /> {{ faq.question }}</h4>
@@ -137,11 +137,11 @@
     <!-- Final CTA -->
     <section class="section-padding container text-center max-w-3xl">
       <div class="glass-panel space-y-6">
-        <h2 class="card-title font-bold text-2xl justify-center">Looking to Procure Industrial or Security Hardware?</h2>
-        <p class="text-muted text-sm">Send your bill of quantities (BOQ) or equipment requirements to DJO Brothers Limited procurement team for competitive pricing and guaranteed delivery schedules.</p>
+        <h2 class="card-title font-bold text-2xl justify-center">{{ t('procurement.ctaTitle') }}</h2>
+        <p class="text-muted text-sm">{{ t('procurement.ctaDesc') }}</p>
         <div class="flex justify-center">
           <router-link to="/contact?service=Hardware+Procurement" class="btn-primary">
-            <ShoppingBag class="btn-icon" /> <span>Request Hardware Quote</span>
+            <ShoppingBag class="btn-icon" /> <span>{{ t('procurement.ctaBtn') }}</span>
           </router-link>
         </div>
       </div>
@@ -151,23 +151,27 @@
 </template>
 
 <script setup>
-import { ShoppingBag, ShieldCheck, Factory, Truck, Globe, CheckCircle2, Layers, HelpCircle } from 'lucide-vue-next';
+import { computed } from 'vue';
+import { ShoppingBag, ShieldCheck, Factory, Truck, Globe2, FileCheck2, HelpCircle, CheckCircle2, Layers } from 'lucide-vue-next';
 import SectionHeader from '../components/common/SectionHeader.vue';
+import { t } from '../i18n';
 
-const faqs = [
+const Globe = Globe2;
+
+const faqs = computed(() => [
   {
-    question: "Does DJO Brothers Limited sell hardware directly to clients?",
-    answer: "Yes. DJO Brothers Limited provides direct provision (sales) of certified security hardware, factory machinery, electrical components, and heavy equipment, backed by OEM warranties and full technical support."
+    question: t('procurement.q1'),
+    answer: t('procurement.a1')
   },
   {
-    question: "Can you procure hard-to-find legacy or specialized engineering hardware?",
-    answer: "Yes. Our global procurement network spans Europe, North America, Asia, and the Middle East, enabling us to source specialized components, OEM spare parts, and custom-manufactured hardware."
+    question: t('procurement.q2'),
+    answer: t('procurement.a2')
   },
   {
-    question: "How do you ensure hardware authenticity and quality?",
-    answer: "We only source directly from authorized Tier-1 OEMs and certified distributors. Every shipment undergoes Factory Acceptance Testing (FAT) and visual quality inspection before dispatch."
+    question: t('procurement.q3'),
+    answer: t('procurement.a3')
   }
-];
+]);
 </script>
 
 <style scoped>

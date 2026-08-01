@@ -10,36 +10,33 @@
                 <BrandLogoIcon class="logo-shield" />
               </div>
             </div>
-            <span class="brand-name"
-              >DJO BROTHERS <span class="brand-accent">LIMITED</span></span
-            >
+            <div class="flex flex-col">
+              <span class="brand-name">DJO BROTHERS <span class="brand-accent">LIMITED</span></span>
+              <span class="text-xs text-sky font-bold tracking-wider">CAC Reg. No: RC 8554182</span>
+            </div>
           </div>
 
           <p class="brand-desc">
-            DJO Brothers Limited provides innovative solutions to complex
-            engineering problems. We specialize in high-level defense Radar &
-            LiDAR security hardware, cybersecurity consultation, factory
-            hardware installation, technical procurement, civil engineering, and
-            heavy machinery & barge hiring.
+            {{ t('footer.brandDesc') }}
           </p>
 
           <div class="flagship-badge-wrapper">
             <span class="badge-tech badge-flagship">
-              Flagship: Defense Radar, LiDAR & Security Hardware
+              {{ t('footer.flagshipBadge') }}
             </span>
           </div>
         </div>
 
         <!-- Core Services Links -->
         <div class="footer-col">
-          <h4 class="col-title">Core Services</h4>
+          <h4 class="col-title">{{ t('footer.coreServices') }}</h4>
           <ul class="footer-links">
             <li>
               <router-link
                 to="/services/security-hardware"
                 class="link-item flagship-link"
               >
-                <ChevronRight class="chevron" /> Security Hardware (Radar/LiDAR)
+                <ChevronRight class="chevron" /> {{ t('header.securityHardware') }}
               </router-link>
             </li>
             <li>
@@ -47,7 +44,7 @@
                 to="/services/cybersecurity-consultation"
                 class="link-item"
               >
-                <ChevronRight class="chevron" /> Cybersecurity Consultation
+                <ChevronRight class="chevron" /> {{ t('header.cybersecurity') }}
               </router-link>
             </li>
             <li>
@@ -55,7 +52,7 @@
                 to="/services/factory-hardware-installation"
                 class="link-item"
               >
-                <ChevronRight class="chevron" /> Factory Hardware Installation
+                <ChevronRight class="chevron" /> {{ t('header.factoryHardware') }}
               </router-link>
             </li>
             <li>
@@ -63,14 +60,12 @@
                 to="/services/hardware-procurement-sales"
                 class="link-item"
               >
-                <ChevronRight class="chevron" /> Hardware Provision &
-                Procurement
+                <ChevronRight class="chevron" /> {{ t('header.hardwareProcurement') }}
               </router-link>
             </li>
             <li>
               <router-link to="/services/civil-engineering" class="link-item">
-                <ChevronRight class="chevron" /> Civil Engineering &
-                Infrastructure
+                <ChevronRight class="chevron" /> {{ t('header.civilEngineering') }}
               </router-link>
             </li>
             <li>
@@ -78,12 +73,12 @@
                 to="/services/heavy-machinery-barge-hire"
                 class="link-item"
               >
-                <ChevronRight class="chevron" /> Heavy Machinery & Barge Hire
+                <ChevronRight class="chevron" /> {{ t('header.bargeHire') }}
               </router-link>
             </li>
             <li>
               <router-link to="/services/solar-installation" class="link-item">
-                <ChevronRight class="chevron" /> Solar Power Systems
+                <ChevronRight class="chevron" /> {{ t('header.solar') }}
               </router-link>
             </li>
           </ul>
@@ -91,31 +86,31 @@
 
         <!-- Corporate Links -->
         <div class="footer-col">
-          <h4 class="col-title">Company & Trust</h4>
+          <h4 class="col-title">{{ t('footer.companyTrust') }}</h4>
           <ul class="footer-links">
             <li>
               <router-link to="/about" class="link-item"
-                >About DJO Brothers Limited</router-link
+                >{{ t('footer.aboutUs') }}</router-link
               >
             </li>
             <li>
               <router-link to="/about#mission" class="link-item"
-                >Engineering Mission & Values</router-link
+                >{{ t('footer.missionValues') }}</router-link
               >
             </li>
             <li>
               <router-link to="/about#safety" class="link-item"
-                >HSE & Quality Assurance</router-link
+                >{{ t('footer.hseQa') }}</router-link
               >
             </li>
             <li>
               <router-link to="/services" class="link-item"
-                >All Service Divisions</router-link
+                >{{ t('footer.allDivisions') }}</router-link
               >
             </li>
             <li>
               <router-link to="/contact" class="link-item"
-                >Contact Engineering Team</router-link
+                >{{ t('footer.contactTeam') }}</router-link
               >
             </li>
           </ul>
@@ -123,8 +118,12 @@
 
         <!-- Contact Info -->
         <div class="footer-col">
-          <h4 class="col-title">Headquarters</h4>
+          <h4 class="col-title">{{ t('footer.contactInfo') }}</h4>
           <ul class="footer-contact">
+            <li class="contact-item">
+              <FileCheck2 class="icon text-sky" />
+              <span class="font-bold text-sky">CAC Reg. No: RC 8554182</span>
+            </li>
             <li class="contact-item">
               <MapPin class="icon text-sky" />
               <span>54 Enerhen Road, Enerhen, Warri, Delta State, Nigeria</span>
@@ -147,11 +146,12 @@
 
       <!-- Footer Bottom -->
       <div class="footer-bottom">
-        <p>© {{ currentYear }} DJO Brothers Limited. All Rights Reserved.</p>
+        <p>© {{ currentYear }} DJO Brothers Limited (RC 8554182). {{ t('footer.rights') }}</p>
         <div class="bottom-tags">
-          <span>Offshore Engineering and Drilling Services</span>
-          <span>Cybersecurity & Factory Hardware</span>
-          <span>Civil Engineering & Barge Hire</span>
+          <span>{{ t('footer.tag1') }}</span>
+          <span>{{ t('footer.tag2') }}</span>
+          <span>{{ t('footer.tag3') }}</span>
+          <span>{{ t('footer.tag4') }}</span>
         </div>
       </div>
     </div>
@@ -167,8 +167,10 @@ import {
   Phone,
   Mail,
   Clock,
+  FileCheck2,
 } from "lucide-vue-next";
 import BrandLogoIcon from "./BrandLogoIcon.vue";
+import { t } from "../../i18n";
 
 const currentYear = computed(() => new Date().getFullYear());
 </script>

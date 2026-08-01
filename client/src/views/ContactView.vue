@@ -4,9 +4,9 @@
     <section class="page-banner bg-tech-grid">
       <div class="container">
         <div class="banner-content space-y-4">
-          <div class="badge-tech">Global Headquarters & Support</div>
-          <h1 class="page-title">Connect with Our <span class="gradient-text">Engineering Team</span></h1>
-          <p class="page-subtitle">Have a project specification, RFP, security site assessment, or general enquiry? Submit your message below or reach our technical support offices directly.</p>
+          <div class="badge-tech">{{ t('contactPage.badge') }}</div>
+          <h1 class="page-title">{{ t('contactPage.heroTitle') }} <span class="gradient-text">{{ t('contactPage.heroTitleHighlight') }}</span></h1>
+          <p class="page-subtitle">{{ t('contactPage.heroDesc') }}</p>
         </div>
       </div>
     </section>
@@ -18,13 +18,21 @@
         <!-- Info Column -->
         <div class="col-span-5 space-y-8">
           <div class="glass-panel info-card">
-            <h3 class="card-title pb-5 border-b">Corporate Headquarters</h3>
+            <h3 class="card-title pb-5 border-b">{{ t('contactPage.hqTitle') }}</h3>
             
             <ul class="info-list">
               <li class="info-item">
+                <div class="info-icon-box"><FileCheck2 class="icon text-sky" /></div>
+                <div>
+                  <h4 class="info-title">CAC Registration</h4>
+                  <p class="info-desc font-bold text-sky">RC 8554182</p>
+                </div>
+              </li>
+
+              <li class="info-item">
                 <div class="info-icon-box"><MapPin class="icon text-sky" /></div>
                 <div>
-                  <h4 class="info-title">Office Address</h4>
+                  <h4 class="info-title">{{ t('contactPage.addressTitle') }}</h4>
                   <p class="info-desc">54 Enerhen Road, Enerhen,<br />Warri, Delta State, Nigeria</p>
                 </div>
               </li>
@@ -32,7 +40,7 @@
               <li class="info-item">
                 <div class="info-icon-box"><Phone class="icon text-sky" /></div>
                 <div>
-                  <h4 class="info-title">Telephone Desk</h4>
+                  <h4 class="info-title">{{ t('contactPage.phoneTitle') }}</h4>
                   <p class="info-desc">+234 905 197 4366</p>
                 </div>
               </li>
@@ -40,7 +48,7 @@
               <li class="info-item">
                 <div class="info-icon-box"><Mail class="icon text-sky" /></div>
                 <div>
-                  <h4 class="info-title">Electronic Mail</h4>
+                  <h4 class="info-title">{{ t('contactPage.emailTitle') }}</h4>
                   <p class="info-desc">contact@djobrothers.com</p>
                 </div>
               </li>
@@ -48,9 +56,9 @@
               <li class="info-item">
                 <div class="info-icon-box teal-box"><Clock class="icon text-teal" /></div>
                 <div>
-                  <h4 class="info-title">Business Hours</h4>
-                  <p class="info-desc">Mon - Fri: 08:00 - 18:00 GMT+1</p>
-                  <span class="sla-tag">24/7 Security SLA Active</span>
+                  <h4 class="info-title">{{ t('contactPage.hoursTitle') }}</h4>
+                  <p class="info-desc">{{ t('contactPage.hoursVal') }}</p>
+                  <span class="sla-tag">{{ t('contactPage.slaTag') }}</span>
                 </div>
               </li>
             </ul>
@@ -58,10 +66,11 @@
 
           <div class="priority-box">
             <div class="flex items-center gap-2 text-sky font-bold text-sm">
-              <ShieldCheck class="icon text-sky" /> Flagship Priority Desk
+              <ShieldCheck class="w-5 h-5 text-sky" />
+              <span>{{ t('contactPage.priorityTitle') }}</span>
             </div>
-            <p class="text-muted text-xs leading-relaxed">
-              Security & Surveillance enquiries trigger priority assignment to a senior solution architect within 4 business hours.
+            <p class="text-xs text-muted leading-relaxed">
+              {{ t('contactPage.priorityDesc') }}
             </p>
           </div>
         </div>
@@ -79,8 +88,9 @@
 <script setup>
 import { ref, onMounted, watch } from 'vue';
 import { useRoute } from 'vue-router';
-import { MapPin, Phone, Mail, Clock, ShieldCheck } from 'lucide-vue-next';
+import { MapPin, Phone, Mail, Clock, ShieldCheck, FileCheck2 } from 'lucide-vue-next';
 import EnquiryForm from '../components/contact/EnquiryForm.vue';
+import { t } from '../i18n';
 
 const route = useRoute();
 const selectedService = ref('Security Hardware');

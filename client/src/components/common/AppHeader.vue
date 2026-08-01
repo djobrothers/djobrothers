@@ -11,19 +11,20 @@
         </div>
         <div class="brand-text">
           <span class="brand-name">DJO BROTHERS <span class="brand-accent">LIMITED</span></span>
-          <span class="brand-tagline">Engineering & Security Solutions</span>
+          <span class="brand-tagline">{{ t('nav.brandTagline') }}</span>
+          <span class="brand-rc">RC 8554182</span>
         </div>
       </router-link>
 
       <!-- Desktop Navigation -->
       <nav class="desktop-nav">
-        <router-link to="/" class="nav-link" active-class="nav-link-active">Home</router-link>
-        <router-link to="/about" class="nav-link" active-class="nav-link-active">About</router-link>
+        <router-link to="/" class="nav-link" active-class="nav-link-active">{{ t('nav.home') }}</router-link>
+        <router-link to="/about" class="nav-link" active-class="nav-link-active">{{ t('nav.about') }}</router-link>
         
         <!-- Services Dropdown -->
         <div class="dropdown-wrapper">
           <router-link to="/services" class="nav-link dropdown-trigger" active-class="nav-link-active">
-            Services
+            {{ t('nav.services') }}
             <ChevronDown class="dropdown-icon" />
           </router-link>
 
@@ -33,64 +34,64 @@
               <ShieldCheck class="item-icon flagship-icon" />
               <div>
                 <div class="item-title text-sky flex items-center gap-2">
-                  Security Hardware
-                  <span class="flagship-tag">Flagship</span>
+                  {{ t('header.securityHardware') }}
+                  <span class="flagship-tag">{{ t('nav.flagship') }}</span>
                 </div>
-                <div class="item-desc">Defense Radar, LiDAR & Surveillance</div>
+                <div class="item-desc">{{ t('header.securityHardwareDesc') }}</div>
               </div>
             </router-link>
 
             <router-link to="/services/cybersecurity-consultation" class="dropdown-item">
               <Lock class="item-icon text-indigo" />
               <div>
-                <div class="item-title">Cybersecurity</div>
-                <div class="item-desc">OT/ICS Defense & System Audits</div>
+                <div class="item-title">{{ t('header.cybersecurity') }}</div>
+                <div class="item-desc">{{ t('header.cybersecurityDesc') }}</div>
               </div>
             </router-link>
 
             <router-link to="/services/factory-hardware-installation" class="dropdown-item">
               <Factory class="item-icon text-emerald" />
               <div>
-                <div class="item-title">Factory Hardware</div>
-                <div class="item-desc">Machinery Installation & SCADA</div>
+                <div class="item-title">{{ t('header.factoryHardware') }}</div>
+                <div class="item-desc">{{ t('header.factoryHardwareDesc') }}</div>
               </div>
             </router-link>
 
             <router-link to="/services/hardware-procurement-sales" class="dropdown-item">
               <ShoppingBag class="item-icon text-purple" />
               <div>
-                <div class="item-title">Hardware Sales & Procurement</div>
-                <div class="item-desc">OEM Provisioning & Global Logistics</div>
+                <div class="item-title">{{ t('header.hardwareProcurement') }}</div>
+                <div class="item-desc">{{ t('header.hardwareProcurementDesc') }}</div>
               </div>
             </router-link>
 
             <router-link to="/services/civil-engineering" class="dropdown-item">
               <HardHat class="item-icon text-amber" />
               <div>
-                <div class="item-title">Civil Engineering</div>
-                <div class="item-desc">Infrastructure & Problem Solutions</div>
+                <div class="item-title">{{ t('header.civilEngineering') }}</div>
+                <div class="item-desc">{{ t('header.civilEngineeringDesc') }}</div>
               </div>
             </router-link>
 
             <router-link to="/services/heavy-machinery-barge-hire" class="dropdown-item">
               <Ship class="item-icon text-cyan" />
               <div>
-                <div class="item-title">Machinery & Barge Hire</div>
-                <div class="item-desc">Heavy Equipment & Marine Barges</div>
+                <div class="item-title">{{ t('header.bargeHire') }}</div>
+                <div class="item-desc">{{ t('header.bargeHireDesc') }}</div>
               </div>
             </router-link>
 
             <router-link to="/services/solar-installation" class="dropdown-item">
               <SunIcon class="item-icon text-yellow" />
               <div>
-                <div class="item-title">Solar Power Systems</div>
-                <div class="item-desc">Commercial & Industrial Solar</div>
+                <div class="item-title">{{ t('header.solar') }}</div>
+                <div class="item-desc">{{ t('header.solarDesc') }}</div>
               </div>
             </router-link>
           </div>
         </div>
 
-        <router-link to="/contact" class="nav-link" active-class="nav-link-active">Contact</router-link>
+        <router-link to="/contact" class="nav-link" active-class="nav-link-active">{{ t('nav.contact') }}</router-link>
       </nav>
 
       <!-- CTA Button & Theme Toggle -->
@@ -106,14 +107,18 @@
           <Moon v-else class="toggle-theme-icon" />
         </button>
 
+        <!-- Language Selector -->
+        <LanguageSelector />
+
         <router-link to="/contact" class="btn-primary header-btn">
-          <span>Request Consultation</span>
+          <span>{{ t('nav.requestConsultation') }}</span>
           <ArrowRight class="btn-icon" />
         </router-link>
       </div>
 
       <!-- Hamburger & Theme Toggle Button Mobile -->
       <div class="mobile-actions">
+        <LanguageSelector />
         <button
           @click="toggleTheme"
           class="theme-toggle-btn mobile-theme-btn"
@@ -132,39 +137,39 @@
 
     <!-- Mobile Drawer -->
     <div v-if="mobileMenuOpen" class="mobile-drawer">
-      <router-link @click="mobileMenuOpen = false" to="/" class="mobile-link">Home</router-link>
-      <router-link @click="mobileMenuOpen = false" to="/about" class="mobile-link">About Us</router-link>
+      <router-link @click="mobileMenuOpen = false" to="/" class="mobile-link">{{ t('nav.home') }}</router-link>
+      <router-link @click="mobileMenuOpen = false" to="/about" class="mobile-link">{{ t('nav.about') }}</router-link>
       
       <div class="mobile-services-group">
-        <div class="mobile-group-title">Services</div>
+        <div class="mobile-group-title">{{ t('nav.services') }}</div>
         <router-link @click="mobileMenuOpen = false" to="/services/security-hardware" class="mobile-link flagship-mobile">
-          <ShieldCheck class="link-icon" /> Security Hardware (Radar & LiDAR)
+          <ShieldCheck class="link-icon" /> {{ t('header.securityHardware') }}
         </router-link>
         <router-link @click="mobileMenuOpen = false" to="/services/cybersecurity-consultation" class="mobile-link">
-          <Lock class="link-icon" /> Cybersecurity Consultation
+          <Lock class="link-icon" /> {{ t('header.cybersecurity') }}
         </router-link>
         <router-link @click="mobileMenuOpen = false" to="/services/factory-hardware-installation" class="mobile-link">
-          <Factory class="link-icon" /> Factory Hardware Installation
+          <Factory class="link-icon" /> {{ t('header.factoryHardware') }}
         </router-link>
         <router-link @click="mobileMenuOpen = false" to="/services/hardware-procurement-sales" class="mobile-link">
-          <ShoppingBag class="link-icon" /> Hardware Sales & Procurement
+          <ShoppingBag class="link-icon" /> {{ t('header.hardwareProcurement') }}
         </router-link>
         <router-link @click="mobileMenuOpen = false" to="/services/civil-engineering" class="mobile-link">
-          <HardHat class="link-icon" /> Civil Engineering
+          <HardHat class="link-icon" /> {{ t('header.civilEngineering') }}
         </router-link>
         <router-link @click="mobileMenuOpen = false" to="/services/heavy-machinery-barge-hire" class="mobile-link">
-          <Ship class="link-icon" /> Heavy Machinery & Barge Hire
+          <Ship class="link-icon" /> {{ t('header.bargeHire') }}
         </router-link>
         <router-link @click="mobileMenuOpen = false" to="/services/solar-installation" class="mobile-link">
-          <SunIcon class="link-icon" /> Solar Power Systems
+          <SunIcon class="link-icon" /> {{ t('header.solar') }}
         </router-link>
       </div>
 
-      <router-link @click="mobileMenuOpen = false" to="/contact" class="mobile-link">Contact Us</router-link>
+      <router-link @click="mobileMenuOpen = false" to="/contact" class="mobile-link">{{ t('nav.contact') }}</router-link>
       
       <div class="mobile-cta-wrapper">
         <router-link @click="mobileMenuOpen = false" to="/contact" class="btn-primary w-full">
-          <span>Request Consultation</span>
+          <span>{{ t('nav.requestConsultation') }}</span>
           <ArrowRight class="btn-icon" />
         </router-link>
       </div>
@@ -176,7 +181,9 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 import { Shield, ShieldCheck, Lock, Factory, ShoppingBag, HardHat, Ship, Sun as SunIcon, Moon, ChevronDown, Menu, X, ArrowRight } from 'lucide-vue-next';
 import BrandLogoIcon from './BrandLogoIcon.vue';
+import LanguageSelector from './LanguageSelector.vue';
 import { useTheme } from '../../composables/useTheme';
+import { t } from '../../i18n';
 
 const isScrolled = ref(false);
 const mobileMenuOpen = ref(false);
@@ -235,6 +242,7 @@ onUnmounted(() => {
   border-radius: 12px;
   background: linear-gradient(135deg, #0284C7, #14B8A6);
   padding: 2px;
+  flex-shrink: 0;
 }
 
 .logo-icon-inner {
@@ -278,6 +286,15 @@ onUnmounted(() => {
   color: var(--color-text-secondary);
   font-weight: 600;
   margin-top: -3px;
+}
+
+.brand-rc {
+  font-size: 0.58rem;
+  font-weight: 700;
+  color: #38BDF8;
+  letter-spacing: 0.08em;
+  margin-top: 1px;
+  opacity: 0.95;
 }
 
 /* Desktop Nav */
@@ -528,8 +545,32 @@ onUnmounted(() => {
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
   color: var(--color-text-secondary);
-  padding-left: 0.75rem;
+  padding: 0 0.75rem;
+}
+
+@media (max-width: 480px) {
+  .brand-logo {
+    gap: 0.4rem;
+  }
+  .logo-icon-wrapper {
+    width: 34px;
+    height: 34px;
+  }
+  .brand-name {
+    font-size: 0.95rem;
+  }
+  .brand-tagline {
+    font-size: 0.5rem;
+    letter-spacing: 0.04em;
+  }
+  .brand-rc {
+    font-size: 0.48rem;
+  }
+  .mobile-actions {
+    gap: 0.4rem;
+  }
 }
 
 .mobile-cta-wrapper {

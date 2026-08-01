@@ -6,21 +6,21 @@
       <div class="container">
         <div class="banner-content space-y-6">
           <div class="badge-tech">
-            <Ship class="b-icon text-cyan" /> HEAVY EQUIPMENT & MARINE FLEET RENTAL
+            <Ship class="b-icon text-cyan" /> {{ t('barge.badge') }}
           </div>
 
           <h1 class="flagship-hero-title">
-            Hiring of Heavy Duty Machineries <br />
-            <span class="gradient-text">& Marine Barges Fleet</span>
+            {{ t('barge.heroTitle') }} <br />
+            <span class="gradient-text">{{ t('barge.heroTitleHighlight') }}</span>
           </h1>
 
           <p class="page-subtitle">
-            DJO Brothers Limited operates a high-capacity rental fleet of heavy-duty earthmoving machinery, heavy lift cranes, and marine barges (flat-deck, spud, and crane barges) for onshore and offshore civil, security, and industrial engineering projects.
+            {{ t('barge.heroDesc') }}
           </p>
 
           <div class="banner-actions">
             <router-link to="/contact?service=Machinery+and+Barge+Hire" class="btn-primary hero-btn">
-              <Ship class="btn-icon" /> <span>Request Machinery & Barge Hire Quote</span>
+              <Ship class="btn-icon" /> <span>{{ t('nav.requestConsultation') }}</span>
             </router-link>
           </div>
         </div>
@@ -30,10 +30,10 @@
     <!-- Fleet Breakdown -->
     <section class="section-padding container space-y-12">
       <SectionHeader
-        badge="Equipment Fleet"
-        title="Heavy Machinery & Marine"
-        highlightTitle="Barge Hire Portfolio"
-        description="Our heavy machinery and marine fleet is maintained to rigorous international safety standards, available for short-term project lease or long-term charter."
+        :badge="t('barge.badge')"
+        :title="t('barge.heroTitle')"
+        :highlightTitle="t('barge.heroTitleHighlight')"
+        :description="t('barge.heroDesc')"
         :center="true"
       />
 
@@ -46,31 +46,31 @@
               <Ship class="w-8 h-8" />
             </div>
             <div>
-              <span class="text-xs uppercase tracking-widest text-cyan font-bold">Marine Logistics</span>
-              <h3 class="card-title text-2xl">Marine Barges & Offshore Fleet Hire</h3>
+              <span class="text-xs uppercase tracking-widest text-cyan font-bold">{{ t('barge.badge') }}</span>
+              <h3 class="card-title text-2xl">{{ t('barge.card1Title') }}</h3>
             </div>
           </div>
 
           <p class="text-muted text-sm leading-relaxed">
-            We provide specialized marine barges designed for coastal construction, river transport, offshore heavy equipment mobilization, and marine piling operations. All barges are fully certified, seaworthy, and equipped with heavy deck load capacities.
+            {{ t('barge.card1Desc') }}
           </p>
 
           <div class="spec-list space-y-3 pt-2">
             <div class="spec-item">
-              <span class="font-semibold text-slate-200">Flat-Deck Cargo Barges</span>
-              <span class="spec-val text-cyan font-bold">1,000 Ton to 5,000 Ton DWT</span>
+              <span class="font-semibold text-slate-200">{{ t('barge.card1Spec1Label') }}</span>
+              <span class="spec-val text-cyan font-bold">{{ t('barge.card1Spec1Val') }}</span>
             </div>
             <div class="spec-item">
-              <span class="font-semibold text-slate-200">Spud Barges & Piling Barges</span>
-              <span class="spec-val text-sky font-bold">Heavy Anchoring & Marine Piling Rigs</span>
+              <span class="font-semibold text-slate-200">{{ t('barge.card1Spec2Label') }}</span>
+              <span class="spec-val text-sky font-bold">{{ t('barge.card1Spec2Val') }}</span>
             </div>
             <div class="spec-item">
-              <span class="font-semibold text-slate-200">Crane Barges</span>
-              <span class="spec-val text-teal font-bold">Integrated 150-Ton Offshore Heavy Lift Crane</span>
+              <span class="font-semibold text-slate-200">{{ t('barge.card1Spec3Label') }}</span>
+              <span class="spec-val text-teal font-bold">{{ t('barge.card1Spec3Val') }}</span>
             </div>
             <div class="spec-item">
-              <span class="font-semibold text-slate-200">Charter Options</span>
-              <span class="spec-val text-emerald font-bold">Bareboat & Fully Crewed Wet Charter</span>
+              <span class="font-semibold text-slate-200">{{ t('barge.card1Spec4Label') }}</span>
+              <span class="spec-val text-emerald font-bold">{{ t('barge.card1Spec4Val') }}</span>
             </div>
           </div>
         </div>
@@ -82,31 +82,31 @@
               <Truck class="w-8 h-8" />
             </div>
             <div>
-              <span class="text-xs uppercase tracking-widest text-amber font-bold">Onshore Heavy Machinery</span>
-              <h3 class="card-title text-2xl">Heavy Duty Earthmoving & Lift Equipment</h3>
+              <span class="text-xs uppercase tracking-widest text-amber font-bold">{{ t('barge.card2Badge') }}</span>
+              <h3 class="card-title text-2xl">{{ t('barge.card2Title') }}</h3>
             </div>
           </div>
 
           <p class="text-muted text-sm leading-relaxed">
-            DJO Brothers Limited supplies top-tier heavy construction equipment for land clearing, deep excavation, road grading, steel erection, and industrial foundation piling, complete with certified operators and on-site mechanics.
+            {{ t('barge.card2Desc') }}
           </p>
 
           <div class="spec-list space-y-3 pt-2">
             <div class="spec-item">
-              <span class="font-semibold text-slate-200">Heavy Excavators (20T - 50T)</span>
-              <span class="spec-val text-amber font-bold">CAT, Komatsu, Volvo High-Reach Rigs</span>
+              <span class="font-semibold text-slate-200">{{ t('barge.card2Spec1Label') }}</span>
+              <span class="spec-val text-amber font-bold">{{ t('barge.card2Spec1Val') }}</span>
             </div>
             <div class="spec-item">
-              <span class="font-semibold text-slate-200">Mobile & Crawler Cranes</span>
-              <span class="spec-val text-sky font-bold">50 Ton to 300 Ton Lift Capacity</span>
+              <span class="font-semibold text-slate-200">{{ t('barge.card2Spec2Label') }}</span>
+              <span class="spec-val text-sky font-bold">{{ t('barge.card2Spec2Val') }}</span>
             </div>
             <div class="spec-item">
-              <span class="font-semibold text-slate-200">Bulldozers & Motor Graders</span>
-              <span class="spec-val text-teal font-bold">GPS-Guided Earthmoving & Road Grading</span>
+              <span class="font-semibold text-slate-200">{{ t('barge.card2Spec3Label') }}</span>
+              <span class="spec-val text-teal font-bold">{{ t('barge.card2Spec3Val') }}</span>
             </div>
             <div class="spec-item">
-              <span class="font-semibold text-slate-200">Piling Rigs & Dump Trucks</span>
-              <span class="spec-val text-emerald font-bold">Hydraulic Rotary Rigs & 30T Articulated Haulers</span>
+              <span class="font-semibold text-slate-200">{{ t('barge.card2Spec4Label') }}</span>
+              <span class="spec-val text-emerald font-bold">{{ t('barge.card2Spec4Val') }}</span>
             </div>
           </div>
         </div>
@@ -117,10 +117,10 @@
     <!-- Rental Services Features -->
     <section class="section-padding container space-y-12">
       <SectionHeader
-        badge="Why Rent With Us"
-        title="Fleet Standards & Support"
-        highlightTitle="Key Benefits"
-        description="We ensure your project encounters zero downtime through immaculate fleet maintenance and certified operator crews."
+        :badge="t('barge.whyBadge')"
+        :title="t('barge.whyTitle')"
+        :highlightTitle="t('barge.whyHighlight')"
+        :description="t('barge.whyDesc')"
         :center="true"
       />
 
@@ -129,22 +129,22 @@
         <!-- 1. Certified Operators -->
         <div class="glass-panel tech-card">
           <div class="tech-icon-box"><ShieldCheck class="tech-icon text-sky" /></div>
-          <h3 class="card-title">Certified Heavy Equipment Operators</h3>
-          <p class="card-desc">Every piece of machinery can be supplied with certified, highly trained operators possessing extensive onshore and marine civil engineering experience.</p>
+          <h3 class="card-title">{{ t('barge.feat1Title') }}</h3>
+          <p class="card-desc">{{ t('barge.feat1Desc') }}</p>
         </div>
 
         <!-- 2. Rapid Site Mobilization -->
         <div class="glass-panel tech-card">
           <div class="tech-icon-box"><Truck class="tech-icon text-cyan" /></div>
-          <h3 class="card-title">Rapid Site Mobilization Logistics</h3>
-          <p class="card-desc">Our dedicated lowbed heavy haulers and tugboat fleet transport machinery and barges to remote onshore sites or offshore waterways rapidly.</p>
+          <h3 class="card-title">{{ t('barge.feat2Title') }}</h3>
+          <p class="card-desc">{{ t('barge.feat2Desc') }}</p>
         </div>
 
         <!-- 3. Rigorous HSE & Maintenance -->
         <div class="glass-panel tech-card">
           <div class="tech-icon-box"><Wrench class="tech-icon text-emerald" /></div>
-          <h3 class="card-title">24/7 Mobile Field Mechanics</h3>
-          <p class="card-desc">On-site preventative maintenance support and mobile field mechanics dedicated to ensuring 100% equipment availability and zero work stoppage.</p>
+          <h3 class="card-title">{{ t('barge.feat3Title') }}</h3>
+          <p class="card-desc">{{ t('barge.feat3Desc') }}</p>
         </div>
 
       </div>
@@ -152,7 +152,7 @@
 
     <!-- FAQ Section -->
     <section class="section-padding container max-w-4xl space-y-8">
-      <SectionHeader badge="FAQ" title="Frequently Asked Questions" highlightTitle="Machinery & Barge Hire" :center="true" />
+      <SectionHeader :badge="t('barge.faqBadge')" :title="t('barge.faqTitle')" :highlightTitle="t('barge.faqHighlight')" :center="true" />
       <div class="space-y-4">
         <div v-for="(faq, idx) in faqs" :key="idx" class="glass-panel faq-card">
           <h4 class="faq-q"><HelpCircle class="faq-icon text-cyan" /> {{ faq.question }}</h4>
@@ -164,11 +164,11 @@
     <!-- Final CTA -->
     <section class="section-padding container text-center max-w-3xl">
       <div class="glass-panel space-y-6">
-        <h2 class="card-title font-bold text-2xl justify-center">Need Heavy Machinery or Barges for Your Next Project?</h2>
-        <p class="text-muted text-sm">Contact DJO Brothers Limited equipment fleet management team for availability, rates, and mobilization timelines.</p>
+        <h2 class="card-title font-bold text-2xl justify-center">{{ t('barge.ctaTitle') }}</h2>
+        <p class="text-muted text-sm">{{ t('barge.ctaDesc') }}</p>
         <div class="flex justify-center">
           <router-link to="/contact?service=Machinery+and+Barge+Hire" class="btn-primary">
-            <Ship class="btn-icon" /> <span>Request Hire Quotation</span>
+            <Ship class="btn-icon" /> <span>{{ t('barge.ctaBtn') }}</span>
           </router-link>
         </div>
       </div>
@@ -178,30 +178,28 @@
 </template>
 
 <script setup>
-import { Ship, Truck, ShieldCheck, Wrench, HelpCircle } from 'lucide-vue-next';
+import { computed } from 'vue';
+import { Ship, Truck, Wrench, ShieldCheck, CheckCircle2, HelpCircle } from 'lucide-vue-next';
 import SectionHeader from '../components/common/SectionHeader.vue';
+import { t } from '../i18n';
 
-const faqs = [
+const faqs = computed(() => [
   {
-    question: "What types of barges are available for hire at DJO Brothers Limited?",
-    answer: "We offer flat-deck cargo barges, spud barges (for anchoring & piling), crane barges equipped with heavy lift cranes, and hopper barges for dredging operations."
+    question: t('barge.q1'),
+    answer: t('barge.a1')
   },
   {
-    question: "Do you offer wet charter (with crew and fuel) or dry charter (equipment only)?",
-    answer: "We provide both wet and dry charter options tailored to client project requirements, including certified barge masters, marine engineers, and heavy machine operators."
+    question: t('barge.q2'),
+    answer: t('barge.a2')
   },
   {
-    question: "How fast can heavy machinery and barges be mobilized to site?",
-    answer: "Mobilization timelines depend on location, but with our dedicated lowbed transporters and marine tugboats, onshore equipment can typically be mobilized within 24-48 hours."
+    question: t('barge.q3'),
+    answer: t('barge.a3')
   }
-];
+]);
 </script>
 
 <style scoped>
-.border-cyan {
-  border: 1px solid rgba(6, 182, 212, 0.3);
-}
-.border-amber {
-  border: 1px solid rgba(245, 158, 11, 0.3);
-}
+.border-cyan { border: 1px solid rgba(6, 182, 212, 0.3); }
+.border-amber { border: 1px solid rgba(245, 158, 11, 0.3); }
 </style>
