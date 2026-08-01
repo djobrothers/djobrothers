@@ -118,7 +118,6 @@
 
       <!-- Hamburger & Theme Toggle Button Mobile -->
       <div class="mobile-actions">
-        <LanguageSelector />
         <button
           @click="toggleTheme"
           class="theme-toggle-btn mobile-theme-btn"
@@ -137,6 +136,12 @@
 
     <!-- Mobile Drawer -->
     <div v-if="mobileMenuOpen" class="mobile-drawer">
+      <!-- Mobile Language Switcher Row -->
+      <div class="mobile-lang-wrapper">
+        <span class="mobile-lang-label">Language / Idioma:</span>
+        <LanguageSelector />
+      </div>
+
       <router-link @click="mobileMenuOpen = false" to="/" class="mobile-link">{{ t('nav.home') }}</router-link>
       <router-link @click="mobileMenuOpen = false" to="/about" class="mobile-link">{{ t('nav.about') }}</router-link>
       
@@ -234,15 +239,21 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  text-decoration: none;
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 .logo-icon-wrapper {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 12px;
   background: linear-gradient(135deg, #0284C7, #14B8A6);
   padding: 2px;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo-icon-inner {
@@ -257,21 +268,26 @@ onUnmounted(() => {
 }
 
 .logo-shield {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   color: #38BDF8;
 }
 
 .brand-text {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  line-height: 1.15;
+  min-width: 0;
 }
 
 .brand-name {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 800;
   color: var(--color-text-primary);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  line-height: 1.1;
 }
 
 .brand-accent {
@@ -280,19 +296,23 @@ onUnmounted(() => {
 }
 
 .brand-tagline {
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   color: var(--color-text-secondary);
   font-weight: 600;
-  margin-top: -3px;
+  white-space: nowrap;
+  line-height: 1.1;
+  margin-top: 2px;
 }
 
 .brand-rc {
-  font-size: 0.58rem;
+  font-size: 0.55rem;
   font-weight: 700;
   color: #38BDF8;
   letter-spacing: 0.08em;
+  white-space: nowrap;
+  line-height: 1.1;
   margin-top: 1px;
   opacity: 0.95;
 }
@@ -505,6 +525,20 @@ onUnmounted(() => {
   gap: 1rem;
 }
 
+.mobile-lang-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.mobile-lang-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+}
+
 @media (min-width: 1024px) {
   .mobile-drawer {
     display: none;
@@ -550,26 +584,77 @@ onUnmounted(() => {
   padding: 0 0.75rem;
 }
 
-@media (max-width: 480px) {
-  .brand-logo {
-    gap: 0.4rem;
-  }
+@media (max-width: 768px) {
   .logo-icon-wrapper {
-    width: 34px;
-    height: 34px;
+    width: 40px;
+    height: 40px;
+  }
+  .logo-shield {
+    width: 20px;
+    height: 20px;
   }
   .brand-name {
     font-size: 0.95rem;
   }
   .brand-tagline {
-    font-size: 0.5rem;
-    letter-spacing: 0.04em;
+    font-size: 0.52rem;
+    letter-spacing: 0.05em;
   }
   .brand-rc {
     font-size: 0.48rem;
   }
+}
+
+@media (max-width: 480px) {
+  .brand-logo {
+    gap: 0.45rem;
+  }
+  .logo-icon-wrapper {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+  }
+  .logo-shield {
+    width: 18px;
+    height: 18px;
+  }
+  .brand-name {
+    font-size: 0.82rem;
+  }
+  .brand-tagline {
+    font-size: 0.44rem;
+    letter-spacing: 0.03em;
+  }
+  .brand-rc {
+    font-size: 0.42rem;
+  }
   .mobile-actions {
-    gap: 0.4rem;
+    gap: 0.35rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .brand-logo {
+    gap: 0.35rem;
+  }
+  .logo-icon-wrapper {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+  }
+  .logo-shield {
+    width: 16px;
+    height: 16px;
+  }
+  .brand-name {
+    font-size: 0.74rem;
+  }
+  .brand-tagline {
+    font-size: 0.4rem;
+    letter-spacing: 0.02em;
+  }
+  .brand-rc {
+    font-size: 0.4rem;
   }
 }
 
