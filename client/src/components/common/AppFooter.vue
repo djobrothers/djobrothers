@@ -85,7 +85,7 @@
           <ul class="footer-contact">
             <li class="contact-item">
               <MapPin class="icon text-sky" />
-              <span>DJO Brothers Limited Tower, Suite 1200, Innovation District</span>
+              <span>54 Enerhen Road, Enerhen, Warri, Delta State, Nigeria</span>
             </li>
             <li class="contact-item">
               <Phone class="icon text-sky" />

@@ -25,7 +25,7 @@
                 <div class="info-icon-box"><MapPin class="icon text-sky" /></div>
                 <div>
                   <h4 class="info-title">Office Address</h4>
-                  <p class="info-desc">DJO Brothers Limited Tower, Suite 1200<br />Innovation District, Zone 4</p>
+                  <p class="info-desc">54 Enerhen Road, Enerhen,<br />Warri, Delta State, Nigeria</p>
                 </div>
               </li>
 
