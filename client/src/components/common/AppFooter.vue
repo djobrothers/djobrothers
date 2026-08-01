@@ -15,7 +15,7 @@
           </div>
 
           <p class="brand-desc">
-            DJO Brothers Limited provides turnkey engineering problem solutions. We specialize in high-level defense Radar & LiDAR security hardware, cybersecurity consultation, factory hardware installation, technical procurement, civil engineering, and heavy machinery & barge hiring.
+            DJO Brothers Limited provides innovative solutions to complex engineering problems. We specialize in high-level defense Radar & LiDAR security hardware, cybersecurity consultation, factory hardware installation, technical procurement, civil engineering, and heavy machinery & barge hiring.
           </p>
 
           <div class="flagship-badge-wrapper">

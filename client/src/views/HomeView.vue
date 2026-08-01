@@ -17,7 +17,7 @@
             </div>
 
             <h1 class="hero-title">
-              Turnkey Solutions to <br />
+              Innovative Solution to <br />
               <span class="gradient-text-flagship">Complex Engineering Problems</span>
             </h1>
 

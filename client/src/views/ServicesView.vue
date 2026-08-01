@@ -10,7 +10,7 @@
             Integrated Engineering & <span class="gradient-text">Security Divisions</span>
           </h1>
           <p class="page-subtitle">
-            DJO Brothers Limited provides turnkey solutions to engineering problems. Explore our 7 specialized engineering and security divisions.
+            DJO Brothers Limited provides innovative solutions to complex engineering problems. Explore our 7 specialized engineering and security divisions.
           </p>
         </div>
       </div>
