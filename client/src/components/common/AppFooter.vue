@@ -8,7 +8,7 @@
           <div class="brand-logo">
             <div class="logo-icon-wrapper">
               <div class="logo-icon-inner">
-                <Shield class="logo-shield" />
+                <BrandLogoIcon class="logo-shield" />
               </div>
             </div>
             <span class="brand-name">DJO BROTHERS <span class="brand-accent">LIMITED</span></span>
@@ -89,7 +89,7 @@
             </li>
             <li class="contact-item">
               <Phone class="icon text-sky" />
-              <span>+234 813 786 0082</span>
+              <span>+234 905 197 4366</span>
             </li>
             <li class="contact-item">
               <Mail class="icon text-sky" />
@@ -121,6 +121,7 @@
 <script setup>
 import { computed } from 'vue';
 import { Shield, ChevronRight, MapPin, Phone, Mail, Clock } from 'lucide-vue-next';
+import BrandLogoIcon from './BrandLogoIcon.vue';
 
 const currentYear = computed(() => new Date().getFullYear());
 </script>

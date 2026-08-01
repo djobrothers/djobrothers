@@ -61,7 +61,12 @@
     <path d="M 192 184 L 270 184 C 315 184 344 214 344 256 L 316 256 C 316 228 296 208 262 208 L 192 208 Z" fill="url(#coreGrad)" opacity="0.9" />
 
     <!-- Central Defense Shield / Core emblem inside the 'D' counter -->
-    <path d="M 256 216 L 284 256 L 256 296 L 228 256 Z" fill="url(#coreGrad)" />
-    <circle cx="256" cy="256" r="6" fill="#ffffff" />
+    <path d="M 256 216 L 284 230 C 284 260 274 278 256 292 C 238 278 228 260 228 230 Z" fill="none" stroke="url(#coreGrad)" stroke-width="6" stroke-linejoin="round" />
+    <path d="M 256 226 L 276 236 C 276 258 268 270 256 280 C 244 270 236 258 236 236 Z" fill="none" stroke="url(#coreGrad)" stroke-width="3" stroke-linejoin="round" opacity="0.8" />
+    <!-- Diagonal Spanner Overlay (Top-Left to Bottom-Right) -->
+    <line x1="210" y1="210" x2="300" y2="300" stroke="#00f0ff" stroke-width="12" stroke-linecap="round" />
+    <line x1="218" y1="218" x2="292" y2="292" stroke="#080d1a" stroke-width="4" stroke-linecap="round" />
+    <circle cx="304" cy="304" r="14" fill="#080d1a" stroke="#00f0ff" stroke-width="6" />
+    <circle cx="204" cy="204" r="12" fill="#00f0ff" />
   </g>
 </svg>

@@ -33,7 +33,7 @@
                 <div class="info-icon-box"><Phone class="icon text-sky" /></div>
                 <div>
                   <h4 class="info-title">Telephone Desk</h4>
-                  <p class="info-desc">+234 813 786 0082</p>
+                  <p class="info-desc">+234 905 197 4366</p>
                 </div>
               </li>
 

@@ -6,7 +6,7 @@
       <router-link to="/" class="brand-logo">
         <div class="logo-icon-wrapper">
           <div class="logo-icon-inner">
-            <Shield class="logo-shield" />
+            <BrandLogoIcon class="logo-shield" />
           </div>
         </div>
         <div class="brand-text">
@@ -175,6 +175,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import { Shield, ShieldCheck, Lock, Factory, ShoppingBag, HardHat, Ship, Sun as SunIcon, Moon, ChevronDown, Menu, X, ArrowRight } from 'lucide-vue-next';
+import BrandLogoIcon from './BrandLogoIcon.vue';
 import { useTheme } from '../../composables/useTheme';
 
 const isScrolled = ref(false);

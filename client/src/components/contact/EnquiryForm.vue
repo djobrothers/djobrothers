@@ -225,7 +225,7 @@ const validateClientSide = () => {
 
   const phoneRegex = /^[\+\d\s\-\(\)]{7,25}$/;
   if (!form.phone_number || !phoneRegex.test(form.phone_number.trim())) {
-    fieldErrors.phone_number = 'Enter a valid phone number (e.g. +234 813 786 0082).';
+    fieldErrors.phone_number = 'Enter a valid phone number (e.g. +234 905 197 4366).';
     isValid = false;
   }
 
