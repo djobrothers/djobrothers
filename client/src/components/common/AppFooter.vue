@@ -2,7 +2,6 @@
   <footer class="app-footer">
     <div class="container relative">
       <div class="footer-grid">
-        
         <!-- Company Info -->
         <div class="footer-brand">
           <div class="brand-logo">
@@ -11,11 +10,17 @@
                 <BrandLogoIcon class="logo-shield" />
               </div>
             </div>
-            <span class="brand-name">DJO BROTHERS <span class="brand-accent">LIMITED</span></span>
+            <span class="brand-name"
+              >DJO BROTHERS <span class="brand-accent">LIMITED</span></span
+            >
           </div>
 
           <p class="brand-desc">
-            DJO Brothers Limited provides innovative solutions to complex engineering problems. We specialize in high-level defense Radar & LiDAR security hardware, cybersecurity consultation, factory hardware installation, technical procurement, civil engineering, and heavy machinery & barge hiring.
+            DJO Brothers Limited provides innovative solutions to complex
+            engineering problems. We specialize in high-level defense Radar &
+            LiDAR security hardware, cybersecurity consultation, factory
+            hardware installation, technical procurement, civil engineering, and
+            heavy machinery & barge hiring.
           </p>
 
           <div class="flagship-badge-wrapper">
@@ -30,32 +35,49 @@
           <h4 class="col-title">Core Services</h4>
           <ul class="footer-links">
             <li>
-              <router-link to="/services/security-hardware" class="link-item flagship-link">
+              <router-link
+                to="/services/security-hardware"
+                class="link-item flagship-link"
+              >
                 <ChevronRight class="chevron" /> Security Hardware (Radar/LiDAR)
               </router-link>
             </li>
             <li>
-              <router-link to="/services/cybersecurity-consultation" class="link-item">
+              <router-link
+                to="/services/cybersecurity-consultation"
+                class="link-item"
+              >
                 <ChevronRight class="chevron" /> Cybersecurity Consultation
               </router-link>
             </li>
             <li>
-              <router-link to="/services/factory-hardware-installation" class="link-item">
+              <router-link
+                to="/services/factory-hardware-installation"
+                class="link-item"
+              >
                 <ChevronRight class="chevron" /> Factory Hardware Installation
               </router-link>
             </li>
             <li>
-              <router-link to="/services/hardware-procurement-sales" class="link-item">
-                <ChevronRight class="chevron" /> Hardware Provision & Procurement
+              <router-link
+                to="/services/hardware-procurement-sales"
+                class="link-item"
+              >
+                <ChevronRight class="chevron" /> Hardware Provision &
+                Procurement
               </router-link>
             </li>
             <li>
               <router-link to="/services/civil-engineering" class="link-item">
-                <ChevronRight class="chevron" /> Civil Engineering & Infrastructure
+                <ChevronRight class="chevron" /> Civil Engineering &
+                Infrastructure
               </router-link>
             </li>
             <li>
-              <router-link to="/services/heavy-machinery-barge-hire" class="link-item">
+              <router-link
+                to="/services/heavy-machinery-barge-hire"
+                class="link-item"
+              >
                 <ChevronRight class="chevron" /> Heavy Machinery & Barge Hire
               </router-link>
             </li>
@@ -71,11 +93,31 @@
         <div class="footer-col">
           <h4 class="col-title">Company & Trust</h4>
           <ul class="footer-links">
-            <li><router-link to="/about" class="link-item">About DJO Brothers Limited</router-link></li>
-            <li><router-link to="/about#mission" class="link-item">Engineering Mission & Values</router-link></li>
-            <li><router-link to="/about#safety" class="link-item">HSE & Quality Assurance</router-link></li>
-            <li><router-link to="/services" class="link-item">All Service Divisions</router-link></li>
-            <li><router-link to="/contact" class="link-item">Contact Engineering Team</router-link></li>
+            <li>
+              <router-link to="/about" class="link-item"
+                >About DJO Brothers Limited</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/about#mission" class="link-item"
+                >Engineering Mission & Values</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/about#safety" class="link-item"
+                >HSE & Quality Assurance</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/services" class="link-item"
+                >All Service Divisions</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/contact" class="link-item"
+                >Contact Engineering Team</router-link
+              >
+            </li>
           </ul>
         </div>
 
@@ -101,27 +143,32 @@
             </li>
           </ul>
         </div>
-
       </div>
 
       <!-- Footer Bottom -->
       <div class="footer-bottom">
         <p>© {{ currentYear }} DJO Brothers Limited. All Rights Reserved.</p>
         <div class="bottom-tags">
-          <span>Defense Radar & LiDAR</span>
+          <span>Offshore Engineering and Drilling Services</span>
           <span>Cybersecurity & Factory Hardware</span>
           <span>Civil Engineering & Barge Hire</span>
         </div>
       </div>
-
     </div>
   </footer>
 </template>
 
 <script setup>
-import { computed } from 'vue';
-import { Shield, ChevronRight, MapPin, Phone, Mail, Clock } from 'lucide-vue-next';
-import BrandLogoIcon from './BrandLogoIcon.vue';
+import { computed } from "vue";
+import {
+  Shield,
+  ChevronRight,
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+} from "lucide-vue-next";
+import BrandLogoIcon from "./BrandLogoIcon.vue";
 
 const currentYear = computed(() => new Date().getFullYear());
 </script>
@@ -173,7 +220,7 @@ const currentYear = computed(() => new Date().getFullYear());
   width: 36px;
   height: 36px;
   border-radius: 10px;
-  background: linear-gradient(135deg, #0284C7, #14B8A6);
+  background: linear-gradient(135deg, #0284c7, #14b8a6);
   padding: 2px;
 }
 
@@ -190,7 +237,7 @@ const currentYear = computed(() => new Date().getFullYear());
 .logo-shield {
   width: 18px;
   height: 18px;
-  color: #38BDF8;
+  color: #38bdf8;
 }
 
 .brand-name {
@@ -200,7 +247,7 @@ const currentYear = computed(() => new Date().getFullYear());
 }
 
 .brand-accent {
-  color: #38BDF8;
+  color: #38bdf8;
   font-weight: 600;
 }
 
@@ -221,7 +268,8 @@ const currentYear = computed(() => new Date().getFullYear());
   display: inline-block;
 }
 
-.footer-links, .footer-contact {
+.footer-links,
+.footer-contact {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -238,11 +286,11 @@ const currentYear = computed(() => new Date().getFullYear());
 }
 
 .link-item:hover {
-  color: #38BDF8;
+  color: #38bdf8;
 }
 
 .flagship-link {
-  color: #38BDF8;
+  color: #38bdf8;
   font-weight: 600;
 }
 
@@ -255,7 +303,7 @@ const currentYear = computed(() => new Date().getFullYear());
 .chevron {
   width: 14px;
   height: 14px;
-  color: #38BDF8;
+  color: #38bdf8;
 }
 
 .contact-item {
