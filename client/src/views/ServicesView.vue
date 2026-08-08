@@ -241,4 +241,109 @@ import { t } from '../i18n';
 .space-y-4 > * + * { margin-top: 1rem; }
 .space-y-6 > * + * { margin-top: 1.5rem; }
 .space-y-12 > * + * { margin-top: 3rem; }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2rem;
+  }
+  .div-title {
+    font-size: 1.5rem;
+  }
+  .flagship-box {
+    padding: 1.75rem;
+    padding-top: 2.5rem;
+  }
+  .sec-box {
+    padding: 1.5rem;
+  }
+  .side-card {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-wrapper {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+  }
+  .page-banner {
+    padding: 2.5rem 0;
+  }
+  .page-title {
+    font-size: 1.65rem;
+    line-height: 1.2;
+  }
+  .page-subtitle {
+    font-size: 0.875rem;
+  }
+  .div-title {
+    font-size: 1.3rem;
+    line-height: 1.25;
+  }
+  .flagship-box {
+    padding: 1.25rem;
+    padding-top: 2.25rem;
+  }
+  .flagship-badge-top {
+    font-size: 0.6rem;
+    padding: 0.3rem 0.85rem;
+    border-bottom-left-radius: 10px;
+  }
+  .sub-feature {
+    padding: 0.5rem;
+    font-size: 0.725rem;
+    gap: 0.35rem;
+  }
+  .f-icon {
+    width: 14px;
+    height: 14px;
+  }
+  .sec-box {
+    padding: 1.25rem;
+  }
+  .side-card {
+    padding: 1rem;
+    border-radius: 12px;
+    gap: 0.75rem;
+  }
+  .side-title {
+    font-size: 0.8rem;
+  }
+  .app-list {
+    font-size: 0.75rem;
+    gap: 0.5rem;
+  }
+  .app-item {
+    padding: 0.5rem;
+    border-radius: 6px;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+  .app-tag {
+    font-size: 0.7rem;
+  }
+  .roi-box {
+    padding: 0.6rem;
+    font-size: 0.75rem;
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 380px) {
+  .page-title {
+    font-size: 1.45rem;
+  }
+  .div-title {
+    font-size: 1.15rem;
+  }
+  .sub-feature {
+    font-size: 0.675rem;
+    padding: 0.4rem;
+  }
+  .flagship-box {
+    padding: 1rem;
+    padding-top: 2rem;
+  }
+}
 </style>

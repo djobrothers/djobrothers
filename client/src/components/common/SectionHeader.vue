@@ -94,4 +94,36 @@ const badgeIcon = computed(() => {
   color: var(--color-text-secondary);
   line-height: 1.6;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 640px) {
+  .section-header {
+    margin-bottom: 2rem;
+    gap: 0.75rem;
+  }
+
+  .header-title {
+    font-size: 1.65rem !important;
+    line-height: 1.25;
+  }
+
+  .header-desc {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 380px) {
+  .section-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .header-title {
+    font-size: 1.4rem !important;
+  }
+
+  .header-desc {
+    font-size: 0.825rem;
+  }
+}
 </style>

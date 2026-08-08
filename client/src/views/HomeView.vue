@@ -401,7 +401,7 @@ import { t } from '../i18n';
   min-height: 85vh;
   display: flex;
   align-items: center;
-  padding-top: 9rem;
+  padding-top: 7.5rem;
   padding-bottom: 5.5rem;
   background-color: var(--bg-navy-950);
   transition: background-color 0.3s ease;
@@ -1083,5 +1083,422 @@ import { t } from '../i18n';
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+}
+
+/* ============================
+   Mobile Responsiveness
+   ============================ */
+
+/* Tablets & Small Laptops */
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 6rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .hero-title {
+    font-size: 2.25rem;
+  }
+
+  .hero-content {
+    gap: 1.25rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .flagship-card {
+    padding: 1.75rem;
+  }
+
+  .flagship-card-title {
+    font-size: 1.6rem;
+  }
+
+  .flagship-card-desc {
+    font-size: 0.95rem;
+  }
+
+  .visual-card {
+    padding: 1.25rem;
+  }
+
+  .overview-grid,
+  .enquiry-grid {
+    gap: 2.5rem;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 640px) {
+  .hero-section {
+    padding-top: 5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .hero-grid {
+    gap: 2rem;
+  }
+
+  .hero-content {
+    gap: 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.85rem;
+    line-height: 1.18;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .hero-btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .hero-stats {
+    gap: 0.85rem;
+    padding-top: 1rem;
+  }
+
+  .stat-num {
+    font-size: 1.35rem;
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
+    margin-top: 0.2rem;
+  }
+
+  /* Right side visual card on mobile */
+  .visual-card {
+    padding: 1.15rem;
+  }
+
+  .visual-header {
+    padding-bottom: 0.85rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .status-label {
+    font-size: 0.775rem;
+  }
+
+  .status-badge {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.45rem;
+  }
+
+  .node-box {
+    padding: 0.85rem 0;
+    gap: 0.75rem;
+  }
+
+  .node-target {
+    font-size: 0.75rem;
+  }
+
+  .node-grid {
+    gap: 0.6rem;
+  }
+
+  .node-card {
+    padding: 0.65rem;
+    border-radius: 10px;
+    gap: 0.3rem;
+  }
+
+  .node-title {
+    font-size: 0.7rem;
+  }
+
+  .node-icon {
+    width: 13px;
+    height: 13px;
+  }
+
+  .node-val {
+    font-size: 0.65rem;
+  }
+
+  .node-ai {
+    padding: 0.65rem 0.75rem;
+    font-size: 0.75rem;
+    border-radius: 10px;
+  }
+
+  .ai-icon {
+    width: 15px;
+    height: 15px;
+  }
+
+  .ai-time {
+    font-size: 0.65rem;
+  }
+
+  .visual-footer {
+    padding-top: 0.75rem;
+  }
+
+  /* Overview Section */
+  .overview-grid {
+    gap: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.65rem;
+    line-height: 1.25;
+  }
+
+  .section-desc {
+    font-size: 0.925rem;
+  }
+
+  .section-desc-secondary {
+    font-size: 0.85rem;
+  }
+
+  .overview-mini-card {
+    padding: 1rem;
+  }
+
+  .mini-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .mini-title {
+    font-size: 0.95rem;
+  }
+
+  .mini-desc {
+    font-size: 0.8rem;
+  }
+
+  /* Matrix Card */
+  .matrix-card {
+    padding: 1.25rem;
+  }
+
+  .matrix-title {
+    font-size: 1.05rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    gap: 0.45rem;
+  }
+
+  .matrix-header-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .progress-header {
+    font-size: 0.8rem;
+  }
+
+  .progress-bar-bg {
+    height: 6px;
+  }
+
+  /* Divisions Section */
+  .divisions-grid {
+    gap: 2rem;
+  }
+
+  .flagship-card {
+    padding: 1.5rem;
+  }
+
+  .flagship-top-tag {
+    font-size: 0.6rem;
+    padding: 0.3rem 0.85rem;
+    border-bottom-left-radius: 10px;
+  }
+
+  .flagship-card-grid {
+    gap: 1.75rem;
+  }
+
+  .flagship-left {
+    gap: 1rem;
+  }
+
+  .flagship-card-title {
+    font-size: 1.35rem;
+    line-height: 1.25;
+  }
+
+  .flagship-card-desc {
+    font-size: 0.875rem;
+    line-height: 1.55;
+  }
+
+  .flagship-features-grid {
+    gap: 0.5rem;
+  }
+
+  .feature-tag {
+    font-size: 0.775rem;
+    padding: 0.4rem 0.65rem;
+    gap: 0.35rem;
+    border-radius: 6px;
+  }
+
+  .tag-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .flagship-actions {
+    gap: 0.75rem;
+    padding-top: 0.25rem;
+  }
+
+  /* Flagship Preview */
+  .flagship-preview {
+    padding: 1.15rem;
+    border-radius: 12px;
+    gap: 1rem;
+  }
+
+  .preview-header {
+    padding-bottom: 0.75rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .preview-title {
+    font-size: 0.8rem;
+  }
+
+  .preview-status {
+    font-size: 0.65rem;
+  }
+
+  .preview-list {
+    gap: 0.65rem;
+  }
+
+  .preview-item {
+    padding: 0.7rem;
+    border-radius: 8px;
+    gap: 0.5rem;
+  }
+
+  .item-name {
+    font-size: 0.775rem;
+  }
+
+  .item-sub {
+    font-size: 0.65rem;
+  }
+
+  .item-badge {
+    font-size: 0.625rem;
+    padding: 0.15rem 0.4rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* Secondary Service Cards */
+  .secondary-grid {
+    gap: 1.15rem;
+  }
+
+  .secondary-card {
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  .sec-icon-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+
+  .sec-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .sec-title {
+    font-size: 1.15rem;
+  }
+
+  .sec-desc {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  /* Enquiry Section */
+  .enquiry-grid {
+    gap: 2rem;
+  }
+}
+
+/* Very Small Screens (iPhone SE, Galaxy S8) */
+@media (max-width: 380px) {
+  .hero-section {
+    padding-top: 4.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .hero-title {
+    font-size: 1.55rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .hero-stats {
+    gap: 0.65rem;
+  }
+
+  .stat-num {
+    font-size: 1.15rem;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .flagship-card-title {
+    font-size: 1.2rem;
+  }
+
+  .flagship-card-desc {
+    font-size: 0.825rem;
+  }
+
+  .feature-tag {
+    font-size: 0.7rem;
+    padding: 0.35rem 0.55rem;
+  }
+
+  .sec-title {
+    font-size: 1.05rem;
+  }
+
+  .sec-desc {
+    font-size: 0.8rem;
+  }
+
+  .node-card {
+    padding: 0.55rem;
+  }
+
+  .node-title {
+    font-size: 0.625rem;
+  }
+
+  .node-val {
+    font-size: 0.575rem;
+  }
 }
 </style>

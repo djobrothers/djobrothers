@@ -561,4 +561,108 @@ const handleSubmit = async () => {
 }
 
 .space-y-3 > * + * { margin-top: 0.75rem; }
+
+/* Mobile Responsiveness */
+@media (max-width: 640px) {
+  .form-card {
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+
+  .form-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-title {
+    font-size: 1.35rem;
+  }
+
+  .form-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .enquiry-form {
+    gap: 1.25rem;
+  }
+
+  .form-row {
+    gap: 1.15rem;
+  }
+
+  .form-label {
+    font-size: 0.7rem;
+  }
+
+  .form-input {
+    padding: 0.8rem 0.95rem 0.8rem 2.5rem;
+    font-size: 0.9rem;
+    border-radius: 10px;
+  }
+
+  .form-input::placeholder {
+    font-size: 0.825rem;
+  }
+
+  .field-icon {
+    left: 0.85rem;
+    width: 16px;
+    height: 16px;
+  }
+
+  .textarea-input {
+    min-height: 100px;
+    padding-left: 0.95rem;
+  }
+
+  .submit-btn {
+    padding: 0.9rem;
+    font-size: 0.95rem;
+    border-radius: 10px;
+  }
+
+  .toast-notification {
+    width: calc(100% - 1.5rem);
+    border-radius: 12px;
+    top: 0.75rem;
+  }
+
+  .toast-content {
+    padding: 0.85rem 1rem;
+    gap: 0.65rem;
+  }
+
+  .toast-title {
+    font-size: 0.85rem;
+  }
+
+  .toast-desc {
+    font-size: 0.75rem;
+  }
+
+  .toast-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 380px) {
+  .form-card {
+    padding: 1.15rem;
+    border-radius: 14px;
+  }
+
+  .form-title {
+    font-size: 1.2rem;
+  }
+
+  .form-input {
+    font-size: 0.85rem;
+    padding: 0.75rem 0.85rem 0.75rem 2.25rem;
+  }
+
+  .submit-btn {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+}
 </style>

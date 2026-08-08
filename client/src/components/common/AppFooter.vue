@@ -336,4 +336,85 @@ const currentYear = computed(() => new Date().getFullYear());
   display: flex;
   gap: 1.5rem;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 640px) {
+  .app-footer {
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .footer-grid {
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .brand-name {
+    font-size: 1.05rem;
+  }
+
+  .brand-desc {
+    font-size: 0.8rem;
+  }
+
+  .col-title {
+    font-size: 0.9rem;
+    margin-bottom: 0.85rem;
+    padding-bottom: 0.35rem;
+  }
+
+  .footer-links,
+  .footer-contact {
+    font-size: 0.8rem;
+    gap: 0.6rem;
+  }
+
+  .contact-item {
+    gap: 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .footer-bottom {
+    font-size: 0.7rem;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  .bottom-tags {
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logo-icon-wrapper {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+  }
+
+  .logo-shield {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand-name {
+    font-size: 0.95rem;
+  }
+
+  .brand-desc {
+    font-size: 0.75rem;
+  }
+
+  .footer-links,
+  .footer-contact {
+    font-size: 0.75rem;
+  }
+}
 </style>

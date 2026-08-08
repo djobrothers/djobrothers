@@ -302,4 +302,93 @@ import { t } from '../i18n';
 
 .space-y-4 > * + * { margin-top: 1rem; }
 .space-y-6 > * + * { margin-top: 1.5rem; }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2rem;
+  }
+  .section-title {
+    font-size: 1.85rem;
+  }
+  .cta-title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-wrapper {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+  }
+  .page-banner {
+    padding: 2.5rem 0;
+  }
+  .page-title {
+    font-size: 1.65rem;
+    line-height: 1.2;
+  }
+  .page-subtitle {
+    font-size: 0.875rem;
+  }
+  .section-title {
+    font-size: 1.55rem;
+    line-height: 1.25;
+  }
+  .card-title {
+    font-size: 1.1rem;
+  }
+  .benchmark-item {
+    padding: 0.85rem;
+    gap: 0.75rem;
+  }
+  .b-icon {
+    width: 18px;
+    height: 18px;
+  }
+  .b-title {
+    font-size: 0.875rem;
+  }
+  .b-desc {
+    font-size: 0.775rem;
+  }
+  .value-card {
+    padding: 1.15rem;
+    gap: 0.6rem;
+  }
+  .v-icon {
+    width: 22px;
+    height: 22px;
+  }
+  .v-title {
+    font-size: 0.975rem;
+  }
+  .v-desc {
+    font-size: 0.8rem;
+  }
+  .cta-title {
+    font-size: 1.35rem;
+  }
+  .icon-box {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+  }
+  .box-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 380px) {
+  .page-title {
+    font-size: 1.45rem;
+  }
+  .section-title {
+    font-size: 1.35rem;
+  }
+  .cta-title {
+    font-size: 1.2rem;
+  }
+}
 </style>

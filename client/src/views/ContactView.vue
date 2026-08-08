@@ -123,4 +123,78 @@ watch(() => route.query.service, () => { updateServiceFromQuery(); });
 .priority-box { padding: 1.75rem; border-radius: 16px; background: var(--glass-bg); border: 1px solid var(--glass-border); display: flex; flex-direction: column; gap: 0.75rem; box-shadow: var(--shadow-card); }
 .space-y-4 > * + * { margin-top: 1rem; }
 .space-y-8 > * + * { margin-top: 2rem; }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2rem;
+  }
+  .info-card {
+    padding: 1.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-wrapper {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+  }
+  .page-banner {
+    padding: 2.5rem 0;
+  }
+  .page-title {
+    font-size: 1.65rem;
+    line-height: 1.2;
+  }
+  .page-subtitle {
+    font-size: 0.875rem;
+  }
+  .card-title {
+    font-size: 1.2rem;
+  }
+  .info-card {
+    padding: 1.25rem;
+    border-radius: 16px;
+  }
+  .info-list {
+    gap: 1.5rem;
+    margin-top: 1.25rem;
+  }
+  .info-item {
+    gap: 1rem;
+  }
+  .info-icon-box {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+  }
+  .icon {
+    width: 18px;
+    height: 18px;
+  }
+  .info-title {
+    font-size: 0.925rem;
+  }
+  .info-desc {
+    font-size: 0.825rem;
+  }
+  .sla-tag {
+    font-size: 0.675rem;
+    padding: 0.2rem 0.45rem;
+  }
+  .priority-box {
+    padding: 1.25rem;
+    border-radius: 12px;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .page-title {
+    font-size: 1.45rem;
+  }
+  .card-title {
+    font-size: 1.1rem;
+  }
+}
 </style>
