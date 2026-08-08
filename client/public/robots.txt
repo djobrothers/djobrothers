@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://djobrothers.com/sitemap.xml

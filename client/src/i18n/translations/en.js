@@ -38,7 +38,7 @@ export default {
     titleLine1: "Innovative Solution to",
     titleLine2: "Complex Engineering Problems",
     subtitle:
-      "DJO Brothers Limited provides end-to-end engineering solutions — combining defense-grade security hardware, cybersecurity consultation, industrial factory installation, technical procurement, civil infrastructure, heavy machinery & barge hiring, and solar energy under one master engineering framework.",
+      "DJO Brothers Limited provides end-to-end solutions to complex engineering problems — combining industrial factory installation, civil infrastructure, technical procurement, cybersecurity consultation, heavy machinery & barge hiring, solar energy microgrids, and defense-grade security systems under one master engineering framework.",
     exploreServices: "Explore All 7 Divisions",
     getInTouch: "Request Solution Consultation",
   },
@@ -95,8 +95,8 @@ export default {
     },
     divisions: {
       badge: "Engineering Divisions",
-      title: "Technology Based Solutions",
-      titleHighlight: "Critical Infrastructure",
+      title: "Technology Based Solutions for",
+      titleHighlight: "Critical Infrastructures",
       desc: "Explore our specialized engineering divisions delivering high-performance infrastructure and industrial solutions.",
       btnExplore: "Explore Service Divisions",
       btnAudit: "Request Consultation",

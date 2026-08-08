@@ -37,7 +37,7 @@ export default {
     badge: 'FÜHRENDES UNTERNEHMEN FÜR INGENIEURWESEN & LÖSUNGEN',
     titleLine1: 'Innovative Lösung für',
     titleLine2: 'Komplexe Ingenieurprobleme',
-    subtitle: 'DJO Brothers Limited bietet schlüsselfertige Ingenieurlösungen: Verteidigungs-Sicherheitshardware, Cybersicherheitsberatung, Industrieanlagen, technische Beschaffung, Zivilinfrastruktur, Leichtervermietung und Solarenergie.',
+    subtitle: 'DJO Brothers Limited bietet schlüsselfertige Lösungen für komplexe Ingenieurprobleme: Industrieanlagen, Zivilinfrastruktur, technische Beschaffung, Cybersicherheitsberatung, Schwermaschinenvermietung, Solarenergie und Sicherheitssysteme.',
     exploreServices: 'Alle 7 Bereiche entdecken',
     getInTouch: 'Lösungsberatung anfordern'
   },
@@ -92,7 +92,7 @@ export default {
     divisions: {
       badge: 'Ingenieurbereiche',
       title: 'Technologiebasierte Lösungen für',
-      titleHighlight: 'Kritische Infrastruktur',
+      titleHighlight: 'Kritische Infrastrukturen',
       desc: 'Entdecken Sie unsere spezialisierten Ingenieurbereiche für hochleistungsfähige Infrastruktur- und Industrielösungen.',
       btnExplore: 'Ingenieurbereiche entdecken',
       btnAudit: 'Beratung anfordern',

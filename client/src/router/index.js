@@ -15,7 +15,7 @@ const routes = [
     path: '/',
     name: 'Home',
     component: HomeView,
-    meta: { title: 'DJO Brothers Limited | Cybersecurity, Industrial Installation & Civil Engineering' }
+    meta: { title: 'DJO Brothers Limited | Innovative Solutions to Complex Engineering Problems' }
   },
   {
     path: '/about',

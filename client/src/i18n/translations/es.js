@@ -37,7 +37,7 @@ export default {
     badge: 'EMPRESA LÍDER EN INGENIERÍA Y SOLUCIONES',
     titleLine1: 'Solución Innovadora para',
     titleLine2: 'Problemas Complejos de Ingeniería',
-    subtitle: 'DJO Brothers Limited ofrece soluciones integrales de ingeniería: combinando hardware de seguridad militar, consultoría de ciberseguridad, instalaciones industriales, logística técnica, infraestructura civil, alquiler de gabarras y energía solar.',
+    subtitle: 'DJO Brothers Limited ofrece soluciones integrales para problemas complejos de ingeniería: combinando instalaciones industriales, infraestructura civil, logística técnica, consultoría de ciberseguridad, alquiler de maquinaria pesada, energía solar y sistemas de seguridad.',
     exploreServices: 'Explorar las 7 Divisiones',
     getInTouch: 'Solicitar Consulta de Soluciones'
   },
@@ -92,7 +92,7 @@ export default {
     divisions: {
       badge: 'Divisiones de Ingeniería',
       title: 'Soluciones Basadas en Tecnología para',
-      titleHighlight: 'Infraestructura Crítica',
+      titleHighlight: 'Infraestructuras Críticas',
       desc: 'Explore nuestras divisiones de ingeniería especializadas que ofrecen soluciones industriales y de infraestructura de alto rendimiento.',
       btnExplore: 'Explorar Divisiones',
       btnAudit: 'Solicitar Consulta',

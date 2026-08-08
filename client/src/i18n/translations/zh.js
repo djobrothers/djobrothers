@@ -37,7 +37,7 @@ export default {
     badge: '多学科工程与技术解决方案企业',
     titleLine1: '解决复杂',
     titleLine2: '工程技术难题',
-    subtitle: 'DJO Brothers Limited 提供端到端的工程解决方案 — 结合军工级安防硬件、网络安全咨询、智能工厂安装、技术采购、土木基础设施建设、重型机械与驳船租赁以及太阳能电力。',
+    subtitle: 'DJO Brothers Limited 为复杂工程问题提供端到端解决方案 — 涵盖工业工厂安装、土木基础设施建设、技术采购、网络安全咨询、重型机械与驳船租赁、太阳能微电网以及国防安防系统。',
     exploreServices: '探索全部 7 大部门',
     getInTouch: '预约解决方案咨询'
   },
@@ -91,7 +91,7 @@ export default {
     },
     divisions: {
       badge: '工程服务部门',
-      title: '基于技术的解决方案与',
+      title: '基于技术的解决方案于',
       titleHighlight: '关键基础设施',
       desc: '探索我们的专业工程部门，提供高性能基础设施与工业解决方案。',
       btnExplore: '探索工程部门',
