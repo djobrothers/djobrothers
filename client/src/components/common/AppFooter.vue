@@ -18,26 +18,12 @@
           <p class="brand-desc">
             {{ t('footer.brandDesc') }}
           </p>
-
-          <div class="flagship-badge-wrapper">
-            <span class="badge-tech badge-flagship">
-              {{ t('footer.flagshipBadge') }}
-            </span>
-          </div>
         </div>
 
         <!-- Core Services Links -->
         <div class="footer-col">
           <h4 class="col-title">{{ t('footer.coreServices') }}</h4>
           <ul class="footer-links">
-            <li>
-              <router-link
-                to="/services/security-hardware"
-                class="link-item flagship-link"
-              >
-                <ChevronRight class="chevron" /> {{ t('header.securityHardware') }}
-              </router-link>
-            </li>
             <li>
               <router-link
                 to="/services/cybersecurity-consultation"
@@ -282,11 +268,6 @@ const currentYear = computed(() => new Date().getFullYear());
 
 .link-item:hover {
   color: #38bdf8;
-}
-
-.flagship-link {
-  color: #38bdf8;
-  font-weight: 600;
 }
 
 .sub-item {

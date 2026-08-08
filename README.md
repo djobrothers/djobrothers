@@ -1,12 +1,12 @@
 # DJO Brothers Engineering & Technology — Corporate Web Platform
 
-An enterprise-grade, production-ready full-stack website for a premier engineering and technology corporation specializing in **Security & Surveillance Systems (Flagship Division)**, **Solar Power Installation**, and **Road & Building Construction**.
+An enterprise-grade, production-ready full-stack website for a premier engineering and technology corporation specializing in **Cybersecurity & Infrastructure Protection**, **Factory Hardware Installation**, **Technical Procurement**, **Civil Engineering**, **Heavy Machinery & Marine Barge Hire**, and **Solar Power Installation**.
 
 ---
 
 ## 🌟 Key Highlights & Features
 
-- **Flagship Focus**: Deep visual emphasis and detailed technical coverage for **Security & Surveillance Systems** (AI Video Analytics, Thermal & PTZ Cameras, 3D LiDAR, Perimeter Radar, Command & Control Centers, Autonomous Drone Docks, Pipeline & Oil/Gas Security).
+- **Multi-Disciplinary Engineering**: Comprehensive coverage across cybersecurity consultation, industrial automation, civil construction, marine logistics, and renewable energy.
 - **Modern High-Tech Aesthetic**: Glassmorphism elements, dark/bright section contrasts, sleek gradients, responsive typography, and micro-interactions.
 - **Enterprise Architecture**: Strict separation of concerns between `client/` (Vue 3, Vite, Vue Router, Axios) and `server/` (Node.js, Express, PostgreSQL, Knex.js, Joi validation).
 - **Production Safety**: Security headers via `helmet`, request logging via `morgan`, rate-limiting via `express-rate-limit`, input sanitization via `Joi`, and async email previews via `Nodemailer`.

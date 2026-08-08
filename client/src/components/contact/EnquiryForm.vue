@@ -1,7 +1,7 @@
 <template>
   <div class="glass-panel form-card">
     <div class="form-header space-y-3">
-      <div class="badge-tech badge-flagship">
+      <div class="badge-tech">
         <Send class="badge-icon" />
         <span>{{ t('form.title') }}</span>
       </div>
@@ -117,7 +117,6 @@
               v-model="form.service"
               :class="['form-input select-input', { 'input-error': fieldErrors.service }]"
             >
-              <option value="Security Hardware">{{ t('header.securityHardware') }}</option>
               <option value="Cybersecurity Consultation">{{ t('header.cybersecurity') }}</option>
               <option value="Factory Hardware">{{ t('header.factoryHardware') }}</option>
               <option value="Hardware Procurement">{{ t('header.hardwareProcurement') }}</option>
@@ -138,25 +137,22 @@
           id="message"
           v-model="form.message"
           rows="4"
-          placeholder="..."
-          :class="['form-input textarea-input', { 'input-error': fieldErrors.message }]"
+          :class="['form-input', { 'input-error': fieldErrors.message }]"
+          :placeholder="t('form.messagePlaceholder')"
         ></textarea>
         <span v-if="fieldErrors.message" class="error-msg">{{ fieldErrors.message }}</span>
       </div>
 
       <!-- Submit Button -->
-      <div class="submit-wrapper">
-        <button type="submit" :disabled="isSubmitting" class="btn-primary submit-btn">
-          <span v-if="!isSubmitting" class="flex items-center justify-center gap-2">
-            <span>{{ t('form.submit') }}</span>
-            <Send class="btn-icon" />
-          </span>
-          <span v-else class="flex items-center justify-center gap-2">
-            <Loader2 class="spinner-icon" />
-            <span>{{ t('form.sending') }}</span>
-          </span>
-        </button>
-      </div>
+      <button
+        type="submit"
+        class="btn-primary w-full justify-center text-base font-semibold py-3"
+        :disabled="isSubmitting"
+      >
+        <Loader2 v-if="isSubmitting" class="btn-icon animate-spin" />
+        <Send v-else class="btn-icon" />
+        <span>{{ isSubmitting ? t('form.submitting') : t('form.submitBtn') }}</span>
+      </button>
     </form>
   </div>
 </template>
@@ -168,7 +164,7 @@ import { User, Mail, Phone, Shield, ChevronDown, Send, CheckCircle2, AlertCircle
 import { t } from '../../i18n';
 
 const props = defineProps({
-  initialService: { type: String, default: 'Security Hardware' }
+  initialService: { type: String, default: 'Cybersecurity Consultation' }
 });
 
 const form = reactive({

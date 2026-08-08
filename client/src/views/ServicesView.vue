@@ -19,52 +19,7 @@
     <!-- Services Overview Matrix -->
     <section class="section-padding container space-y-12">
       
-      <!-- 1. Flagship Security Hardware Division -->
-      <div class="glass-panel flagship-box">
-        <div class="flagship-badge-top">★ {{ t('nav.flagship') }}</div>
-
-        <div class="grid lg-grid-cols-12 gap-10 items-center">
-          <div class="col-span-7 space-y-6">
-            <div class="badge-tech badge-flagship">
-              <ShieldCheck class="b-icon" /> {{ t('secHardware.badge') }}
-            </div>
-
-            <h2 class="div-title">{{ t('header.securityHardware') }}</h2>
-
-            <p class="text-muted leading-relaxed">
-              {{ t('secHardware.heroDesc') }}
-            </p>
-
-            <div class="grid md-grid-cols-3 gap-3">
-              <div class="sub-feature"><Radio class="f-icon text-sky" /> {{ t('servicesPage.sub1') }}</div>
-              <div class="sub-feature"><Eye class="f-icon text-sky" /> {{ t('servicesPage.sub2') }}</div>
-              <div class="sub-feature"><Video class="f-icon text-sky" /> {{ t('servicesPage.sub3') }}</div>
-              <div class="sub-feature"><Zap class="f-icon text-sky" /> {{ t('servicesPage.sub4') }}</div>
-              <div class="sub-feature"><Fingerprint class="f-icon text-sky" /> {{ t('servicesPage.sub5') }}</div>
-              <div class="sub-feature"><Cpu class="f-icon text-sky" /> {{ t('servicesPage.sub6') }}</div>
-            </div>
-
-            <div>
-              <router-link to="/services/security-hardware" class="btn-primary">
-                <span>{{ t('common.viewDetails') }}</span>
-                <ArrowRight class="btn-icon" />
-              </router-link>
-            </div>
-          </div>
-
-          <div class="col-span-5 side-card">
-            <h4 class="side-title"><ShieldCheck class="f-icon text-sky" /> {{ t('servicesPage.appsTitle') }}</h4>
-            <ul class="app-list">
-              <li class="app-item"><span>{{ t('servicesPage.app1') }}</span> <span class="app-tag">{{ t('servicesPage.app1Tag') }}</span></li>
-              <li class="app-item"><span>{{ t('servicesPage.app2') }}</span> <span class="app-tag">{{ t('servicesPage.app2Tag') }}</span></li>
-              <li class="app-item"><span>{{ t('servicesPage.app3') }}</span> <span class="app-tag">{{ t('servicesPage.app3Tag') }}</span></li>
-              <li class="app-item"><span>{{ t('servicesPage.app4') }}</span> <span class="app-tag">{{ t('servicesPage.app4Tag') }}</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2. Cybersecurity Consultation -->
+      <!-- 1. Cybersecurity Consultation -->
       <div class="glass-panel sec-box indigo-border">
         <div class="grid lg-grid-cols-12 gap-8 items-center">
           <div class="col-span-7 space-y-4">
@@ -207,8 +162,6 @@ import { t } from '../i18n';
 .page-title { font-size: 3rem; font-weight: 800; color: var(--color-text-primary); line-height: 1.1; }
 .page-subtitle { font-size: 1.15rem; color: var(--color-text-secondary); line-height: 1.6; }
 
-.flagship-box { position: relative; border-color: var(--color-border-glow); background: var(--glass-bg); padding: 2.5rem; overflow: hidden; }
-.flagship-badge-top { position: absolute; top: 0; right: 0; background: linear-gradient(90deg, #0284C7, #0D9488); color: #FFFFFF; font-weight: 800; font-size: 0.75rem; padding: 0.4rem 1.25rem; border-bottom-left-radius: 14px; text-transform: uppercase; }
 .div-title { font-size: 2rem; font-weight: 800; color: var(--color-text-primary); }
 .b-icon { width: 16px; height: 16px; }
 
@@ -250,10 +203,6 @@ import { t } from '../i18n';
   .div-title {
     font-size: 1.5rem;
   }
-  .flagship-box {
-    padding: 1.75rem;
-    padding-top: 2.5rem;
-  }
   .sec-box {
     padding: 1.5rem;
   }
@@ -280,15 +229,6 @@ import { t } from '../i18n';
   .div-title {
     font-size: 1.3rem;
     line-height: 1.25;
-  }
-  .flagship-box {
-    padding: 1.25rem;
-    padding-top: 2.25rem;
-  }
-  .flagship-badge-top {
-    font-size: 0.6rem;
-    padding: 0.3rem 0.85rem;
-    border-bottom-left-radius: 10px;
   }
   .sub-feature {
     padding: 0.5rem;
@@ -340,10 +280,6 @@ import { t } from '../i18n';
   .sub-feature {
     font-size: 0.675rem;
     padding: 0.4rem;
-  }
-  .flagship-box {
-    padding: 1rem;
-    padding-top: 2rem;
   }
 }
 </style>

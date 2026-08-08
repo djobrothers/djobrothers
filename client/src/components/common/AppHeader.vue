@@ -30,17 +30,6 @@
 
           <!-- Dropdown Menu -->
           <div class="dropdown-menu">
-            <router-link to="/services/security-hardware" class="dropdown-item flagship-item">
-              <ShieldCheck class="item-icon flagship-icon" />
-              <div>
-                <div class="item-title text-sky flex items-center gap-2">
-                  {{ t('header.securityHardware') }}
-                  <span class="flagship-tag">{{ t('nav.flagship') }}</span>
-                </div>
-                <div class="item-desc">{{ t('header.securityHardwareDesc') }}</div>
-              </div>
-            </router-link>
-
             <router-link to="/services/cybersecurity-consultation" class="dropdown-item">
               <Lock class="item-icon text-indigo" />
               <div>
@@ -147,9 +136,6 @@
       
       <div class="mobile-services-group">
         <div class="mobile-group-title">{{ t('nav.services') }}</div>
-        <router-link @click="mobileMenuOpen = false" to="/services/security-hardware" class="mobile-link flagship-mobile">
-          <ShieldCheck class="link-icon" /> {{ t('header.securityHardware') }}
-        </router-link>
         <router-link @click="mobileMenuOpen = false" to="/services/cybersecurity-consultation" class="mobile-link">
           <Lock class="link-icon" /> {{ t('header.cybersecurity') }}
         </router-link>
@@ -404,11 +390,6 @@ onUnmounted(() => {
   background: rgba(2, 132, 199, 0.08);
 }
 
-.flagship-item {
-  background: rgba(2, 132, 199, 0.1);
-  border: 1px solid rgba(56, 189, 248, 0.3);
-}
-
 .item-icon {
   width: 20px;
   height: 20px;
@@ -425,16 +406,6 @@ onUnmounted(() => {
 .item-desc {
   font-size: 0.75rem;
   color: var(--color-text-secondary);
-}
-
-.flagship-tag {
-  font-size: 0.65rem;
-  padding: 2px 6px;
-  background: rgba(56, 189, 248, 0.25);
-  color: #0284C7;
-  border-radius: 4px;
-  font-weight: 700;
-  text-transform: uppercase;
 }
 
 /* Desktop CTA */
@@ -559,12 +530,6 @@ onUnmounted(() => {
 .mobile-link:hover {
   background: rgba(2, 132, 199, 0.1);
   color: #0284C7;
-}
-
-.flagship-mobile {
-  color: #0284C7;
-  background: rgba(2, 132, 199, 0.12);
-  border: 1px solid rgba(56, 189, 248, 0.3);
 }
 
 .mobile-services-group {

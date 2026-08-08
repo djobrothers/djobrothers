@@ -11,14 +11,14 @@
           
           <!-- Left Column -->
           <div class="hero-content">
-            <div class="badge-tech badge-flagship">
+            <div class="badge-tech">
               <Wrench class="badge-icon" />
               <span>{{ t('hero.badge') }}</span>
             </div>
 
             <h1 class="hero-title">
               {{ t('hero.titleLine1') }} <br />
-              <span class="gradient-text-flagship">{{ t('hero.titleLine2') }}</span>
+              <span class="gradient-text">{{ t('hero.titleLine2') }}</span>
             </h1>
 
             <p class="hero-subtitle">
@@ -174,11 +174,11 @@
               <div class="space-y-5">
                 <div class="progress-item">
                   <div class="progress-header">
-                    <span class="progress-name"><Shield class="p-icon text-sky" /> {{ t('home.matrix.item1Name') }}</span>
-                    <span class="text-sky font-bold">{{ t('home.matrix.item1Tag') }}</span>
+                    <span class="progress-name"><Lock class="p-icon text-indigo" /> {{ t('home.cards.cyberTitle') }}</span>
+                    <span class="text-indigo font-bold">{{ t('home.matrix.item1Tag') }}</span>
                   </div>
                   <div class="progress-bar-bg">
-                    <div class="progress-bar-fill flagship-fill"></div>
+                    <div class="progress-bar-fill cyber-fill"></div>
                   </div>
                 </div>
 
@@ -208,7 +208,7 @@
       </div>
     </section>
 
-    <!-- Division Showcase Section (Flagship Highlighted) -->
+    <!-- Division Showcase Section -->
     <section class="section-padding divisions-section">
       <div class="container">
         <SectionHeader
@@ -220,77 +220,6 @@
         />
 
         <div class="divisions-grid">
-          
-          <!-- Flagship Card -->
-          <div class="glass-panel flagship-card">
-            <div class="flagship-top-tag">{{ t('home.divisions.flagshipTag') }}</div>
-
-            <div class="flagship-card-grid">
-              <div class="flagship-left space-y-4">
-                <div class="badge-tech badge-flagship">
-                  <ShieldCheck class="badge-icon" />
-                  <span>{{ t('home.divisions.flagshipBadge') }}</span>
-                </div>
-
-                <h3 class="flagship-card-title">{{ t('home.divisions.flagshipTitle') }}</h3>
-
-                <p class="flagship-card-desc">
-                  {{ t('home.divisions.flagshipDesc') }}
-                </p>
-
-                <div class="flagship-features-grid">
-                  <div class="feature-tag"><CheckCircle class="tag-icon" /> {{ t('home.divisions.feat1') }}</div>
-                  <div class="feature-tag"><CheckCircle class="tag-icon" /> {{ t('home.divisions.feat2') }}</div>
-                  <div class="feature-tag"><CheckCircle class="tag-icon" /> {{ t('home.divisions.feat3') }}</div>
-                  <div class="feature-tag"><CheckCircle class="tag-icon" /> {{ t('home.divisions.feat4') }}</div>
-                  <div class="feature-tag"><CheckCircle class="tag-icon" /> {{ t('home.divisions.feat5') }}</div>
-                  <div class="feature-tag"><CheckCircle class="tag-icon" /> {{ t('home.divisions.feat6') }}</div>
-                </div>
-
-                <div class="flagship-actions">
-                  <router-link to="/services/security-hardware" class="btn-primary">
-                    <span>{{ t('home.divisions.btnExplore') }}</span>
-                    <ArrowRight class="btn-icon" />
-                  </router-link>
-                  <router-link to="/contact?service=Security+Hardware" class="btn-secondary">
-                    <span>{{ t('home.divisions.btnAudit') }}</span>
-                  </router-link>
-                </div>
-              </div>
-
-              <!-- Graphic Preview -->
-              <div class="flagship-preview">
-                <div class="preview-header">
-                  <span class="preview-title"><Lock class="preview-icon" /> {{ t('home.divisions.previewTitle') }}</span>
-                  <span class="preview-status">{{ t('home.divisions.previewStatus') }}</span>
-                </div>
-                <div class="preview-list">
-                  <div class="preview-item">
-                    <div>
-                      <div class="item-name">{{ t('home.divisions.pItem1Name') }}</div>
-                      <div class="item-sub">{{ t('home.divisions.pItem1Sub') }}</div>
-                    </div>
-                    <span class="item-badge">{{ t('home.divisions.pItem1Badge') }}</span>
-                  </div>
-                  <div class="preview-item">
-                    <div>
-                      <div class="item-name">{{ t('home.divisions.pItem2Name') }}</div>
-                      <div class="item-sub">{{ t('home.divisions.pItem2Sub') }}</div>
-                    </div>
-                    <span class="item-badge">{{ t('home.divisions.pItem2Badge') }}</span>
-                  </div>
-                  <div class="preview-item">
-                    <div>
-                      <div class="item-name">{{ t('home.divisions.pItem3Name') }}</div>
-                      <div class="item-sub">{{ t('home.divisions.pItem3Sub') }}</div>
-                    </div>
-                    <span class="item-badge text-teal">{{ t('home.divisions.pItem3Badge') }}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <!-- Secondary Divisions Cards (All Services) -->
           <div class="secondary-grid">
             <!-- 1. Cybersecurity -->
@@ -369,7 +298,7 @@
       <div class="container">
         <div class="enquiry-grid">
           <div class="enquiry-text space-y-4">
-            <div class="badge-tech badge-flagship">{{ t('home.enquiry.badge') }}</div>
+            <div class="badge-tech">{{ t('home.enquiry.badge') }}</div>
             <h2 class="section-title">
               {{ t('home.enquiry.title') }} <span class="gradient-text">{{ t('home.enquiry.titleHighlight') }}</span>
             </h2>
@@ -379,7 +308,7 @@
           </div>
 
           <div class="enquiry-form-wrapper">
-            <EnquiryForm initialService="Security & Surveillance" />
+            <EnquiryForm initialService="Cybersecurity Consultation" />
           </div>
         </div>
       </div>
@@ -796,9 +725,9 @@ import { t } from '../i18n';
   border-radius: 999px;
 }
 
-.flagship-fill {
-  width: 100%;
-  background: linear-gradient(90deg, #0284C7, #0D9488);
+.cyber-fill {
+  width: 95%;
+  background: linear-gradient(90deg, #6366F1, #4F46E5);
 }
 
 .solar-fill {
@@ -821,110 +750,6 @@ import { t } from '../i18n';
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-}
-
-.flagship-card {
-  position: relative;
-  border-color: var(--color-border-glow);
-  padding: 2.5rem;
-  overflow: hidden;
-  background: var(--glass-bg);
-}
-
-.flagship-top-tag {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: linear-gradient(90deg, #0284C7, #0D9488);
-  color: #FFFFFF;
-  font-weight: 800;
-  font-size: 0.75rem;
-  padding: 0.4rem 1.25rem;
-  border-bottom-left-radius: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.flagship-card-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2.5rem;
-  align-items: center;
-}
-
-@media (min-width: 1024px) {
-  .flagship-card-grid {
-    grid-template-columns: 1.15fr 0.85fr;
-  }
-}
-
-.flagship-left {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-.flagship-card-title {
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--color-text-primary);
-  line-height: 1.2;
-}
-
-.flagship-card-desc {
-  font-size: 1.05rem;
-  color: var(--color-text-secondary);
-  line-height: 1.6;
-}
-
-.flagship-features-grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 0.75rem;
-  padding: 0.5rem 0;
-}
-
-@media (min-width: 640px) {
-  .flagship-features-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.feature-tag {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--color-text-primary);
-  padding: 0.5rem 0.85rem;
-  background: var(--bg-navy-900);
-  border: 1px solid var(--glass-border);
-  border-radius: 8px;
-}
-
-.tag-icon {
-  width: 16px;
-  height: 16px;
-  color: var(--color-electric-600);
-}
-
-.flagship-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding-top: 0.5rem;
-}
-
-/* Flagship Preview */
-.flagship-preview {
-  background: var(--bg-navy-900);
-  border: 1px solid var(--glass-border);
-  border-radius: 16px;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
 }
 
 .preview-header {

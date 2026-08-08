@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import AboutView from '../views/AboutView.vue';
 import ServicesView from '../views/ServicesView.vue';
-import SecurityHardwareView from '../views/SecurityHardwareView.vue';
 import CybersecurityView from '../views/CybersecurityView.vue';
 import FactoryHardwareView from '../views/FactoryHardwareView.vue';
 import HardwareProcurementView from '../views/HardwareProcurementView.vue';
@@ -16,7 +15,7 @@ const routes = [
     path: '/',
     name: 'Home',
     component: HomeView,
-    meta: { title: 'DJO Brothers Limited | Advanced Security Hardware, Cybersecurity & Civil Engineering' }
+    meta: { title: 'DJO Brothers Limited | Cybersecurity, Industrial Installation & Civil Engineering' }
   },
   {
     path: '/about',
@@ -28,14 +27,15 @@ const routes = [
     path: '/services',
     name: 'Services',
     component: ServicesView,
-    meta: { title: 'Engineering & Security Divisions | DJO Brothers Limited' }
+    meta: { title: 'Engineering Divisions | DJO Brothers Limited' }
   },
   {
     path: '/services/security-hardware',
-    name: 'SecurityHardware',
-    component: SecurityHardwareView,
-    alias: '/services/security-surveillance',
-    meta: { title: 'Security Hardware & Defense Radar / LiDAR | DJO Brothers Limited' }
+    redirect: '/services'
+  },
+  {
+    path: '/services/security-surveillance',
+    redirect: '/services'
   },
   {
     path: '/services/cybersecurity-consultation',
